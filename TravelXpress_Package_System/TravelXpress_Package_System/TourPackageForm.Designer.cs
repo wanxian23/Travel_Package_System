@@ -44,6 +44,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -70,13 +72,13 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(34, 223);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 140);
+            this.label1.Size = new System.Drawing.Size(214, 202);
             this.label1.TabIndex = 2;
             this.label1.Text = "Package 1\r\nFrom: Selangor\r\nTo: Melaka\r\nTransport: Bus \r\nAccomodation: CATS Hotel\r" +
-    "\nDuration: 3 Days 2 Night\r\nPrice: RM 1000.00 per pax";
+    "\nDuration: 3 Days 2 Night\r\nPrice: RM 1000.00 per pax\r\nSpecial Attraction: A\'Famo" +
+    "sa, The Stadthuys, Jonker Street\r\n";
             // 
             // label2
             // 
@@ -185,17 +187,38 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(428, 365);
+            this.label6.Location = new System.Drawing.Point(440, 397);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(352, 20);
             this.label6.TabIndex = 15;
             this.label6.Text = "Transport later need to choose boarding place";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(451, 368);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(394, 20);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Accomodation later can choose type of room or bed";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(34, 429);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(84, 20);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
             // 
             // TourPackageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1465, 562);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button5);
@@ -213,7 +236,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TourPackageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tour Package";
@@ -245,5 +268,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
