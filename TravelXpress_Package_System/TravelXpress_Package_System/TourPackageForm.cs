@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace TravelXpress_Package_System
 {
-    public partial class Form1 : Form
+    public partial class TourPackageForm : Form
     {
-        public Form1()
+        public TourPackageForm()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            TourPackageForm tourPackageForm = new TourPackageForm();
-            tourPackageForm.ShowDialog();
         }
     }
 }
