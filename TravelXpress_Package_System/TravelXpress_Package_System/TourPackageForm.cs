@@ -16,5 +16,11 @@ namespace TravelXpress_Package_System
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CheckoutForm checkoutform = new CheckoutForm();
+            checkoutform.ShowDialog();
+        }
     }
 }

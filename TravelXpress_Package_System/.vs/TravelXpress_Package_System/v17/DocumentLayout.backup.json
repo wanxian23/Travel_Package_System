@@ -3,23 +3,27 @@
   "WorkspaceRootPath": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|g:\\my drive\\school_stuff\\utem_doc\\sem\\year2\\sem2\\event-driven programming\\lab\\project\\travel_package_system\\travelxpress_package_system\\travelxpress_package_system\\checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\travelxpress_package_system\\checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|solutionrelative:travelxpress_package_system\\checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|g:\\my drive\\school_stuff\\utem_doc\\sem\\year2\\sem2\\event-driven programming\\lab\\project\\travel_package_system\\travelxpress_package_system\\travelxpress_package_system\\tourpackageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|solutionrelative:travelxpress_package_system\\tourpackageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|g:\\my drive\\school_stuff\\utem_doc\\sem\\year2\\sem2\\event-driven programming\\lab\\project\\travel_package_system\\travelxpress_package_system\\travelxpress_package_system\\tourpackagedetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\travelxpress_package_system\\tourpackagedetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|solutionrelative:travelxpress_package_system\\tourpackagedetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|g:\\my drive\\school_stuff\\utem_doc\\sem\\year2\\sem2\\event-driven programming\\lab\\project\\travel_package_system\\travelxpress_package_system\\travelxpress_package_system\\checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\travelxpress_package_system\\tourpackageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|solutionrelative:travelxpress_package_system\\tourpackageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\travelxpress_package_system\\tourpackageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|solutionrelative:travelxpress_package_system\\tourpackageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\travelxpress_package_system\\checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|solutionrelative:travelxpress_package_system\\checkoutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\travelxpress_package_system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|g:\\my drive\\school_stuff\\utem_doc\\sem\\year2\\sem2\\event-driven programming\\lab\\project\\travel_package_system\\travelxpress_package_system\\travelxpress_package_system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E06C27ED-CDA7-48B6-9305-FFE9E720A90F}|TravelXpress_Package_System\\TravelXpress_Package_System.csproj|solutionrelative:travelxpress_package_system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,6 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "TourPackageForm.cs",
+              "DocumentMoniker": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TourPackageForm.cs",
+              "RelativeDocumentMoniker": "TravelXpress_Package_System\\TourPackageForm.cs",
+              "ToolTip": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TourPackageForm.cs",
+              "RelativeToolTip": "TravelXpress_Package_System\\TourPackageForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAApwBUAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T18:35:44.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CheckoutForm.cs",
               "DocumentMoniker": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\CheckoutForm.cs",
               "RelativeDocumentMoniker": "TravelXpress_Package_System\\CheckoutForm.cs",
@@ -67,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TourPackageDetailsForm.cs [Design]",
               "DocumentMoniker": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TourPackageDetailsForm.cs",
               "RelativeDocumentMoniker": "TravelXpress_Package_System\\TourPackageDetailsForm.cs",
@@ -79,20 +96,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
               "DocumentMoniker": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\Form1.cs",
               "RelativeDocumentMoniker": "TravelXpress_Package_System\\Form1.cs",
               "ToolTip": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\Form1.cs",
               "RelativeToolTip": "TravelXpress_Package_System\\Form1.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAewBYAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAhwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T08:40:37.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\Form1.cs",
               "RelativeDocumentMoniker": "TravelXpress_Package_System\\Form1.cs",
@@ -104,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TourPackageForm.cs [Design]",
               "DocumentMoniker": "G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TourPackageForm.cs",
               "RelativeDocumentMoniker": "TravelXpress_Package_System\\TourPackageForm.cs",
