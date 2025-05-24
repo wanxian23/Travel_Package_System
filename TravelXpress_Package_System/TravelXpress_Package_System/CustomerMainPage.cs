@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace TravelXpress_Package_System
 {
-    public partial class Form1 : Form
+    public partial class CustomerMainPage : Form
     {
-        public Form1()
+        public CustomerMainPage()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            CustomerMainPage customerMainPage = new CustomerMainPage();
-            customerMainPage.ShowDialog();
+            TourPackageForm tourPackageForm = new TourPackageForm();
+            tourPackageForm.ShowDialog();
         }
     }
 }

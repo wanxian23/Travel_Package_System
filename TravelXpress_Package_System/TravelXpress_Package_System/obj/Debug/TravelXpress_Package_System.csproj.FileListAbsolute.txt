@@ -24,3 +24,9 @@ G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Pr
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.pdb
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CheckoutForm.resources
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TourPackageDetailsForm.resources
+C:\Users\chiew\Desktop\Test\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CheckoutForm.resources
+C:\Users\chiew\Desktop\Test\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.ChekourPaymentForm.resources
+C:\Users\chiew\Desktop\Test\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TourPackageDetailsForm.resources
+C:\Users\chiew\Desktop\Test\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CustomerMainPage.resources
+C:\Users\chiew\Desktop\Test\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase.mdf
+C:\Users\chiew\Desktop\Test\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase_log.ldf
