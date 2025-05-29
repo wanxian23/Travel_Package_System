@@ -43,8 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -186,24 +184,6 @@
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(440, 397);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(352, 20);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Transport later need to choose boarding place";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(451, 368);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(394, 20);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Accomodation later can choose type of room or bed";
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -231,8 +211,6 @@
             this.ClientSize = new System.Drawing.Size(1465, 562);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.pictureBox5);
@@ -277,8 +255,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
