@@ -34,3 +34,24 @@ G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Pr
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase_log.ldf
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.ChekourPaymentForm.resources
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CustomerMainPage.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase.mdf
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase_log.ldf
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.exe.config
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.exe
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.pdb
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.AssemblyReference.cache
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CheckoutForm.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.ChekourPaymentForm.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CustomerMainPage.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.Form1.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.Properties.Resources.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TourPackageDetailsForm.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TourPackageForm.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.GenerateResource.cache
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.CoreCompileInputs.cache
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.exe
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.pdb
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminAccomodationPage.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminMainPage.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminPackagePage.resources
+E:\DCS\DCS Year 2 Sem 2\Event-Driven Programming\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminTicketPage.resources

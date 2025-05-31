@@ -61,6 +61,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAccomodationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAccomodationPage.Designer.cs">
+      <DependentUpon>AdminAccomodationPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMainPage.Designer.cs">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTicketPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTicketPage.Designer.cs">
+      <DependentUpon>AdminTicketPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPackagePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPackagePage.Designer.cs">
+      <DependentUpon>AdminPackagePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckoutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +123,18 @@
     <Compile Include="TourPackageForm.Designer.cs">
       <DependentUpon>TourPackageForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminAccomodationPage.resx">
+      <DependentUpon>AdminAccomodationPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMainPage.resx">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPackagePage.resx">
+      <DependentUpon>AdminPackagePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTicketPage.resx">
+      <DependentUpon>AdminTicketPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckoutForm.resx">
       <DependentUpon>CheckoutForm.cs</DependentUpon>
     </EmbeddedResource>

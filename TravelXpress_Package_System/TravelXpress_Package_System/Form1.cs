@@ -22,5 +22,11 @@ namespace TravelXpress_Package_System
             CustomerMainPage customerMainPage = new CustomerMainPage();
             customerMainPage.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdminMainPage adminMainPage = new AdminMainPage();
+            adminMainPage.ShowDialog();
+        }
     }
 }
