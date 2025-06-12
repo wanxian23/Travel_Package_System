@@ -22,5 +22,10 @@ namespace TravelXpress_Package_System
             TourPackageForm tourPackageForm = new TourPackageForm();
             tourPackageForm.ShowDialog();
         }
+
+        private void buttonTicket_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

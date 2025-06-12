@@ -35,7 +35,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonTicket = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,16 +105,17 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Travel Ticket";
             // 
-            // button1
+            // buttonTicket
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(163, 570);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 46);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTicket.Location = new System.Drawing.Point(163, 570);
+            this.buttonTicket.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonTicket.Name = "buttonTicket";
+            this.buttonTicket.Size = new System.Drawing.Size(147, 46);
+            this.buttonTicket.TabIndex = 7;
+            this.buttonTicket.Text = "Book";
+            this.buttonTicket.UseVisualStyleBackColor = true;
+            this.buttonTicket.Click += new System.EventHandler(this.buttonTicket_Click);
             // 
             // CustomerMainPage
             // 
@@ -127,7 +128,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonTicket);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "CustomerMainPage";
@@ -147,6 +148,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonTicket;
     }
 }
