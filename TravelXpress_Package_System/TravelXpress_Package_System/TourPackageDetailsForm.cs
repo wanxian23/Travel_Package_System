@@ -12,9 +12,11 @@ namespace TravelXpress_Package_System
 {
     public partial class TourPackageDetailsForm : Form
     {
-        public TourPackageDetailsForm()
+        public int packageType;
+        public TourPackageDetailsForm(int packageType)
         {
             InitializeComponent();
+            this.packageType = packageType;
         }
     }
 }
