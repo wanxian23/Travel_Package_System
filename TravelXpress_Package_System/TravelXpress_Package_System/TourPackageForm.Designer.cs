@@ -29,22 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TourPackageForm));
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonCheckout1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonCheckout2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonCheckout3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonCheckout4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonCheckout5 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelMorDetails1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabelMorDetails2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelMorDetails3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelMorDetails4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabelMorDetails5 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -52,15 +56,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonCheckout1
             // 
-            this.button1.Location = new System.Drawing.Point(38, 459);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 48);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCheckout1.Location = new System.Drawing.Point(38, 459);
+            this.buttonCheckout1.Name = "buttonCheckout1";
+            this.buttonCheckout1.Size = new System.Drawing.Size(156, 48);
+            this.buttonCheckout1.TabIndex = 1;
+            this.buttonCheckout1.Text = "Checkout";
+            this.buttonCheckout1.UseVisualStyleBackColor = true;
+            this.buttonCheckout1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -77,18 +81,19 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(327, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 40);
+            this.label2.Size = new System.Drawing.Size(92, 40);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Package 1\r\nFrom: ";
+            this.label2.Text = "Package 2 \r\nFrom: ";
             // 
-            // button2
+            // buttonCheckout2
             // 
-            this.button2.Location = new System.Drawing.Point(331, 459);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 48);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonCheckout2.Location = new System.Drawing.Point(331, 459);
+            this.buttonCheckout2.Name = "buttonCheckout2";
+            this.buttonCheckout2.Size = new System.Drawing.Size(156, 48);
+            this.buttonCheckout2.TabIndex = 4;
+            this.buttonCheckout2.Text = "Checkout";
+            this.buttonCheckout2.UseVisualStyleBackColor = true;
+            this.buttonCheckout2.Click += new System.EventHandler(this.buttonCheckout2_Click);
             // 
             // pictureBox2
             // 
@@ -107,16 +112,17 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 40);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Package 1\r\nFrom: ";
+            this.label3.Text = "Package 3\r\nFrom: ";
             // 
-            // button3
+            // buttonCheckout3
             // 
-            this.button3.Location = new System.Drawing.Point(618, 459);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 48);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonCheckout3.Location = new System.Drawing.Point(618, 459);
+            this.buttonCheckout3.Name = "buttonCheckout3";
+            this.buttonCheckout3.Size = new System.Drawing.Size(156, 48);
+            this.buttonCheckout3.TabIndex = 7;
+            this.buttonCheckout3.Text = "Checkout";
+            this.buttonCheckout3.UseVisualStyleBackColor = true;
+            this.buttonCheckout3.Click += new System.EventHandler(this.buttonCheckout3_Click);
             // 
             // pictureBox3
             // 
@@ -135,16 +141,17 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 40);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Package 1\r\nFrom: ";
+            this.label4.Text = "Package 4\r\nFrom: ";
             // 
-            // button4
+            // buttonCheckout4
             // 
-            this.button4.Location = new System.Drawing.Point(911, 459);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 48);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonCheckout4.Location = new System.Drawing.Point(911, 459);
+            this.buttonCheckout4.Name = "buttonCheckout4";
+            this.buttonCheckout4.Size = new System.Drawing.Size(156, 48);
+            this.buttonCheckout4.TabIndex = 10;
+            this.buttonCheckout4.Text = "Checkout";
+            this.buttonCheckout4.UseVisualStyleBackColor = true;
+            this.buttonCheckout4.Click += new System.EventHandler(this.buttonCheckout4_Click);
             // 
             // pictureBox4
             // 
@@ -163,16 +170,17 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 40);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Package 1\r\nFrom: ";
+            this.label5.Text = "Package 5\r\nFrom: ";
             // 
-            // button5
+            // buttonCheckout5
             // 
-            this.button5.Location = new System.Drawing.Point(1202, 459);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 48);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonCheckout5.Location = new System.Drawing.Point(1202, 459);
+            this.buttonCheckout5.Name = "buttonCheckout5";
+            this.buttonCheckout5.Size = new System.Drawing.Size(156, 48);
+            this.buttonCheckout5.TabIndex = 13;
+            this.buttonCheckout5.Text = "Checkout";
+            this.buttonCheckout5.UseVisualStyleBackColor = true;
+            this.buttonCheckout5.Click += new System.EventHandler(this.buttonCheckout5_Click);
             // 
             // pictureBox5
             // 
@@ -184,15 +192,16 @@
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
-            // linkLabel1
+            // linkLabelMorDetails1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(34, 429);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(84, 20);
-            this.linkLabel1.TabIndex = 17;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabelMorDetails1.AutoSize = true;
+            this.linkLabelMorDetails1.Location = new System.Drawing.Point(34, 429);
+            this.linkLabelMorDetails1.Name = "linkLabelMorDetails1";
+            this.linkLabelMorDetails1.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails1.TabIndex = 17;
+            this.linkLabelMorDetails1.TabStop = true;
+            this.linkLabelMorDetails1.Text = "More details....";
+            this.linkLabelMorDetails1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails1_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -204,27 +213,71 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // linkLabelMorDetails2
+            // 
+            this.linkLabelMorDetails2.AutoSize = true;
+            this.linkLabelMorDetails2.Location = new System.Drawing.Point(327, 429);
+            this.linkLabelMorDetails2.Name = "linkLabelMorDetails2";
+            this.linkLabelMorDetails2.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails2.TabIndex = 19;
+            this.linkLabelMorDetails2.TabStop = true;
+            this.linkLabelMorDetails2.Text = "More details....";
+            // 
+            // linkLabelMorDetails3
+            // 
+            this.linkLabelMorDetails3.AutoSize = true;
+            this.linkLabelMorDetails3.Location = new System.Drawing.Point(614, 429);
+            this.linkLabelMorDetails3.Name = "linkLabelMorDetails3";
+            this.linkLabelMorDetails3.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails3.TabIndex = 20;
+            this.linkLabelMorDetails3.TabStop = true;
+            this.linkLabelMorDetails3.Text = "More details....";
+            // 
+            // linkLabelMorDetails4
+            // 
+            this.linkLabelMorDetails4.AutoSize = true;
+            this.linkLabelMorDetails4.Location = new System.Drawing.Point(907, 429);
+            this.linkLabelMorDetails4.Name = "linkLabelMorDetails4";
+            this.linkLabelMorDetails4.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails4.TabIndex = 21;
+            this.linkLabelMorDetails4.TabStop = true;
+            this.linkLabelMorDetails4.Text = "More details....";
+            // 
+            // linkLabelMorDetails5
+            // 
+            this.linkLabelMorDetails5.AutoSize = true;
+            this.linkLabelMorDetails5.Location = new System.Drawing.Point(1198, 429);
+            this.linkLabelMorDetails5.Name = "linkLabelMorDetails5";
+            this.linkLabelMorDetails5.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails5.TabIndex = 22;
+            this.linkLabelMorDetails5.TabStop = true;
+            this.linkLabelMorDetails5.Text = "More details....";
+            // 
             // TourPackageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1465, 562);
+            this.Controls.Add(this.linkLabelMorDetails5);
+            this.Controls.Add(this.linkLabelMorDetails4);
+            this.Controls.Add(this.linkLabelMorDetails3);
+            this.Controls.Add(this.linkLabelMorDetails2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabelMorDetails1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonCheckout5);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonCheckout4);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.buttonCheckout3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonCheckout2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonCheckout1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TourPackageForm";
@@ -241,21 +294,25 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCheckout1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCheckout2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonCheckout3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonCheckout4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonCheckout5;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelMorDetails1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabelMorDetails2;
+        private System.Windows.Forms.LinkLabel linkLabelMorDetails3;
+        private System.Windows.Forms.LinkLabel linkLabelMorDetails4;
+        private System.Windows.Forms.LinkLabel linkLabelMorDetails5;
     }
 }

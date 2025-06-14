@@ -13,9 +13,11 @@ namespace TravelXpress_Package_System
 {
     public partial class CheckoutForm : Form
     {
-        public CheckoutForm()
+        public int packagetype;
+        public CheckoutForm(int packagetype)
         {
             InitializeComponent();
+            this.packagetype = packagetype;
 
             groupBoxCustomerFamilyDetails.Hide();
 
