@@ -80,3 +80,12 @@ C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_Sys
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.CoreCompileInputs.cache
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.exe
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.pdb
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpressDBMS.mdf
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpressDBMS_log.ldf
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminAccomodationPage.resources
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminMainPage.resources
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminPackagePage.resources
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminTicketPage.resources
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketBookingForm.resources
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketForm.resources
+G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketSeat.resources

@@ -25,7 +25,9 @@ namespace TravelXpress_Package_System
 
         private void buttonTicket_Click(object sender, EventArgs e)
         {
-
+            TicketBookingForm ticketBookingForm = new TicketBookingForm();
+            this.Hide();
+            ticketBookingForm.ShowDialog();
         }
     }
 }
