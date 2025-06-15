@@ -67,13 +67,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxSingleBed = new System.Windows.Forms.CheckBox();
+            this.checkBoxFamilyRoom = new System.Windows.Forms.CheckBox();
+            this.checkBoxSingleRKingBed = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSingleBed = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSingleRKingBed = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownFamilyRoom = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -109,9 +109,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSingleBed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSingleRKingBed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFamilyRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumPax)).BeginInit();
             this.SuspendLayout();
             // 
@@ -514,16 +514,15 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.72727F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.27273F));
-            //this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.checkBoxSingleBed, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.checkBoxFamilyRoom, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.checkBoxSingleRKingBed, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label15, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown2, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown4, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown3, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownSingleBed, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownSingleRKingBed, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownFamilyRoom, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.label16, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label17, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label18, 1, 2);
@@ -547,123 +546,121 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Type of Room";
             // 
-            // checkBox1
+            // checkBoxSingleBed
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(4, 41);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 24);
-            this.checkBox1.TabIndex = 23;
-            this.checkBox1.Text = "Single";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxSingleBed.AutoSize = true;
+            this.checkBoxSingleBed.Location = new System.Drawing.Point(4, 41);
+            this.checkBoxSingleBed.Name = "checkBoxSingleBed";
+            this.checkBoxSingleBed.Size = new System.Drawing.Size(77, 24);
+            this.checkBoxSingleBed.TabIndex = 23;
+            this.checkBoxSingleBed.Text = "Single";
+            this.checkBoxSingleBed.UseVisualStyleBackColor = true;
+            this.checkBoxSingleBed.CheckedChanged += new System.EventHandler(this.checkBoxSingleBed_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxFamilyRoom
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(4, 125);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 24);
-            this.checkBox2.TabIndex = 27;
-            this.checkBox2.Text = "Family";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxFamilyRoom.AutoSize = true;
+            this.checkBoxFamilyRoom.Location = new System.Drawing.Point(4, 125);
+            this.checkBoxFamilyRoom.Name = "checkBoxFamilyRoom";
+            this.checkBoxFamilyRoom.Size = new System.Drawing.Size(80, 24);
+            this.checkBoxFamilyRoom.TabIndex = 27;
+            this.checkBoxFamilyRoom.Text = "Family";
+            this.checkBoxFamilyRoom.UseVisualStyleBackColor = true;
+            this.checkBoxFamilyRoom.CheckedChanged += new System.EventHandler(this.checkBoxFamilyRoom_CheckedChanged);
             // 
-            // checkBox3
+            // checkBoxSingleRKingBed
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(4, 79);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(77, 24);
-            this.checkBox3.TabIndex = 29;
-            this.checkBox3.Text = "Single";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxSingleRKingBed.AutoSize = true;
+            this.checkBoxSingleRKingBed.Location = new System.Drawing.Point(4, 79);
+            this.checkBoxSingleRKingBed.Name = "checkBoxSingleRKingBed";
+            this.checkBoxSingleRKingBed.Size = new System.Drawing.Size(77, 24);
+            this.checkBoxSingleRKingBed.TabIndex = 29;
+            this.checkBoxSingleRKingBed.Text = "Single";
+            this.checkBoxSingleRKingBed.UseVisualStyleBackColor = true;
+            this.checkBoxSingleRKingBed.CheckedChanged += new System.EventHandler(this.checkBoxSingleRKingBed_CheckedChanged);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            //this.label15.Location = new System.Drawing.Point(506, 1);
-            this.label15.Location = new System.Drawing.Point(500, 1);
+            this.label15.Location = new System.Drawing.Point(496, 1);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 20);
             this.label15.TabIndex = 1;
             this.label15.Text = "Quantity";
             // 
-            // numericUpDown2
+            // numericUpDownSingleBed
             // 
-            //this.numericUpDown2.Location = new System.Drawing.Point(506, 41);
-            this.numericUpDown2.Location = new System.Drawing.Point(500, 41);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numericUpDownSingleBed.Location = new System.Drawing.Point(496, 41);
+            this.numericUpDownSingleBed.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.numericUpDownSingleBed.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 27);
-            this.numericUpDown2.TabIndex = 26;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numericUpDownSingleBed.Name = "numericUpDownSingleBed";
+            this.numericUpDownSingleBed.Size = new System.Drawing.Size(120, 27);
+            this.numericUpDownSingleBed.TabIndex = 26;
+            this.numericUpDownSingleBed.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Visible = false;
+            this.numericUpDownSingleBed.Visible = false;
             // 
-            // numericUpDown4
+            // numericUpDownSingleRKingBed
             // 
-            //this.numericUpDown4.Location = new System.Drawing.Point(506, 79);
-            this.numericUpDown4.Location = new System.Drawing.Point(500, 79);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(496, 79);
+            this.numericUpDownSingleRKingBed.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
+            this.numericUpDownSingleRKingBed.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 27);
-            this.numericUpDown4.TabIndex = 30;
-            this.numericUpDown4.Value = new decimal(new int[] {
+            this.numericUpDownSingleRKingBed.Name = "numericUpDownSingleRKingBed";
+            this.numericUpDownSingleRKingBed.Size = new System.Drawing.Size(120, 27);
+            this.numericUpDownSingleRKingBed.TabIndex = 30;
+            this.numericUpDownSingleRKingBed.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown4.Visible = false;
+            this.numericUpDownSingleRKingBed.Visible = false;
             // 
-            // numericUpDown3
+            // numericUpDownFamilyRoom
             // 
-            //this.numericUpDown3.Location = new System.Drawing.Point(506, 125);
-            this.numericUpDown3.Location = new System.Drawing.Point(500, 125);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(496, 125);
+            this.numericUpDownFamilyRoom.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
+            this.numericUpDownFamilyRoom.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 27);
-            this.numericUpDown3.TabIndex = 28;
-            this.numericUpDown3.Value = new decimal(new int[] {
+            this.numericUpDownFamilyRoom.Name = "numericUpDownFamilyRoom";
+            this.numericUpDownFamilyRoom.Size = new System.Drawing.Size(120, 27);
+            this.numericUpDownFamilyRoom.TabIndex = 28;
+            this.numericUpDownFamilyRoom.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown3.Visible = false;
+            this.numericUpDownFamilyRoom.Visible = false;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-//            this.label16.Location = new System.Drawing.Point(244, 1);
-            this.label16.Location = new System.Drawing.Point(241, 1);
+            this.label16.Location = new System.Drawing.Point(239, 1);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(99, 20);
             this.label16.TabIndex = 31;
@@ -672,8 +669,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            //this.label17.Location = new System.Drawing.Point(244, 38);
-            this.label17.Location = new System.Drawing.Point(241, 38);
+            this.label17.Location = new System.Drawing.Point(239, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(117, 20);
             this.label17.TabIndex = 32;
@@ -682,8 +678,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            //this.label18.Location = new System.Drawing.Point(244, 76);
-            this.label18.Location = new System.Drawing.Point(241, 76);
+            this.label18.Location = new System.Drawing.Point(239, 76);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(104, 20);
             this.label18.TabIndex = 33;
@@ -692,8 +687,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(244, 122);
-            //this.label19.Location = new System.Drawing.Point(241, 122);
+            this.label19.Location = new System.Drawing.Point(239, 122);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(104, 20);
             this.label19.TabIndex = 34;
@@ -924,9 +918,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSingleBed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSingleRKingBed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFamilyRoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNumPax)).EndInit();
             this.ResumeLayout(false);
 
@@ -939,13 +933,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBoxSingleBed;
+        private System.Windows.Forms.CheckBox checkBoxFamilyRoom;
+        private System.Windows.Forms.CheckBox checkBoxSingleRKingBed;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDownSingleBed;
+        private System.Windows.Forms.NumericUpDown numericUpDownSingleRKingBed;
+        private System.Windows.Forms.NumericUpDown numericUpDownFamilyRoom;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
