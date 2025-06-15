@@ -10,3 +10,6 @@ obj/
 # Others
 *.log
 *.tmp
+"/TravelXpress_Package_System/bin/" 
+"/TravelXpress_Package_System/obj/" 
+"/TravelXpress_Package_System/.vs/" 

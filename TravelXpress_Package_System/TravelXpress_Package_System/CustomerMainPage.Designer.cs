@@ -53,12 +53,12 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(555, 570);
+            this.button3.Location = new System.Drawing.Point(574, 570);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(140, 46);
             this.button3.TabIndex = 12;
-            this.button3.Text = "button3";
+            this.button3.Text = "Book";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -76,7 +76,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(927, 570);
+            this.button2.Location = new System.Drawing.Point(953, 570);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 46);
@@ -108,7 +108,7 @@
             // buttonTicket
             // 
             this.buttonTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTicket.Location = new System.Drawing.Point(163, 570);
+            this.buttonTicket.Location = new System.Drawing.Point(185, 570);
             this.buttonTicket.Margin = new System.Windows.Forms.Padding(4);
             this.buttonTicket.Name = "buttonTicket";
             this.buttonTicket.Size = new System.Drawing.Size(147, 46);
