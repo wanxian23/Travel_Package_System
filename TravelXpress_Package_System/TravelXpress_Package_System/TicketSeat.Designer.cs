@@ -166,21 +166,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(243, 183);
+            this.textBox1.Location = new System.Drawing.Point(288, 183);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(413, 34);
+            this.textBox1.Size = new System.Drawing.Size(368, 34);
             this.textBox1.TabIndex = 29;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 183);
+            this.label3.Location = new System.Drawing.Point(46, 183);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 29);
+            this.label3.Size = new System.Drawing.Size(217, 29);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Seats Book";
+            this.label3.Text = "Seats (Ex: 1, 3, 4)";
             // 
             // clearBt
             // 
@@ -193,9 +193,9 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(243, 107);
+            this.numericUpDown1.Location = new System.Drawing.Point(288, 107);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(413, 34);
+            this.numericUpDown1.Size = new System.Drawing.Size(368, 34);
             this.numericUpDown1.TabIndex = 27;
             // 
             // panel2
@@ -234,7 +234,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 109);
+            this.label2.Location = new System.Drawing.Point(89, 107);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 29);
