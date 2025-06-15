@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBoxCustomerFamilyDetails = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -48,6 +51,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -74,16 +78,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.backBt = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBoxCustomerFamilyDetails.SuspendLayout();
             this.groupBoxGender.SuspendLayout();
             this.panel2.SuspendLayout();
             this.ticket1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,6 +111,38 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(815, 416);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(286, 64);
+            this.groupBox1.TabIndex = 81;
+            this.groupBox1.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(142, 23);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(116, 33);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Female";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(16, 23);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(87, 33);
+            this.radioButton2.TabIndex = 0;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Male";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(870, 827);
@@ -132,7 +164,7 @@
             this.groupBoxCustomerFamilyDetails.Controls.Add(this.buttonPrevious);
             this.groupBoxCustomerFamilyDetails.Controls.Add(this.label24);
             this.groupBoxCustomerFamilyDetails.Controls.Add(this.buttonNextPerson);
-            this.groupBoxCustomerFamilyDetails.Location = new System.Drawing.Point(74, 579);
+            this.groupBoxCustomerFamilyDetails.Location = new System.Drawing.Point(62, 576);
             this.groupBoxCustomerFamilyDetails.Name = "groupBoxCustomerFamilyDetails";
             this.groupBoxCustomerFamilyDetails.Size = new System.Drawing.Size(1104, 231);
             this.groupBoxCustomerFamilyDetails.TabIndex = 79;
@@ -290,6 +322,13 @@
             this.label20.Size = new System.Drawing.Size(94, 29);
             this.label20.TabIndex = 51;
             this.label20.Text = "Contact";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(815, 508);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(351, 34);
+            this.textBox7.TabIndex = 54;
             // 
             // textBox8
             // 
@@ -581,45 +620,6 @@
             this.backBt.UseVisualStyleBackColor = true;
             this.backBt.Click += new System.EventHandler(this.backBt_Click);
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(815, 508);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(351, 34);
-            this.textBox7.TabIndex = 54;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(815, 416);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(286, 64);
-            this.groupBox1.TabIndex = 81;
-            this.groupBox1.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(142, 23);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(116, 33);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Female";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(16, 23);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(87, 33);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Male";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // TicketCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -632,14 +632,14 @@
             this.Text = "TicketCheckout";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBoxCustomerFamilyDetails.ResumeLayout(false);
             this.groupBoxCustomerFamilyDetails.PerformLayout();
             this.groupBoxGender.ResumeLayout(false);
             this.groupBoxGender.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ticket1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
