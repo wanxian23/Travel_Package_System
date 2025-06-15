@@ -22,7 +22,6 @@ namespace TravelXpress_Package_System
             groupBoxCustomerFamilyDetails.Hide();
 
 <<<<<<< HEAD
-            groupBoxCustomerFamilyDetails.Text = "Details for customer 2: ";
 =======
             groupBoxCustomerFamilyDetails.Text = "Details for customer member 1: ";
 
