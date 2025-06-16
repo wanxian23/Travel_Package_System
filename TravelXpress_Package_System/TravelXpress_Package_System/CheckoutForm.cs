@@ -21,12 +21,10 @@ namespace TravelXpress_Package_System
 
             groupBoxCustomerFamilyDetails.Hide();
 
-<<<<<<< HEAD
-=======
             groupBoxCustomerFamilyDetails.Text = "Details for customer member 1: ";
 
             string connection = "";
->>>>>>> 66dbf8f (Complete Checkout page customer member details logic)
+
         }
 
         public class CustomerMemberDetails
