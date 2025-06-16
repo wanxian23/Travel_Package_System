@@ -48,10 +48,8 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.busFromTb = new System.Windows.Forms.TextBox();
+            this.busFromLb = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.ticket1 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
@@ -70,12 +68,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.backBt = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.departTb = new System.Windows.Forms.TextBox();
+            this.departDateLb = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.busToLb = new System.Windows.Forms.Label();
+            this.busToTb = new System.Windows.Forms.TextBox();
+            this.returnDateLb = new System.Windows.Forms.Label();
+            this.returnTb = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.ticket2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -91,11 +91,11 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.ticket1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.returnTb);
+            this.panel1.Controls.Add(this.returnDateLb);
             this.panel1.Controls.Add(this.backBt);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.departTb);
+            this.panel1.Controls.Add(this.departDateLb);
             this.panel1.Location = new System.Drawing.Point(15, 14);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.panel1.Name = "panel1";
@@ -304,62 +304,38 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.busFromTb);
+            this.panel2.Controls.Add(this.busFromLb);
+            this.panel2.Controls.Add(this.busToTb);
+            this.panel2.Controls.Add(this.busToLb);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1200, 80);
             this.panel2.TabIndex = 25;
             // 
-            // textBox2
+            // busFromTb
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(189, 22);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(422, 39);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Text = "Kuala Lumpur";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.busFromTb.BackColor = System.Drawing.Color.Silver;
+            this.busFromTb.Location = new System.Drawing.Point(189, 22);
+            this.busFromTb.Multiline = true;
+            this.busFromTb.Name = "busFromTb";
+            this.busFromTb.ReadOnly = true;
+            this.busFromTb.Size = new System.Drawing.Size(422, 39);
+            this.busFromTb.TabIndex = 21;
+            this.busFromTb.Text = "Kuala Lumpur";
+            this.busFromTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // busFromLb
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(81, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 43);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Depart:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(697, 22);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(422, 39);
-            this.textBox3.TabIndex = 22;
-            this.textBox3.Text = "Kedah";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(606, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 43);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "To";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.busFromLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busFromLb.ForeColor = System.Drawing.Color.White;
+            this.busFromLb.Location = new System.Drawing.Point(81, 18);
+            this.busFromLb.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.busFromLb.Name = "busFromLb";
+            this.busFromLb.Size = new System.Drawing.Size(99, 43);
+            this.busFromLb.TabIndex = 19;
+            this.busFromLb.Text = "Depart:";
+            this.busFromLb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17
             // 
@@ -571,27 +547,6 @@
             this.label5.Text = "07：00 AM";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(823, 112);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(240, 39);
-            this.textBox4.TabIndex = 24;
-            this.textBox4.Text = "12 April 2025";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(644, 108);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 43);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Return Date";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // backBt
             // 
             this.backBt.Location = new System.Drawing.Point(1017, 199);
@@ -602,26 +557,71 @@
             this.backBt.UseVisualStyleBackColor = true;
             this.backBt.Click += new System.EventHandler(this.backBt_Click);
             // 
-            // textBox1
+            // departTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(300, 108);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(240, 39);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "12 April 2025";
+            this.departTb.Location = new System.Drawing.Point(300, 108);
+            this.departTb.Multiline = true;
+            this.departTb.Name = "departTb";
+            this.departTb.ReadOnly = true;
+            this.departTb.Size = new System.Drawing.Size(240, 39);
+            this.departTb.TabIndex = 18;
+            this.departTb.Text = "12 April 2025";
             // 
-            // label2
+            // departDateLb
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(121, 104);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 43);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Depart Date";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.departDateLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.departDateLb.Location = new System.Drawing.Point(121, 104);
+            this.departDateLb.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.departDateLb.Name = "departDateLb";
+            this.departDateLb.Size = new System.Drawing.Size(177, 43);
+            this.departDateLb.TabIndex = 17;
+            this.departDateLb.Text = "Depart Date";
+            this.departDateLb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // busToLb
+            // 
+            this.busToLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.busToLb.ForeColor = System.Drawing.Color.White;
+            this.busToLb.Location = new System.Drawing.Point(606, 18);
+            this.busToLb.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.busToLb.Name = "busToLb";
+            this.busToLb.Size = new System.Drawing.Size(92, 43);
+            this.busToLb.TabIndex = 20;
+            this.busToLb.Text = "To";
+            this.busToLb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // busToTb
+            // 
+            this.busToTb.BackColor = System.Drawing.Color.Silver;
+            this.busToTb.Location = new System.Drawing.Point(697, 22);
+            this.busToTb.Multiline = true;
+            this.busToTb.Name = "busToTb";
+            this.busToTb.ReadOnly = true;
+            this.busToTb.Size = new System.Drawing.Size(422, 39);
+            this.busToTb.TabIndex = 22;
+            this.busToTb.Text = "Kedah";
+            this.busToTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // returnDateLb
+            // 
+            this.returnDateLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnDateLb.Location = new System.Drawing.Point(644, 108);
+            this.returnDateLb.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.returnDateLb.Name = "returnDateLb";
+            this.returnDateLb.Size = new System.Drawing.Size(177, 43);
+            this.returnDateLb.TabIndex = 23;
+            this.returnDateLb.Text = "Return Date";
+            this.returnDateLb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // returnTb
+            // 
+            this.returnTb.Location = new System.Drawing.Point(823, 112);
+            this.returnTb.Multiline = true;
+            this.returnTb.Name = "returnTb";
+            this.returnTb.ReadOnly = true;
+            this.returnTb.Size = new System.Drawing.Size(240, 39);
+            this.returnTb.TabIndex = 24;
+            this.returnTb.Text = "12 April 2025";
             // 
             // TicketForm
             // 
@@ -632,7 +632,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TicketForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ticket Form";
+            this.Load += new System.EventHandler(this.TicketForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ticket2.ResumeLayout(false);
@@ -649,14 +651,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button backBt;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label departDateLb;
+        private System.Windows.Forms.TextBox departTb;
+        private System.Windows.Forms.Label busFromLb;
+        private System.Windows.Forms.TextBox busFromTb;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel ticket1;
         private System.Windows.Forms.Label label5;
@@ -694,5 +692,9 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox busToTb;
+        private System.Windows.Forms.Label busToLb;
+        private System.Windows.Forms.TextBox returnTb;
+        private System.Windows.Forms.Label returnDateLb;
     }
 }

@@ -12,7 +12,8 @@ namespace TravelXpress_Package_System
 {
     public partial class TicketCheckout : Form
     {
-        public TicketCheckout()
+        TemporaryDataStore previousDateStore;
+        public TicketCheckout(TemporaryDataStore previousDateStore)
         {
             InitializeComponent();
         }
@@ -29,7 +30,7 @@ namespace TravelXpress_Package_System
 
         private void backBt_Click(object sender, EventArgs e)
         {
-            TicketSeat ticketSeat = new TicketSeat();
+            TicketSeat ticketSeat = new TicketSeat(previousDateStore);
             this.Hide();
             ticketSeat.ShowDialog();
         }

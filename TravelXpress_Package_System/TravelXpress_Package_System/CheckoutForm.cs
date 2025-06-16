@@ -20,17 +20,11 @@ namespace TravelXpress_Package_System
             this.packagetype = packagetype;
 
             groupBoxCustomerFamilyDetails.Hide();
-<<<<<<< HEAD
 
             groupBoxCustomerFamilyDetails.Text = "Details for customer member 1: ";
 
             string connection = "";
 
-=======
-            groupBoxCustomerFamilyDetails.Text = "Details for customer member 1: ";
-
-            string connection = "";
->>>>>>> 2929178d82c3cc53231246972dd66881cf2b583a
         }
 
         public class CustomerMemberDetails

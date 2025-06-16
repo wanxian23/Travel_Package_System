@@ -161,6 +161,11 @@
     <Compile Include="TourPackageForm.Designer.cs">
       <DependentUpon>TourPackageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TravelXpressDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravelXpressDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminAccomodationPage.resx">
       <DependentUpon>AdminAccomodationPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +232,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TravelXpressDataSet.xsc">
+      <DependentUpon>TravelXpressDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TravelXpressDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TravelXpressDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TravelXpressDataSet.xss">
+      <DependentUpon>TravelXpressDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
