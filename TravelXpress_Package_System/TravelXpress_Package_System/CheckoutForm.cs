@@ -20,11 +20,17 @@ namespace TravelXpress_Package_System
             this.packagetype = packagetype;
 
             groupBoxCustomerFamilyDetails.Hide();
+<<<<<<< HEAD
 
             groupBoxCustomerFamilyDetails.Text = "Details for customer member 1: ";
 
             string connection = "";
 
+=======
+            groupBoxCustomerFamilyDetails.Text = "Details for customer member 1: ";
+
+            string connection = "";
+>>>>>>> 2929178d82c3cc53231246972dd66881cf2b583a
         }
 
         public class CustomerMemberDetails
@@ -85,13 +91,12 @@ namespace TravelXpress_Package_System
             if (customerMemberPax == 1)
             {
                 buttonNextPerson.Enabled = false;
-                buttonPrevious.Enabled = false;
             }
             else
             {
                 buttonNextPerson.Enabled = true;
-                buttonPrevious.Enabled = true;
             }
+            buttonPrevious.Enabled = false;
         }
 
         private void buttonMemberPaxEdit_Click(object sender, EventArgs e)
@@ -107,33 +112,21 @@ namespace TravelXpress_Package_System
             }
             else
             {
-                var validNextID = "";
-                if (memberDetails.Any())
+                if (memberDetails.Count + 1 == currentCustomerMemberNo)
                 {
-                    var lastMemberindex = memberDetails.Count - 1;
-                    var lastMemberid = memberDetails[lastMemberindex].ID.Substring(1);
-                    int nextid = int.Parse(lastMemberid) + 1;
-                    validNextID = "C" + nextid.ToString("D4");
+                    addNewMemberDetails();
+                    clearMemberDetails();
                 }
                 else
                 {
-                    validNextID = "C0001";
+                    editCurrentMemberDetails();
                 }
-                memberDetails.Add(new CustomerMemberDetails
-                {
-                    ID = validNextID,
-                    Name = textBoxCustomerMemberName.Text,
-                    IC = textBoxCustomerMemberIC.Text,
-                    PhoneNO = textBoxCustomerMemberPhone.Text,
-                    Gender = radioButtonMale.Checked ? "Male" : "Female"
-                });
-                textBoxCustomerMemberName.Text = "";
-                textBoxCustomerMemberIC.Text = "";
-                textBoxCustomerMemberPhone.Text = "";
-                radioButtonMale.Checked = false;
-                radioButtonFemale.Checked = false;
                 currentCustomerMemberNo++;
                 groupBoxCustomerFamilyDetails.Text = $"Details for customer member {currentCustomerMemberNo}: ";
+                if (memberDetails.Count >= currentCustomerMemberNo)
+                {
+                    showCurrentMemberDetails();
+                }
                 buttonPrevious.Enabled = true;
 
                 if (currentCustomerMemberNo == customerMemberPax)
@@ -143,17 +136,42 @@ namespace TravelXpress_Package_System
             }
         }
 
-
-        private void buttonPrevious_Click(object sender, EventArgs e)
+        void addNewMemberDetails()
         {
-            currentCustomerMemberNo--;
-            groupBoxCustomerFamilyDetails.Text = $"Details for customer member {currentCustomerMemberNo}: ";
-            buttonNextPerson.Enabled = true;
-
-            if (currentCustomerMemberNo == 1)
+            var validNextID = "";
+            if (memberDetails.Any())
             {
-                buttonPrevious.Enabled = false;
+                var lastMemberindex = memberDetails.Count - 1;
+                var lastMemberid = memberDetails[lastMemberindex].ID.Substring(1);
+                int nextid = int.Parse(lastMemberid) + 1;
+                validNextID = "C" + nextid.ToString("D4");
             }
+            else
+            {
+                validNextID = "C0001";
+            }
+            memberDetails.Add(new CustomerMemberDetails
+            {
+                ID = validNextID,
+                Name = textBoxCustomerMemberName.Text,
+                IC = textBoxCustomerMemberIC.Text,
+                PhoneNO = textBoxCustomerMemberPhone.Text,
+                Gender = radioButtonMale.Checked ? "Male" : "Female"
+            });
+            
+        }
+        
+        void clearMemberDetails()
+        {
+            textBoxCustomerMemberName.Text = "";
+            textBoxCustomerMemberIC.Text = "";
+            textBoxCustomerMemberPhone.Text = "";
+            radioButtonMale.Checked = false;
+            radioButtonFemale.Checked = false;
+        }
+
+        void showCurrentMemberDetails()
+        {
             textBoxCustomerMemberName.Text = memberDetails[currentCustomerMemberNo - 1].Name;
             textBoxCustomerMemberIC.Text = memberDetails[currentCustomerMemberNo - 1].IC;
             textBoxCustomerMemberPhone.Text = memberDetails[currentCustomerMemberNo - 1].PhoneNO;
@@ -165,6 +183,36 @@ namespace TravelXpress_Package_System
             {
                 radioButtonFemale.Checked = true;
             }
+        }
+
+        void editCurrentMemberDetails()
+        {
+            memberDetails[currentCustomerMemberNo - 1].Name = textBoxCustomerMemberName.Text;
+            memberDetails[currentCustomerMemberNo - 1].IC = textBoxCustomerMemberIC.Text;
+            memberDetails[currentCustomerMemberNo - 1].PhoneNO = textBoxCustomerMemberPhone.Text;
+            memberDetails[currentCustomerMemberNo - 1].Gender = radioButtonMale.Checked ? "Male" : "Female";
+        }
+
+
+        private void buttonPrevious_Click(object sender, EventArgs e)
+        {
+            if (currentCustomerMemberNo > memberDetails.Count)
+            {
+                addNewMemberDetails();
+            }
+            else
+            {
+                editCurrentMemberDetails();
+            }
+            currentCustomerMemberNo--;
+            groupBoxCustomerFamilyDetails.Text = $"Details for customer member {currentCustomerMemberNo}: ";
+            buttonNextPerson.Enabled = true;
+
+            if (currentCustomerMemberNo == 1)
+            {
+                buttonPrevious.Enabled = false;
+            }
+            showCurrentMemberDetails();
         }
 
         private void buttonConfirmCustomerMemberDetails_Click(object sender, EventArgs e)
@@ -179,8 +227,15 @@ namespace TravelXpress_Package_System
             }
             else
             {
+                if (currentCustomerMemberNo > memberDetails.Count)
+                {
+                    addNewMemberDetails();
+                }
+                else
+                {
+                    editCurrentMemberDetails();
+                }
                 groupBoxCustomerFamilyDetails.Enabled = false;
-
             }
         }
 
@@ -203,11 +258,6 @@ namespace TravelXpress_Package_System
                 return false;
             }
             return true;
-        }
-        private void buttonCheckOut_Click(object sender, EventArgs e)
-        {
-            ChekourPaymentForm form = new ChekourPaymentForm();
-            form.ShowDialog();
         }
 
         private void buttonEditCustomerMemberDetails_Click(object sender, EventArgs e)
@@ -252,6 +302,58 @@ namespace TravelXpress_Package_System
                 }
                 panel1.ScrollControlIntoView(buttonCheckOut);
             }
+        }
+
+        private void checkBoxSingleBed_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSingleBed.Checked)
+            {
+                numericUpDownSingleBed.Visible = true;
+            }
+        }
+
+        private void checkBoxSingleRKingBed_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxSingleRKingBed.Checked)
+            {
+                numericUpDownSingleRKingBed.Visible = true;
+            }
+        }
+
+        private void checkBoxFamilyRoom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxFamilyRoom.Checked)
+            {
+                numericUpDownFamilyRoom.Visible = true;
+            }
+        }
+        private void buttonCheckOut_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(memberDetails.Count);
+            int numPeople = checkRoomPax();
+            if (numPeople != 0)
+            {
+                MessageBox.Show($"Not enough room booked! You are short by {numPeople}. \nPlease add more room to accomodate all {customerMemberPax + 1} people");
+            }
+            else
+            {
+                ChekourPaymentForm form = new ChekourPaymentForm();
+                form.ShowDialog();
+            }
+        }
+        int checkRoomPax()
+        {
+            int singleBed = (int)numericUpDownSingleBed.Value;
+            int singleRKingBed = (int)numericUpDownSingleRKingBed.Value * 2;
+            int familyRoom = (int)numericUpDownFamilyRoom.Value * 4;
+
+            int estimatedRoomPax = singleBed + singleRKingBed + familyRoom;
+
+            if (estimatedRoomPax < (customerMemberPax + 1))
+            {
+                return (((int)customerMemberPax + 1) - estimatedRoomPax);
+            }
+            return 0;
         }
     }
 }
