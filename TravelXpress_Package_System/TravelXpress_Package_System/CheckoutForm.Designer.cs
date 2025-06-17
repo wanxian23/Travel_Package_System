@@ -514,7 +514,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.72727F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.27273F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxSingleBed, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxFamilyRoom, 0, 3);
@@ -582,7 +582,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(496, 1);
+            this.label15.Location = new System.Drawing.Point(494, 1);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 20);
             this.label15.TabIndex = 1;
@@ -590,7 +590,7 @@
             // 
             // numericUpDownSingleBed
             // 
-            this.numericUpDownSingleBed.Location = new System.Drawing.Point(496, 41);
+            this.numericUpDownSingleBed.Location = new System.Drawing.Point(494, 41);
             this.numericUpDownSingleBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -613,7 +613,7 @@
             // 
             // numericUpDownSingleRKingBed
             // 
-            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(496, 79);
+            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(494, 79);
             this.numericUpDownSingleRKingBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -636,7 +636,7 @@
             // 
             // numericUpDownFamilyRoom
             // 
-            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(496, 125);
+            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(494, 125);
             this.numericUpDownFamilyRoom.Maximum = new decimal(new int[] {
             10,
             0,
@@ -660,7 +660,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(239, 1);
+            this.label16.Location = new System.Drawing.Point(238, 1);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(99, 20);
             this.label16.TabIndex = 31;
@@ -669,7 +669,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(239, 38);
+            this.label17.Location = new System.Drawing.Point(238, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(117, 20);
             this.label17.TabIndex = 32;
@@ -678,7 +678,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(239, 76);
+            this.label18.Location = new System.Drawing.Point(238, 76);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(104, 20);
             this.label18.TabIndex = 33;
@@ -687,7 +687,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(239, 122);
+            this.label19.Location = new System.Drawing.Point(238, 122);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(104, 20);
             this.label19.TabIndex = 34;
@@ -816,6 +816,11 @@
             // numericUpDownNumPax
             // 
             this.numericUpDownNumPax.Location = new System.Drawing.Point(409, 797);
+            this.numericUpDownNumPax.Maximum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
             this.numericUpDownNumPax.Minimum = new decimal(new int[] {
             1,
             0,

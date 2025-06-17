@@ -16,13 +16,22 @@ namespace TravelXpress_Package_System
         private SqlConnection connection;
         private SqlDataAdapter dataAdapter;
         private DataSet dataSet;
-        public TicketBookingForm()
+
+        SeatDetail seatDetail = new SeatDetail();
+        public TicketBookingForm(SeatDetail seatDetail)
         {
             InitializeComponent();
 
             string DBConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=G:\\My Drive\\School_Stuff\\UTeM_Doc\\Sem\\Year2\\Sem2\\Event-Driven Programming\\Lab\\Project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf";
             connection = new SqlConnection(DBConnection);
+            this.seatDetail = seatDetail;
         }
+
+        public string busFrom { get { return busFromTb.Text; } set { busFromTb.Text = value; } }
+        public string busTo { get { return busToTb.Text; } set { busToTb.Text = value; } }
+        public DateTime busDepartDate { get { return departureDate.Value.Date; } set { departureDate.Value = value; } }
+        public DateTime busReturnDate { get { return returnDate.Value.Date; } set { returnDate.Value = value; } }
+
         private void backBt_Click(object sender, EventArgs e)
         {
             CustomerMainPage customerMainPage = new CustomerMainPage();
@@ -32,7 +41,7 @@ namespace TravelXpress_Package_System
 
         private void searchBt_Click(object sender, EventArgs e)
         {
-            TemporaryDataStore dataStore = new TemporaryDataStore();
+            TemporaryBusDetailsStore dataStore = new TemporaryBusDetailsStore();
 
             dataStore.departDate = departureDate.Value.Date;
             dataStore.reDate = returnDate.Value.Date;
@@ -45,17 +54,28 @@ namespace TravelXpress_Package_System
                 MessageBox.Show("'Bus From' Textbox Cannot be Null!", "NULL WARNING");
                 return;
             }
-            
+
+            if (dataStore.departDate <= DateTime.Now.Date)
+            {
+                MessageBox.Show("Departure Date Cannot Smaller Than or Same As Today!", "DATE INPUT ERROR");
+                return;
+            }
+
             if (returnDate.Enabled == true)
             {
                 if (dataStore.reDate <= dataStore.departDate)
                 {
-                    MessageBox.Show("Return Date Cannot Smaller Than Departure Date!", "DATE INPUT ERROR");
+                    MessageBox.Show("Return Date Cannot Smaller Than or Same As Departure Date!", "DATE INPUT ERROR");
+                    return;
+                }
+                else if (dataStore.reDate < DateTime.Now.Date)
+                {
+                    MessageBox.Show("Return Date Cannot Smaller Than or Same As Today!", "DATE INPUT ERROR");
                     return;
                 }
             }
 
-            TicketForm ticketForm = new TicketForm(dataStore);
+            TicketForm ticketForm = new TicketForm(dataStore, seatDetail);
             this.Hide();
             ticketForm.ShowDialog();
         }
@@ -63,36 +83,6 @@ namespace TravelXpress_Package_System
         private void TicketBookingForm_Load(object sender, EventArgs e)
         {
             this.busDetailsTableAdapter.Fill(this.travelXpressDataSet.BusDetails);
-
-            // Delay hiding until UI is ready
-            this.BeginInvoke((MethodInvoker)delegate {
-                HideUnwantedColumns();
-            });
-        }
-
-
-        private void HideUnwantedColumns()
-        {
-            // Now it's safe to hide columns
-            if (busDetailsDataGridView.Columns.Contains("BusID"))
-                busDetailsDataGridView.Columns["BusID"].Visible = false;
-
-            if (busDetailsDataGridView.Columns.Contains("BusPlateNum"))
-                busDetailsDataGridView.Columns["BusPlateNum"].Visible = false;
-
-            if (busDetailsDataGridView.Columns.Contains("BusUpload"))
-                busDetailsDataGridView.Columns["BusUpload"].Visible = false;
-
-            if (busDetailsDataGridView.Columns.Contains("SeatUpload"))
-                busDetailsDataGridView.Columns["SeatUpload"].Visible = false;
-        }
-
-        private void busDetailsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.busDetailsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.travelXpressDataSet);
-
         }
 
         private void clearBt_Click(object sender, EventArgs e)
@@ -126,11 +116,11 @@ namespace TravelXpress_Package_System
         }
     }
 
-    public class TemporaryDataStore : Form
+    public class TemporaryBusDetailsStore : Form
     {
-        public string busFrom;
-        public string busTo;
-        public DateTime departDate;
-        public DateTime reDate;
+        public string busFrom { get; set; }
+        public string busTo { get; set; }
+        public DateTime departDate { get; set; }
+        public DateTime reDate { get; set; }
     }
 }

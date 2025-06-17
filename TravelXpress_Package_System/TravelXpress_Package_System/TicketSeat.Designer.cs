@@ -33,36 +33,38 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.totalFeesLb = new System.Windows.Forms.Label();
+            this.numSeatLb = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.nextBt = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.seatsTb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.clearBt = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numSeatTb = new System.Windows.Forms.NumericUpDown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.backBt = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.confirmBt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSeatTb)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.confirmBt);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.seatsTb);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.clearBt);
-            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.numSeatTb);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.backBt);
             this.panel1.Controls.Add(this.label2);
@@ -94,8 +96,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.totalFeesLb);
+            this.panel3.Controls.Add(this.numSeatLb);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.nextBt);
@@ -103,32 +105,33 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(701, 117);
             this.panel3.TabIndex = 27;
-            this.panel3.Visible = false;
             // 
-            // label7
+            // totalFeesLb
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(140, 50);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 51);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "21";
+            this.totalFeesLb.AutoSize = true;
+            this.totalFeesLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalFeesLb.ForeColor = System.Drawing.Color.White;
+            this.totalFeesLb.Location = new System.Drawing.Point(140, 50);
+            this.totalFeesLb.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.totalFeesLb.Name = "totalFeesLb";
+            this.totalFeesLb.Size = new System.Drawing.Size(72, 51);
+            this.totalFeesLb.TabIndex = 33;
+            this.totalFeesLb.Text = "__";
+            this.totalFeesLb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // numSeatLb
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(116, 21);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(27, 29);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "3";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.numSeatLb.AutoSize = true;
+            this.numSeatLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSeatLb.ForeColor = System.Drawing.Color.White;
+            this.numSeatLb.Location = new System.Drawing.Point(116, 21);
+            this.numSeatLb.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.numSeatLb.Name = "numSeatLb";
+            this.numSeatLb.Size = new System.Drawing.Size(41, 29);
+            this.numSeatLb.TabIndex = 32;
+            this.numSeatLb.Text = "__";
+            this.numSeatLb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.numSeatLb.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -162,14 +165,15 @@
             this.nextBt.TabIndex = 1;
             this.nextBt.Text = "Next";
             this.nextBt.UseVisualStyleBackColor = true;
+            this.nextBt.Visible = false;
             this.nextBt.Click += new System.EventHandler(this.nextBt_Click);
             // 
-            // textBox1
+            // seatsTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(288, 183);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(368, 34);
-            this.textBox1.TabIndex = 29;
+            this.seatsTb.Location = new System.Drawing.Point(288, 183);
+            this.seatsTb.Name = "seatsTb";
+            this.seatsTb.Size = new System.Drawing.Size(368, 34);
+            this.seatsTb.TabIndex = 29;
             // 
             // label3
             // 
@@ -184,19 +188,21 @@
             // 
             // clearBt
             // 
-            this.clearBt.Location = new System.Drawing.Point(528, 247);
+            this.clearBt.Location = new System.Drawing.Point(379, 247);
             this.clearBt.Name = "clearBt";
             this.clearBt.Size = new System.Drawing.Size(128, 43);
             this.clearBt.TabIndex = 10;
             this.clearBt.Text = "Clear";
             this.clearBt.UseVisualStyleBackColor = true;
+            this.clearBt.Click += new System.EventHandler(this.clearBt_Click);
             // 
-            // numericUpDown1
+            // numSeatTb
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(288, 107);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(368, 34);
-            this.numericUpDown1.TabIndex = 27;
+            this.numSeatTb.Location = new System.Drawing.Point(288, 107);
+            this.numSeatTb.Name = "numSeatTb";
+            this.numSeatTb.Size = new System.Drawing.Size(368, 34);
+            this.numSeatTb.TabIndex = 27;
+            this.numSeatTb.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // panel2
             // 
@@ -241,6 +247,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Num Of Seats";
             // 
+            // confirmBt
+            // 
+            this.confirmBt.Location = new System.Drawing.Point(528, 247);
+            this.confirmBt.Name = "confirmBt";
+            this.confirmBt.Size = new System.Drawing.Size(128, 43);
+            this.confirmBt.TabIndex = 30;
+            this.confirmBt.Text = "Confirm";
+            this.confirmBt.UseVisualStyleBackColor = true;
+            this.confirmBt.Click += new System.EventHandler(this.confirmBt_Click);
+            // 
             // TicketSeat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -258,7 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSeatTb)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -275,14 +291,15 @@
         private System.Windows.Forms.Button nextBt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox seatsTb;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numSeatTb;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label numSeatLb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label totalFeesLb;
+        private System.Windows.Forms.Button confirmBt;
     }
 }

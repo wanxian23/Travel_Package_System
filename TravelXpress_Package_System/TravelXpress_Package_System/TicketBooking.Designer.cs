@@ -35,14 +35,6 @@
             this.backBt = new System.Windows.Forms.Button();
             this.searchBt = new System.Windows.Forms.Button();
             this.clearBt = new System.Windows.Forms.Button();
-            this.busDetailsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.busDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.travelXpressDataSet = new TravelXpress_Package_System.TravelXpressDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -71,22 +63,27 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.busDetailsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.busDetailsDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.busDetailsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.travelXpressDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDetailsBindingNavigator)).BeginInit();
             this.busDetailsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.busDetailsDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.busDetailsDataGridView1);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.busDetailsDataGridView);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.returnDate);
@@ -100,7 +97,7 @@
             this.panel1.Location = new System.Drawing.Point(15, 14);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1244, 616);
+            this.panel1.Size = new System.Drawing.Size(1262, 670);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -143,83 +140,6 @@
             this.clearBt.UseVisualStyleBackColor = true;
             this.clearBt.Click += new System.EventHandler(this.clearBt_Click);
             // 
-            // busDetailsDataGridView
-            // 
-            this.busDetailsDataGridView.AutoGenerateColumns = false;
-            this.busDetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.busDetailsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.busDetailsDataGridView.DataSource = this.busDetailsBindingSource;
-            this.busDetailsDataGridView.Location = new System.Drawing.Point(31, 100);
-            this.busDetailsDataGridView.Name = "busDetailsDataGridView";
-            this.busDetailsDataGridView.RowHeadersWidth = 51;
-            this.busDetailsDataGridView.RowTemplate.Height = 24;
-            this.busDetailsDataGridView.Size = new System.Drawing.Size(1162, 126);
-            this.busDetailsDataGridView.TabIndex = 26;
-            this.busDetailsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.busDetailsDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "BusID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "BusID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Bus";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Bus";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "BusPlateNum";
-            this.dataGridViewTextBoxColumn3.HeaderText = "BusPlateNum";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "BusType";
-            this.dataGridViewTextBoxColumn4.HeaderText = "BusType";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "TotalSeats";
-            this.dataGridViewTextBoxColumn5.HeaderText = "TotalSeats";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "BusUpload";
-            this.dataGridViewTextBoxColumn6.HeaderText = "BusUpload";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SeatUpload";
-            this.dataGridViewTextBoxColumn7.HeaderText = "SeatUpload";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
             // busDetailsBindingSource
             // 
             this.busDetailsBindingSource.DataMember = "BusDetails";
@@ -236,7 +156,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1221, 70);
+            this.panel2.Size = new System.Drawing.Size(1218, 70);
             this.panel2.TabIndex = 26;
             // 
             // label1
@@ -385,7 +305,7 @@
             this.busDetailsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.busDetailsBindingNavigator.Name = "busDetailsBindingNavigator";
             this.busDetailsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.busDetailsBindingNavigator.Size = new System.Drawing.Size(1259, 27);
+            this.busDetailsBindingNavigator.Size = new System.Drawing.Size(1277, 27);
             this.busDetailsBindingNavigator.TabIndex = 1;
             this.busDetailsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -482,13 +402,61 @@
             this.busDetailsBindingNavigatorSaveItem.Name = "busDetailsBindingNavigatorSaveItem";
             this.busDetailsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.busDetailsBindingNavigatorSaveItem.Text = "Save Data";
-            this.busDetailsBindingNavigatorSaveItem.Click += new System.EventHandler(this.busDetailsBindingNavigatorSaveItem_Click);
+            // 
+            // busDetailsDataGridView1
+            // 
+            this.busDetailsDataGridView1.AutoGenerateColumns = false;
+            this.busDetailsDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.busDetailsDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.busDetailsDataGridView1.DataSource = this.busDetailsBindingSource;
+            this.busDetailsDataGridView1.Location = new System.Drawing.Point(31, 99);
+            this.busDetailsDataGridView1.Name = "busDetailsDataGridView1";
+            this.busDetailsDataGridView1.RowHeadersWidth = 51;
+            this.busDetailsDataGridView1.RowTemplate.Height = 24;
+            this.busDetailsDataGridView1.Size = new System.Drawing.Size(1162, 127);
+            this.busDetailsDataGridView1.TabIndex = 27;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Bus";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Bus";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "BusPlateNum";
+            this.dataGridViewTextBoxColumn7.HeaderText = "BusPlateNum";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "BusType";
+            this.dataGridViewTextBoxColumn8.HeaderText = "BusType";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "TotalSeats";
+            this.dataGridViewTextBoxColumn9.HeaderText = "TotalSeats";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
             // 
             // TicketBookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 630);
+            this.ClientSize = new System.Drawing.Size(1277, 684);
             this.Controls.Add(this.busDetailsBindingNavigator);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -500,7 +468,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.busDetailsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.travelXpressDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -509,6 +476,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.busDetailsBindingNavigator)).EndInit();
             this.busDetailsBindingNavigator.ResumeLayout(false);
             this.busDetailsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.busDetailsDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -548,14 +516,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton busDetailsBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView busDetailsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView busDetailsDataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
     }
 }
