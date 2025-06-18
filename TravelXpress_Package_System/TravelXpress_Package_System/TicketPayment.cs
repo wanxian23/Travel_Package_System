@@ -18,7 +18,11 @@ namespace TravelXpress_Package_System
 
         string basePath = AppDomain.CurrentDomain.BaseDirectory;
 
-        string[] imagePath;
+        string[] imagePath = {
+                "Image/Payment/tng.png",
+                "Image/Payment/FPX.png",
+                "Image/Payment/Card.png"
+            };
 
         public TicketPayment(UserDetails userDetails)
         {
@@ -27,11 +31,7 @@ namespace TravelXpress_Package_System
             this.userDetails = userDetails;
 
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
-            string[] imagePath = {
-                Path.Combine(basePath, @"..\..\Image\Payment\FPX.png"),
-                Path.Combine(basePath, @"..\..\Image\Payment\tng.png"),
-                Path.Combine(basePath, @"..\..\Image\Payment\Card.png")
-            };
+
         }
 
         private void cardRb_CheckedChanged(object sender, EventArgs e)
@@ -65,5 +65,49 @@ namespace TravelXpress_Package_System
         {
 
         }
+
+        private void bookBt_Click(object sender, EventArgs e)
+        {
+            if (cardRb.Checked)
+            {
+                if (string.IsNullOrWhiteSpace(cardHolderNameTb.Text))
+                {
+                    MessageBox.Show("Card Holder Name Cannot Be Null!", "NULL ERROR!");
+                    return;
+                }
+
+                string cleanedText = cardNumTb.Text.Replace("_", "").Replace("-", "").Trim();
+                if (string.IsNullOrWhiteSpace(cleanedText))
+                {
+                    MessageBox.Show("Card Number Cannot Be Null", "NULL ERROR!");
+                    return;
+                }
+
+                if (exDateMMTb.Value == 0 || exDateYYTb.Value == 0 || exDateMMTb == null || exDateYYTb == null)
+                {
+                    MessageBox.Show("Expiry Date For Both Month and Year Cannot Be Null or Zero!", "NULL/ INPUT ERROR");
+                    return;
+                }
+
+                if (cvvTb.Value == 0 || cvvTb == null)
+                {
+                    MessageBox.Show("CVV Number Cannot Be Null or Zero!", "NULL/ INPUT ERROR");
+                    return;
+                }
+
+                if (!visaRb.Checked && !masterRb.Checked)
+                {
+                    MessageBox.Show("Visa/ Master Must Be Chosen Either One!", "NULL ERROR");
+                    return;
+                }
+
+                if (!policyCb.Checked)
+                {
+                    MessageBox.Show("Term And Policy Must Be Checked Before Proceed!", "NULL ERROR");
+                    return;
+                }
+            }
+        }
+
     }
 }

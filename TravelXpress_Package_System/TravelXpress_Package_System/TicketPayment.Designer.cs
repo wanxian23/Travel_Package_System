@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketPayment));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.cardPanel = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.bookBt = new System.Windows.Forms.Button();
+            this.policyCb = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.masterRb = new System.Windows.Forms.RadioButton();
+            this.visaRb = new System.Windows.Forms.RadioButton();
+            this.cvvTb = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.exDateYYTb = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.exDateMMTb = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cardHolderNameTb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.cardNumTb = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.paymentPic = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,45 +54,45 @@
             this.ewalletRb = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel.SuspendLayout();
             this.cardPanel.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cvvTb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exDateYYTb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exDateMMTb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentPic)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.cardPanel);
-            this.panel1.Controls.Add(this.paymentPic);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(15, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1227, 596);
-            this.panel1.TabIndex = 2;
+            this.panel.AutoScroll = true;
+            this.panel.Controls.Add(this.bookBt);
+            this.panel.Controls.Add(this.cardPanel);
+            this.panel.Controls.Add(this.paymentPic);
+            this.panel.Controls.Add(this.groupBox1);
+            this.panel.Controls.Add(this.panel2);
+            this.panel.Location = new System.Drawing.Point(15, 14);
+            this.panel.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(1227, 596);
+            this.panel.TabIndex = 2;
             // 
             // cardPanel
             // 
-            this.cardPanel.Controls.Add(this.button1);
-            this.cardPanel.Controls.Add(this.checkBox1);
+            this.cardPanel.Controls.Add(this.policyCb);
             this.cardPanel.Controls.Add(this.label7);
             this.cardPanel.Controls.Add(this.groupBox3);
-            this.cardPanel.Controls.Add(this.numericUpDown3);
+            this.cardPanel.Controls.Add(this.cvvTb);
             this.cardPanel.Controls.Add(this.label6);
-            this.cardPanel.Controls.Add(this.numericUpDown2);
+            this.cardPanel.Controls.Add(this.exDateYYTb);
             this.cardPanel.Controls.Add(this.label5);
-            this.cardPanel.Controls.Add(this.numericUpDown1);
+            this.cardPanel.Controls.Add(this.exDateMMTb);
             this.cardPanel.Controls.Add(this.label4);
-            this.cardPanel.Controls.Add(this.textBox1);
+            this.cardPanel.Controls.Add(this.cardHolderNameTb);
             this.cardPanel.Controls.Add(this.label3);
-            this.cardPanel.Controls.Add(this.maskedTextBox1);
+            this.cardPanel.Controls.Add(this.cardNumTb);
             this.cardPanel.Controls.Add(this.label2);
             this.cardPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardPanel.Location = new System.Drawing.Point(36, 225);
@@ -103,26 +103,28 @@
             this.cardPanel.Text = "Card Details";
             this.cardPanel.Visible = false;
             // 
-            // button1
+            // bookBt
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(434, 341);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 57);
-            this.button1.TabIndex = 80;
-            this.button1.Text = "Book";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bookBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookBt.Location = new System.Drawing.Point(1050, 504);
+            this.bookBt.Name = "bookBt";
+            this.bookBt.Size = new System.Drawing.Size(119, 57);
+            this.bookBt.TabIndex = 80;
+            this.bookBt.Text = "Book";
+            this.bookBt.UseVisualStyleBackColor = true;
+            this.bookBt.Click += new System.EventHandler(this.bookBt_Click);
             // 
-            // checkBox1
+            // policyCb
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(45, 369);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(312, 29);
-            this.checkBox1.TabIndex = 79;
-            this.checkBox1.Text = "I Agree To The Term and Policy";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.policyCb.AutoSize = true;
+            this.policyCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.policyCb.ForeColor = System.Drawing.Color.Red;
+            this.policyCb.Location = new System.Drawing.Point(45, 369);
+            this.policyCb.Name = "policyCb";
+            this.policyCb.Size = new System.Drawing.Size(312, 29);
+            this.policyCb.TabIndex = 79;
+            this.policyCb.Text = "I Agree To The Term and Policy";
+            this.policyCb.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -136,44 +138,44 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton5);
-            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.masterRb);
+            this.groupBox3.Controls.Add(this.visaRb);
             this.groupBox3.Location = new System.Drawing.Point(160, 293);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(232, 60);
             this.groupBox3.TabIndex = 68;
             this.groupBox3.TabStop = false;
             // 
-            // radioButton5
+            // masterRb
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(110, 19);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(107, 33);
-            this.radioButton5.TabIndex = 67;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Master";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.masterRb.AutoSize = true;
+            this.masterRb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.masterRb.Location = new System.Drawing.Point(110, 19);
+            this.masterRb.Name = "masterRb";
+            this.masterRb.Size = new System.Drawing.Size(107, 33);
+            this.masterRb.TabIndex = 67;
+            this.masterRb.TabStop = true;
+            this.masterRb.Text = "Master";
+            this.masterRb.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // visaRb
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(14, 19);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 33);
-            this.radioButton2.TabIndex = 66;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Visa";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.visaRb.AutoSize = true;
+            this.visaRb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.visaRb.Location = new System.Drawing.Point(14, 19);
+            this.visaRb.Name = "visaRb";
+            this.visaRb.Size = new System.Drawing.Size(80, 33);
+            this.visaRb.TabIndex = 66;
+            this.visaRb.TabStop = true;
+            this.visaRb.Text = "Visa";
+            this.visaRb.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown3
+            // cvvTb
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(330, 243);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(93, 34);
-            this.numericUpDown3.TabIndex = 77;
+            this.cvvTb.Location = new System.Drawing.Point(330, 243);
+            this.cvvTb.Name = "cvvTb";
+            this.cvvTb.Size = new System.Drawing.Size(93, 34);
+            this.cvvTb.TabIndex = 77;
             // 
             // label6
             // 
@@ -185,12 +187,12 @@
             this.label6.TabIndex = 76;
             this.label6.Text = "CVV";
             // 
-            // numericUpDown2
+            // exDateYYTb
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(139, 247);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(68, 34);
-            this.numericUpDown2.TabIndex = 75;
+            this.exDateYYTb.Location = new System.Drawing.Point(139, 247);
+            this.exDateYYTb.Name = "exDateYYTb";
+            this.exDateYYTb.Size = new System.Drawing.Size(68, 34);
+            this.exDateYYTb.TabIndex = 75;
             // 
             // label5
             // 
@@ -202,12 +204,12 @@
             this.label5.TabIndex = 74;
             this.label5.Text = "/";
             // 
-            // numericUpDown1
+            // exDateMMTb
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(43, 247);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(68, 34);
-            this.numericUpDown1.TabIndex = 73;
+            this.exDateMMTb.Location = new System.Drawing.Point(43, 247);
+            this.exDateMMTb.Name = "exDateMMTb";
+            this.exDateMMTb.Size = new System.Drawing.Size(68, 34);
+            this.exDateMMTb.TabIndex = 73;
             // 
             // label4
             // 
@@ -219,12 +221,12 @@
             this.label4.TabIndex = 72;
             this.label4.Text = "Expiry Date (MM/YY)";
             // 
-            // textBox1
+            // cardHolderNameTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(43, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(490, 34);
-            this.textBox1.TabIndex = 71;
+            this.cardHolderNameTb.Location = new System.Drawing.Point(43, 74);
+            this.cardHolderNameTb.Name = "cardHolderNameTb";
+            this.cardHolderNameTb.Size = new System.Drawing.Size(490, 34);
+            this.cardHolderNameTb.TabIndex = 71;
             // 
             // label3
             // 
@@ -236,13 +238,13 @@
             this.label3.TabIndex = 70;
             this.label3.Text = "Card Number";
             // 
-            // maskedTextBox1
+            // cardNumTb
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(43, 152);
-            this.maskedTextBox1.Mask = "0000-0000-0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(490, 34);
-            this.maskedTextBox1.TabIndex = 69;
+            this.cardNumTb.Location = new System.Drawing.Point(43, 152);
+            this.cardNumTb.Mask = "0000-0000-0000-0000";
+            this.cardNumTb.Name = "cardNumTb";
+            this.cardNumTb.Size = new System.Drawing.Size(490, 34);
+            this.cardNumTb.TabIndex = 69;
             // 
             // label2
             // 
@@ -257,10 +259,10 @@
             // paymentPic
             // 
             this.paymentPic.Image = ((System.Drawing.Image)(resources.GetObject("paymentPic.Image")));
-            this.paymentPic.Location = new System.Drawing.Point(656, 117);
+            this.paymentPic.Location = new System.Drawing.Point(658, 117);
             this.paymentPic.Name = "paymentPic";
-            this.paymentPic.Size = new System.Drawing.Size(534, 480);
-            this.paymentPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.paymentPic.Size = new System.Drawing.Size(511, 349);
+            this.paymentPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.paymentPic.TabIndex = 9;
             this.paymentPic.TabStop = false;
             // 
@@ -322,7 +324,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1221, 70);
+            this.panel2.Size = new System.Drawing.Size(1197, 70);
             this.panel2.TabIndex = 26;
             // 
             // label1
@@ -343,20 +345,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 624);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TicketPayment";
             this.Text = "TicketPayment";
             this.Load += new System.EventHandler(this.TicketPayment_Load);
-            this.panel1.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
             this.cardPanel.ResumeLayout(false);
             this.cardPanel.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cvvTb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exDateYYTb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exDateMMTb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentPic)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -368,7 +370,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.PictureBox paymentPic;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
@@ -378,20 +380,20 @@
         private System.Windows.Forms.RadioButton ewalletRb;
         private System.Windows.Forms.GroupBox cardPanel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cardHolderNameTb;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox cardNumTb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.RadioButton masterRb;
+        private System.Windows.Forms.RadioButton visaRb;
+        private System.Windows.Forms.NumericUpDown cvvTb;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown exDateYYTb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.NumericUpDown exDateMMTb;
+        private System.Windows.Forms.Button bookBt;
+        private System.Windows.Forms.CheckBox policyCb;
     }
 }

@@ -49,6 +49,13 @@ namespace TravelXpress_Package_System
             dataStore.busFrom = busFromTb.Text;
             dataStore.busTo = busToTb.Text;
 
+            dataStore.departDate = departureDate.Value.Date;
+            dataStore.reDate = returnDate.Value.Date;
+
+            dataStore.busFrom = busFromTb.Text;
+            dataStore.busTo = busToTb.Text;
+
+
             if (string.IsNullOrWhiteSpace(busFromTb.Text))
             {
                 MessageBox.Show("'Bus From' Textbox Cannot be Null!", "NULL WARNING");
@@ -116,11 +123,4 @@ namespace TravelXpress_Package_System
         }
     }
 
-    public class TemporaryBusDetailsStore : Form
-    {
-        public string busFrom { get; set; }
-        public string busTo { get; set; }
-        public DateTime departDate { get; set; }
-        public DateTime reDate { get; set; }
-    }
 }
