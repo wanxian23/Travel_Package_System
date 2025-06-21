@@ -12,6 +12,7 @@ namespace TravelXpress_Package_System
 {
     public partial class CustomerMainPage : Form
     {
+        SeatDetail seatDetail = new SeatDetail();
         public CustomerMainPage()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace TravelXpress_Package_System
 
         private void buttonTicket_Click(object sender, EventArgs e)
         {
-            TicketBookingForm ticketBookingForm = new TicketBookingForm();
+            TicketBookingForm ticketBookingForm = new TicketBookingForm(seatDetail);
             this.Hide();
             ticketBookingForm.ShowDialog();
         }
