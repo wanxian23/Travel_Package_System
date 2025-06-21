@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TravelXpress_Package_System.Module;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace TravelXpress_Package_System
@@ -14,6 +16,11 @@ namespace TravelXpress_Package_System
     public partial class CheckoutForm : Form
     {
         public int packagetype;
+        public int durationDays = 0;
+        public CustomerMemberDetails customerMemberDetails;
+        public CustomerDetails customerDetails;
+        public PackageCheckout PackageCheckout;
+        
         public CheckoutForm(int packagetype)
         {
             InitializeComponent();
@@ -23,17 +30,37 @@ namespace TravelXpress_Package_System
 
             groupBoxCustomerFamilyDetails.Text = "Details for customer member 1: ";
 
-            string connection = "";
+            comboBoxTransport.SelectedIndex = 0;
+            
+            dateTimePickerFromDate.Value = DateTime.Today.Date;
 
+            getDataFromDB();
+
+            if (durationDays != 0)
+            {
+                dateTimePickerToDate.Value = DateTime.Today.Date.AddDays(durationDays - 1);
+            }
         }
 
-        public class CustomerMemberDetails
+        void getDataFromDB()
         {
-            public string ID {  get; set; }
-            public string Name { get; set; }
-            public string IC { get; set; }
-            public string PhoneNO { get; set; }
-            public string Gender { get; set; }
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\chiew\\Desktop\\C# project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
+            string query = "SELECT DurationDays FROM Package WHERE PackageID = @PackageID";
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PackageID", packagetype);
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet, "Package");
+
+                if (dataSet.Tables["Package"].Rows.Count > 0)
+                {
+                    durationDays = int.Parse(dataSet.Tables["Package"].Rows[0]["DurationDays"].ToString());
+                }
+            }
         }
 
         public List<CustomerMemberDetails> memberDetails = new List<CustomerMemberDetails>();
@@ -323,23 +350,30 @@ namespace TravelXpress_Package_System
         }
         private void buttonCheckOut_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(memberDetails.Count);
+            //Console.WriteLine(memberDetails.Count);
             int numPeople = checkRoomPax();
-            if (numPeople != 0)
+            if (!checkCustomerDetail())
+            {
+                MessageBox.Show($"Your details is not yet complete");
+                return;
+            }
+            else if (numPeople != 0)
             {
                 MessageBox.Show($"Not enough room booked! You are short by {numPeople}. \nPlease add more room to accomodate all {customerMemberPax + 1} people");
+                return;
             }
             else
             {
-                ChekourPaymentForm form = new ChekourPaymentForm();
+                
+                ChekourPaymentForm form = new ChekourPaymentForm(PackageCheckout);
                 form.ShowDialog();
             }
         }
         int checkRoomPax()
         {
-            int singleBed = (int)numericUpDownSingleBed.Value;
-            int singleRKingBed = (int)numericUpDownSingleRKingBed.Value * 2;
-            int familyRoom = (int)numericUpDownFamilyRoom.Value * 4;
+            int singleBed = checkBoxSingleBed.Checked ? (int)numericUpDownSingleBed.Value : 0;
+            int singleRKingBed = checkBoxSingleRKingBed.Checked ? (int)numericUpDownSingleRKingBed.Value * 2 : 0;
+            int familyRoom = checkBoxFamilyRoom.Checked ? (int)numericUpDownFamilyRoom.Value * 4 : 0;
 
             int estimatedRoomPax = singleBed + singleRKingBed + familyRoom;
 
@@ -348,6 +382,42 @@ namespace TravelXpress_Package_System
                 return (((int)customerMemberPax + 1) - estimatedRoomPax);
             }
             return 0;
+        }
+
+        private void dateTimePickerFromDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateTimePickerFromDate.Value < DateTime.Today)
+            {
+                MessageBox.Show("From date cannot less than today date");
+                dateTimePickerFromDate.Value = DateTime.Today;
+                return;
+            }
+            else if (durationDays != 0)
+            {
+                dateTimePickerToDate.Value = dateTimePickerFromDate.Value.AddDays(durationDays - 1);
+            }
+        }
+
+        private void dateTimePickerToDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateTimePickerToDate.Value < DateTime.Today)
+            {
+                MessageBox.Show("To date cannot less than today date");
+                dateTimePickerToDate.Value = DateTime.Today.AddDays(durationDays - 1);
+                return;
+            }
+            else if (durationDays != 0)
+            {
+                var newFromDate = dateTimePickerToDate.Value.AddDays(-durationDays + 1);
+
+                if (newFromDate < DateTime.Today)
+                {
+                    MessageBox.Show("The selected end date with this duration results in a start date before today. Please choose a later end date", "Invalid date range");
+                    dateTimePickerToDate.Value = DateTime.Today.AddDays(durationDays - 1);
+                    return;
+                }
+                dateTimePickerFromDate.Value = newFromDate;
+            }
         }
     }
 }
