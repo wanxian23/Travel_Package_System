@@ -12,6 +12,7 @@ namespace TravelXpress_Package_System.Module
         public string IC { get; set; }
         public string Contact { get; set; }
         public string Email { get; set; }
-        public int Gender { get; set; }
+        public string Gender { get; set; }
+        public int memberNum { get; set; } 
     }
 }
