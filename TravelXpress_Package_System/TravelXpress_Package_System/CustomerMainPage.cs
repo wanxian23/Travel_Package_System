@@ -30,5 +30,11 @@ namespace TravelXpress_Package_System
             this.Hide();
             ticketBookingForm.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AccommodationAvailabilityPage accommAvailabilityPage = new AccommodationAvailabilityPage();
+            accommAvailabilityPage.ShowDialog();
+        }
     }
 }

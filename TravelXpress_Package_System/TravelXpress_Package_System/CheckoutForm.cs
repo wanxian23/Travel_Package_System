@@ -44,7 +44,7 @@ namespace TravelXpress_Package_System
 
         void getDataFromDB()
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\chiew\\Desktop\\C# project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\A'isyah Insyirah\\Desktop\\UTEM\\YEAR 2 SEM 2\\EVENT-BASED\\PROJECT\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
             string query = "SELECT DurationDays FROM Package WHERE PackageID = @PackageID";
             
             using (SqlConnection connection = new SqlConnection(connectionString))

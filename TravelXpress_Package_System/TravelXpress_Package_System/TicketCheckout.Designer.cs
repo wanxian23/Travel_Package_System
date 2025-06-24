@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.icTb = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panelProceedBt = new System.Windows.Forms.FlowLayoutPanel();
+            this.proceedBt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.femaleRb = new System.Windows.Forms.RadioButton();
             this.maleRb = new System.Windows.Forms.RadioButton();
-            this.proceedBt = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -65,19 +68,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.backBt = new System.Windows.Forms.Button();
-            this.panelProceedBt = new System.Windows.Forms.FlowLayoutPanel();
-            this.icTb = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
+            this.panelProceedBt.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.ticket1.SuspendLayout();
-            this.panelProceedBt.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.icTb);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.panelProceedBt);
@@ -100,6 +102,41 @@
             this.panel1.Size = new System.Drawing.Size(1227, 580);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // icTb
+            // 
+            this.icTb.Location = new System.Drawing.Point(187, 582);
+            this.icTb.Name = "icTb";
+            this.icTb.Size = new System.Drawing.Size(325, 34);
+            this.icTb.TabIndex = 83;
+            this.icTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(89, 582);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(36, 29);
+            this.label27.TabIndex = 82;
+            this.label27.Text = "IC";
+            // 
+            // panelProceedBt
+            // 
+            this.panelProceedBt.Controls.Add(this.proceedBt);
+            this.panelProceedBt.Location = new System.Drawing.Point(878, 582);
+            this.panelProceedBt.Name = "panelProceedBt";
+            this.panelProceedBt.Size = new System.Drawing.Size(288, 76);
+            this.panelProceedBt.TabIndex = 80;
+            // 
+            // proceedBt
+            // 
+            this.proceedBt.Location = new System.Drawing.Point(3, 3);
+            this.proceedBt.Name = "proceedBt";
+            this.proceedBt.Size = new System.Drawing.Size(265, 48);
+            this.proceedBt.TabIndex = 80;
+            this.proceedBt.Text = "Proceed Payment";
+            this.proceedBt.UseVisualStyleBackColor = true;
+            this.proceedBt.Click += new System.EventHandler(this.proceedBt_Click);
             // 
             // groupBox1
             // 
@@ -132,16 +169,6 @@
             this.maleRb.TabStop = true;
             this.maleRb.Text = "Male";
             this.maleRb.UseVisualStyleBackColor = true;
-            // 
-            // proceedBt
-            // 
-            this.proceedBt.Location = new System.Drawing.Point(3, 3);
-            this.proceedBt.Name = "proceedBt";
-            this.proceedBt.Size = new System.Drawing.Size(265, 48);
-            this.proceedBt.TabIndex = 80;
-            this.proceedBt.Text = "Proceed Payment";
-            this.proceedBt.UseVisualStyleBackColor = true;
-            this.proceedBt.Click += new System.EventHandler(this.proceedBt_Click);
             // 
             // label22
             // 
@@ -485,30 +512,12 @@
             this.backBt.UseVisualStyleBackColor = true;
             this.backBt.Click += new System.EventHandler(this.backBt_Click);
             // 
-            // panelProceedBt
+            // flowLayoutPanel1
             // 
-            this.panelProceedBt.Controls.Add(this.proceedBt);
-            this.panelProceedBt.Location = new System.Drawing.Point(878, 582);
-            this.panelProceedBt.Name = "panelProceedBt";
-            this.panelProceedBt.Size = new System.Drawing.Size(288, 76);
-            this.panelProceedBt.TabIndex = 80;
-            // 
-            // icTb
-            // 
-            this.icTb.Location = new System.Drawing.Point(187, 582);
-            this.icTb.Name = "icTb";
-            this.icTb.Size = new System.Drawing.Size(325, 34);
-            this.icTb.TabIndex = 83;
-            this.icTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(89, 582);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 29);
-            this.label27.TabIndex = 82;
-            this.label27.Text = "IC";
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1196, 135);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 84;
             // 
             // TicketCheckout
             // 
@@ -524,11 +533,11 @@
             this.Load += new System.EventHandler(this.TicketCheckout_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelProceedBt.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ticket1.ResumeLayout(false);
-            this.panelProceedBt.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -575,5 +584,6 @@
         private System.Windows.Forms.FlowLayoutPanel panelProceedBt;
         private System.Windows.Forms.TextBox icTb;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -31,12 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketBookingForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.busDetailsDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.busDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.travelXpressDataSet = new TravelXpress_Package_System.TravelXpressDataSet();
             this.panel3 = new System.Windows.Forms.Panel();
             this.backBt = new System.Windows.Forms.Button();
             this.searchBt = new System.Windows.Forms.Button();
             this.clearBt = new System.Windows.Forms.Button();
-            this.busDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.travelXpressDataSet = new TravelXpress_Package_System.TravelXpressDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,20 +68,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.busDetailsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.busDetailsDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.busDetailsDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.travelXpressDataSet)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDetailsBindingNavigator)).BeginInit();
             this.busDetailsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.busDetailsDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,6 +99,65 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1262, 670);
             this.panel1.TabIndex = 0;
+            // 
+            // busDetailsDataGridView1
+            // 
+            this.busDetailsDataGridView1.AutoGenerateColumns = false;
+            this.busDetailsDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.busDetailsDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.busDetailsDataGridView1.DataSource = this.busDetailsBindingSource;
+            this.busDetailsDataGridView1.Location = new System.Drawing.Point(31, 99);
+            this.busDetailsDataGridView1.Name = "busDetailsDataGridView1";
+            this.busDetailsDataGridView1.RowHeadersWidth = 51;
+            this.busDetailsDataGridView1.RowTemplate.Height = 24;
+            this.busDetailsDataGridView1.Size = new System.Drawing.Size(1162, 127);
+            this.busDetailsDataGridView1.TabIndex = 27;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Bus";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Bus";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "BusPlateNum";
+            this.dataGridViewTextBoxColumn7.HeaderText = "BusPlateNum";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "BusType";
+            this.dataGridViewTextBoxColumn8.HeaderText = "BusType";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "TotalSeats";
+            this.dataGridViewTextBoxColumn9.HeaderText = "TotalSeats";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // busDetailsBindingSource
+            // 
+            this.busDetailsBindingSource.DataMember = "BusDetails";
+            this.busDetailsBindingSource.DataSource = this.travelXpressDataSet;
+            // 
+            // travelXpressDataSet
+            // 
+            this.travelXpressDataSet.DataSetName = "TravelXpressDataSet";
+            this.travelXpressDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -139,16 +198,6 @@
             this.clearBt.Text = "Clear";
             this.clearBt.UseVisualStyleBackColor = true;
             this.clearBt.Click += new System.EventHandler(this.clearBt_Click);
-            // 
-            // busDetailsBindingSource
-            // 
-            this.busDetailsBindingSource.DataMember = "BusDetails";
-            this.busDetailsBindingSource.DataSource = this.travelXpressDataSet;
-            // 
-            // travelXpressDataSet
-            // 
-            this.travelXpressDataSet.DataSetName = "TravelXpressDataSet";
-            this.travelXpressDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel2
             // 
@@ -305,7 +354,7 @@
             this.busDetailsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.busDetailsBindingNavigator.Name = "busDetailsBindingNavigator";
             this.busDetailsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.busDetailsBindingNavigator.Size = new System.Drawing.Size(1277, 27);
+            this.busDetailsBindingNavigator.Size = new System.Drawing.Size(1277, 31);
             this.busDetailsBindingNavigator.TabIndex = 1;
             this.busDetailsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -315,13 +364,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -331,7 +380,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -340,7 +389,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -349,13 +398,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -370,7 +419,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -378,7 +427,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -387,70 +436,21 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // busDetailsBindingNavigatorSaveItem
             // 
             this.busDetailsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.busDetailsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("busDetailsBindingNavigatorSaveItem.Image")));
             this.busDetailsBindingNavigatorSaveItem.Name = "busDetailsBindingNavigatorSaveItem";
-            this.busDetailsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.busDetailsBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.busDetailsBindingNavigatorSaveItem.Text = "Save Data";
-            // 
-            // busDetailsDataGridView1
-            // 
-            this.busDetailsDataGridView1.AutoGenerateColumns = false;
-            this.busDetailsDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.busDetailsDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.busDetailsDataGridView1.DataSource = this.busDetailsBindingSource;
-            this.busDetailsDataGridView1.Location = new System.Drawing.Point(31, 99);
-            this.busDetailsDataGridView1.Name = "busDetailsDataGridView1";
-            this.busDetailsDataGridView1.RowHeadersWidth = 51;
-            this.busDetailsDataGridView1.RowTemplate.Height = 24;
-            this.busDetailsDataGridView1.Size = new System.Drawing.Size(1162, 127);
-            this.busDetailsDataGridView1.TabIndex = 27;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Bus";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Bus";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "BusPlateNum";
-            this.dataGridViewTextBoxColumn7.HeaderText = "BusPlateNum";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "BusType";
-            this.dataGridViewTextBoxColumn8.HeaderText = "BusType";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "TotalSeats";
-            this.dataGridViewTextBoxColumn9.HeaderText = "TotalSeats";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 125;
             // 
             // TicketBookingForm
             // 
@@ -467,16 +467,16 @@
             this.Load += new System.EventHandler(this.TicketBookingForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.busDetailsDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.travelXpressDataSet)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.busDetailsBindingNavigator)).EndInit();
             this.busDetailsBindingNavigator.ResumeLayout(false);
             this.busDetailsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.busDetailsDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
