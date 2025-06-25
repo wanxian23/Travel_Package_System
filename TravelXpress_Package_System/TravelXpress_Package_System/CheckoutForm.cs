@@ -20,16 +20,11 @@ namespace TravelXpress_Package_System
         public CustomerMemberDetails customerMemberDetails;
         public CustomerDetails customerDetails;
         public PackageCheckout PackageCheckout;
-        public ConnectionClass connectionClass;
         
         public CheckoutForm(int packagetype)
         {
             InitializeComponent();
             this.packagetype = packagetype;
-            this.customerMemberDetails = new CustomerMemberDetails();
-            this.customerDetails = new CustomerDetails();
-            this.PackageCheckout = new PackageCheckout();
-            this.connectionClass = new ConnectionClass();
 
             groupBoxCustomerFamilyDetails.Hide();
 
@@ -49,8 +44,8 @@ namespace TravelXpress_Package_System
 
         void getDataFromDB()
         {
-            string connectionString = connectionClass.connectionString;
-            string query = "SELECT * FROM Package WHERE PackageID = @PackageID";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\chiew\\Desktop\\C# project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
+            string query = "SELECT DurationDays FROM Package WHERE PackageID = @PackageID";
             
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -64,25 +59,6 @@ namespace TravelXpress_Package_System
                 if (dataSet.Tables["Package"].Rows.Count > 0)
                 {
                     durationDays = int.Parse(dataSet.Tables["Package"].Rows[0]["DurationDays"].ToString());
-                }
-            }
-
-            string query2 = "SELECT * FROM ImagePath WHERE PackageID = @PackageID AND imagePath LIKE '%itinerary%'";
-            using (SqlConnection connection1 = new SqlConnection(connectionString))
-            {
-                SqlCommand command = new SqlCommand(query2, connection1);
-                command.Parameters.AddWithValue("@PackageID", packagetype);
-
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                DataSet dataSet = new DataSet();
-                dataAdapter.Fill(dataSet, "ImagePath");
-
-                var data = dataSet.Tables["ImagePath"];
-                if (data.Rows.Count > 0)
-                {
-                    Console.WriteLine(data.Rows[0]["ImageID"]);
-                    Console.WriteLine(data.Rows[0]["imagePath"]);
-                    Console.WriteLine(data.Rows[0]["PackageID"]);
                 }
             }
         }
@@ -160,13 +136,11 @@ namespace TravelXpress_Package_System
                 if (memberDetails.Count + 1 == currentCustomerMemberNo)
                 {
                     addNewMemberDetails();
-                    //Console.WriteLine("Add member by next button");
                     clearMemberDetails();
                 }
                 else
                 {
                     editCurrentMemberDetails();
-                    clearMemberDetails();
                 }
                 currentCustomerMemberNo++;
                 groupBoxCustomerFamilyDetails.Text = $"Details for customer member {currentCustomerMemberNo}: ";
@@ -246,7 +220,6 @@ namespace TravelXpress_Package_System
             if (currentCustomerMemberNo > memberDetails.Count)
             {
                 addNewMemberDetails();
-                //Console.WriteLine("Add member by previous button");
             }
             else
             {

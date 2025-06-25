@@ -232,7 +232,6 @@
             this.linkLabelMorDetails3.TabIndex = 20;
             this.linkLabelMorDetails3.TabStop = true;
             this.linkLabelMorDetails3.Text = "More details....";
-            this.linkLabelMorDetails3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails3_LinkClicked);
             // 
             // linkLabelMorDetails4
             // 
@@ -243,7 +242,6 @@
             this.linkLabelMorDetails4.TabIndex = 21;
             this.linkLabelMorDetails4.TabStop = true;
             this.linkLabelMorDetails4.Text = "More details....";
-            this.linkLabelMorDetails4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails4_LinkClicked);
             // 
             // linkLabelMorDetails5
             // 
@@ -254,7 +252,6 @@
             this.linkLabelMorDetails5.TabIndex = 22;
             this.linkLabelMorDetails5.TabStop = true;
             this.linkLabelMorDetails5.Text = "More details....";
-            this.linkLabelMorDetails5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails5_LinkClicked);
             // 
             // TourPackageForm
             // 
