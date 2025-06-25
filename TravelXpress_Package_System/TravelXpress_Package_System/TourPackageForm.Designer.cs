@@ -81,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(327, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 40);
+            this.label2.Size = new System.Drawing.Size(120, 50);
             this.label2.TabIndex = 5;
             this.label2.Text = "Package 2 \r\nFrom: ";
             // 
@@ -100,7 +100,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(316, 39);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(242, 142);
+            this.pictureBox2.Size = new System.Drawing.Size(241, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -110,7 +110,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(614, 223);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 40);
+            this.label3.Size = new System.Drawing.Size(114, 50);
             this.label3.TabIndex = 8;
             this.label3.Text = "Package 3\r\nFrom: ";
             // 
@@ -139,7 +139,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(907, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 40);
+            this.label4.Size = new System.Drawing.Size(114, 50);
             this.label4.TabIndex = 11;
             this.label4.Text = "Package 4\r\nFrom: ";
             // 
@@ -168,7 +168,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(1198, 223);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 40);
+            this.label5.Size = new System.Drawing.Size(114, 50);
             this.label5.TabIndex = 14;
             this.label5.Text = "Package 5\r\nFrom: ";
             // 
@@ -197,7 +197,7 @@
             this.linkLabelMorDetails1.AutoSize = true;
             this.linkLabelMorDetails1.Location = new System.Drawing.Point(34, 429);
             this.linkLabelMorDetails1.Name = "linkLabelMorDetails1";
-            this.linkLabelMorDetails1.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails1.Size = new System.Drawing.Size(154, 25);
             this.linkLabelMorDetails1.TabIndex = 17;
             this.linkLabelMorDetails1.TabStop = true;
             this.linkLabelMorDetails1.Text = "More details....";
@@ -218,17 +218,18 @@
             this.linkLabelMorDetails2.AutoSize = true;
             this.linkLabelMorDetails2.Location = new System.Drawing.Point(327, 429);
             this.linkLabelMorDetails2.Name = "linkLabelMorDetails2";
-            this.linkLabelMorDetails2.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails2.Size = new System.Drawing.Size(154, 25);
             this.linkLabelMorDetails2.TabIndex = 19;
             this.linkLabelMorDetails2.TabStop = true;
             this.linkLabelMorDetails2.Text = "More details....";
+            this.linkLabelMorDetails2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails2_LinkClicked);
             // 
             // linkLabelMorDetails3
             // 
             this.linkLabelMorDetails3.AutoSize = true;
             this.linkLabelMorDetails3.Location = new System.Drawing.Point(614, 429);
             this.linkLabelMorDetails3.Name = "linkLabelMorDetails3";
-            this.linkLabelMorDetails3.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails3.Size = new System.Drawing.Size(154, 25);
             this.linkLabelMorDetails3.TabIndex = 20;
             this.linkLabelMorDetails3.TabStop = true;
             this.linkLabelMorDetails3.Text = "More details....";
@@ -238,7 +239,7 @@
             this.linkLabelMorDetails4.AutoSize = true;
             this.linkLabelMorDetails4.Location = new System.Drawing.Point(907, 429);
             this.linkLabelMorDetails4.Name = "linkLabelMorDetails4";
-            this.linkLabelMorDetails4.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails4.Size = new System.Drawing.Size(154, 25);
             this.linkLabelMorDetails4.TabIndex = 21;
             this.linkLabelMorDetails4.TabStop = true;
             this.linkLabelMorDetails4.Text = "More details....";
@@ -248,14 +249,14 @@
             this.linkLabelMorDetails5.AutoSize = true;
             this.linkLabelMorDetails5.Location = new System.Drawing.Point(1198, 429);
             this.linkLabelMorDetails5.Name = "linkLabelMorDetails5";
-            this.linkLabelMorDetails5.Size = new System.Drawing.Size(117, 20);
+            this.linkLabelMorDetails5.Size = new System.Drawing.Size(154, 25);
             this.linkLabelMorDetails5.TabIndex = 22;
             this.linkLabelMorDetails5.TabStop = true;
             this.linkLabelMorDetails5.Text = "More details....";
             // 
             // TourPackageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1465, 562);
             this.Controls.Add(this.linkLabelMorDetails5);

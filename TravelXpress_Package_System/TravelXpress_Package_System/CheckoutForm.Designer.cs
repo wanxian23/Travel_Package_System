@@ -33,7 +33,7 @@
             this.buttonEditCustomerMemberDetails = new System.Windows.Forms.Button();
             this.buttonConfirmCustomerMemberDetails = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBoxCustomerIC = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerEmail = new System.Windows.Forms.TextBox();
             this.groupBoxCustomerGender = new System.Windows.Forms.GroupBox();
             this.radioButtonCusFemale = new System.Windows.Forms.RadioButton();
             this.radioButtonCusMale = new System.Windows.Forms.RadioButton();
@@ -60,8 +60,8 @@
             this.buttonCheckOut = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPackageToLocation = new System.Windows.Forms.TextBox();
+            this.textBoxPackageFromLocation = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePickerToDate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -85,11 +85,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxPackageDuration = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxTransport = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxPackagePrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDownNumPax = new System.Windows.Forms.NumericUpDown();
@@ -97,8 +97,8 @@
             this.labelNumberPax = new System.Windows.Forms.Label();
             this.textBoxCustomerName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxCustomerEmail = new System.Windows.Forms.TextBox();
             this.textBoxCustomerContact = new System.Windows.Forms.TextBox();
+            this.textBoxCustomerIC = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBoxCustomerGender.SuspendLayout();
@@ -121,7 +121,7 @@
             this.panel1.Controls.Add(this.buttonEditCustomerMemberDetails);
             this.panel1.Controls.Add(this.buttonConfirmCustomerMemberDetails);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBoxCustomerIC);
+            this.panel1.Controls.Add(this.textBoxCustomerEmail);
             this.panel1.Controls.Add(this.groupBoxCustomerGender);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.buttonMemberPaxEdit);
@@ -132,8 +132,8 @@
             this.panel1.Controls.Add(this.buttonCheckOut);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxPackageToLocation);
+            this.panel1.Controls.Add(this.textBoxPackageFromLocation);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.dateTimePickerToDate);
             this.panel1.Controls.Add(this.label6);
@@ -145,11 +145,11 @@
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBoxPackageDuration);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboBoxTransport);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.textBoxPackagePrice);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.numericUpDownNumPax);
@@ -157,8 +157,8 @@
             this.panel1.Controls.Add(this.labelNumberPax);
             this.panel1.Controls.Add(this.textBoxCustomerName);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBoxCustomerEmail);
             this.panel1.Controls.Add(this.textBoxCustomerContact);
+            this.panel1.Controls.Add(this.textBoxCustomerIC);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -197,12 +197,12 @@
             this.label12.TabIndex = 81;
             this.label12.Text = "Gender";
             // 
-            // textBoxCustomerIC
+            // textBoxCustomerEmail
             // 
-            this.textBoxCustomerIC.Location = new System.Drawing.Point(162, 501);
-            this.textBoxCustomerIC.Name = "textBoxCustomerIC";
-            this.textBoxCustomerIC.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerIC.TabIndex = 81;
+            this.textBoxCustomerEmail.Location = new System.Drawing.Point(162, 583);
+            this.textBoxCustomerEmail.Name = "textBoxCustomerEmail";
+            this.textBoxCustomerEmail.Size = new System.Drawing.Size(234, 27);
+            this.textBoxCustomerEmail.TabIndex = 7;
             // 
             // groupBoxCustomerGender
             // 
@@ -466,21 +466,21 @@
             this.pictureBox2.TabIndex = 66;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox5
+            // textBoxPackageToLocation
             // 
-            this.textBox5.Location = new System.Drawing.Point(799, 172);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(157, 27);
-            this.textBox5.TabIndex = 65;
+            this.textBoxPackageToLocation.Location = new System.Drawing.Point(799, 172);
+            this.textBoxPackageToLocation.Name = "textBoxPackageToLocation";
+            this.textBoxPackageToLocation.ReadOnly = true;
+            this.textBoxPackageToLocation.Size = new System.Drawing.Size(157, 27);
+            this.textBoxPackageToLocation.TabIndex = 65;
             // 
-            // textBox1
+            // textBoxPackageFromLocation
             // 
-            this.textBox1.Location = new System.Drawing.Point(805, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(157, 27);
-            this.textBox1.TabIndex = 64;
+            this.textBoxPackageFromLocation.Location = new System.Drawing.Point(805, 116);
+            this.textBoxPackageFromLocation.Name = "textBoxPackageFromLocation";
+            this.textBoxPackageFromLocation.ReadOnly = true;
+            this.textBoxPackageFromLocation.Size = new System.Drawing.Size(157, 27);
+            this.textBoxPackageFromLocation.TabIndex = 64;
             // 
             // pictureBox1
             // 
@@ -515,7 +515,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.72727F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.27273F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxSingleBed, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxFamilyRoom, 0, 3);
@@ -583,7 +583,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(490, 1);
+            this.label15.Location = new System.Drawing.Point(482, 1);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 20);
             this.label15.TabIndex = 1;
@@ -591,7 +591,7 @@
             // 
             // numericUpDownSingleBed
             // 
-            this.numericUpDownSingleBed.Location = new System.Drawing.Point(490, 41);
+            this.numericUpDownSingleBed.Location = new System.Drawing.Point(482, 41);
             this.numericUpDownSingleBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -614,7 +614,7 @@
             // 
             // numericUpDownSingleRKingBed
             // 
-            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(490, 79);
+            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(482, 79);
             this.numericUpDownSingleRKingBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -637,7 +637,7 @@
             // 
             // numericUpDownFamilyRoom
             // 
-            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(490, 125);
+            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(482, 125);
             this.numericUpDownFamilyRoom.Maximum = new decimal(new int[] {
             10,
             0,
@@ -661,7 +661,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(236, 1);
+            this.label16.Location = new System.Drawing.Point(232, 1);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(99, 20);
             this.label16.TabIndex = 31;
@@ -670,7 +670,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(236, 38);
+            this.label17.Location = new System.Drawing.Point(232, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(117, 20);
             this.label17.TabIndex = 32;
@@ -679,7 +679,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(236, 76);
+            this.label18.Location = new System.Drawing.Point(232, 76);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(104, 20);
             this.label18.TabIndex = 33;
@@ -688,7 +688,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(236, 122);
+            this.label19.Location = new System.Drawing.Point(232, 122);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(104, 20);
             this.label19.TabIndex = 34;
@@ -755,13 +755,13 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "Duration";
             // 
-            // textBox3
+            // textBoxPackageDuration
             // 
-            this.textBox3.Location = new System.Drawing.Point(799, 237);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(157, 27);
-            this.textBox3.TabIndex = 37;
+            this.textBoxPackageDuration.Location = new System.Drawing.Point(799, 237);
+            this.textBoxPackageDuration.Name = "textBoxPackageDuration";
+            this.textBoxPackageDuration.ReadOnly = true;
+            this.textBoxPackageDuration.Size = new System.Drawing.Size(157, 27);
+            this.textBoxPackageDuration.TabIndex = 37;
             // 
             // label22
             // 
@@ -791,13 +791,13 @@
             this.comboBoxTransport.Size = new System.Drawing.Size(121, 28);
             this.comboBoxTransport.TabIndex = 52;
             // 
-            // textBox4
+            // textBoxPackagePrice
             // 
-            this.textBox4.Location = new System.Drawing.Point(799, 302);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(157, 27);
-            this.textBox4.TabIndex = 39;
+            this.textBoxPackagePrice.Location = new System.Drawing.Point(799, 302);
+            this.textBoxPackagePrice.Name = "textBoxPackagePrice";
+            this.textBoxPackagePrice.ReadOnly = true;
+            this.textBoxPackagePrice.Size = new System.Drawing.Size(157, 27);
+            this.textBoxPackagePrice.TabIndex = 39;
             // 
             // label5
             // 
@@ -864,7 +864,7 @@
             this.textBoxCustomerName.Location = new System.Drawing.Point(162, 460);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerName.TabIndex = 43;
+            this.textBoxCustomerName.TabIndex = 4;
             // 
             // label10
             // 
@@ -875,19 +875,19 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "Contact";
             // 
-            // textBoxCustomerEmail
-            // 
-            this.textBoxCustomerEmail.Location = new System.Drawing.Point(162, 583);
-            this.textBoxCustomerEmail.Name = "textBoxCustomerEmail";
-            this.textBoxCustomerEmail.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerEmail.TabIndex = 47;
-            // 
             // textBoxCustomerContact
             // 
             this.textBoxCustomerContact.Location = new System.Drawing.Point(162, 542);
             this.textBoxCustomerContact.Name = "textBoxCustomerContact";
             this.textBoxCustomerContact.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerContact.TabIndex = 45;
+            this.textBoxCustomerContact.TabIndex = 6;
+            // 
+            // textBoxCustomerIC
+            // 
+            this.textBoxCustomerIC.Location = new System.Drawing.Point(162, 501);
+            this.textBoxCustomerIC.Name = "textBoxCustomerIC";
+            this.textBoxCustomerIC.Size = new System.Drawing.Size(234, 27);
+            this.textBoxCustomerIC.TabIndex = 5;
             // 
             // label9
             // 
@@ -961,11 +961,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button buttonCheckOut;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxPackageDuration;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxTransport;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxPackagePrice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDownNumPax;
@@ -973,14 +973,14 @@
         private System.Windows.Forms.Label labelNumberPax;
         private System.Windows.Forms.TextBox textBoxCustomerName;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxCustomerEmail;
         private System.Windows.Forms.TextBox textBoxCustomerContact;
+        private System.Windows.Forms.TextBox textBoxCustomerIC;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPackageToLocation;
+        private System.Windows.Forms.TextBox textBoxPackageFromLocation;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBoxCustomerMemberName;
         private System.Windows.Forms.Label label25;
@@ -1001,12 +1001,12 @@
         private System.Windows.Forms.Button buttonMemberPaxConfirm;
         private System.Windows.Forms.Button buttonMemberPaxEdit;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBoxCustomerIC;
         private System.Windows.Forms.GroupBox groupBoxCustomerGender;
         private System.Windows.Forms.RadioButton radioButtonCusFemale;
         private System.Windows.Forms.RadioButton radioButtonCusMale;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonEditCustomerMemberDetails;
         private System.Windows.Forms.Button buttonConfirmCustomerMemberDetails;
+        private System.Windows.Forms.TextBox textBoxCustomerEmail;
     }
 }

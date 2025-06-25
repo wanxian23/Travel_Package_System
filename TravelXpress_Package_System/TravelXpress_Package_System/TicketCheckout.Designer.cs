@@ -75,12 +75,19 @@
             this.panelProceedBt.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1.SuspendLayout();
+            this.panelProceedBt.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.ticket1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.ticketFlowPanel);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.icTb);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.panelProceedBt);
@@ -518,6 +525,12 @@
             this.label25.Size = new System.Drawing.Size(96, 69);
             this.label25.TabIndex = 52;
             this.label25.Text = "25";
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1196, 135);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 84;
             // 
             // TicketCheckout
             // 
@@ -540,6 +553,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.ticket1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -587,5 +601,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
