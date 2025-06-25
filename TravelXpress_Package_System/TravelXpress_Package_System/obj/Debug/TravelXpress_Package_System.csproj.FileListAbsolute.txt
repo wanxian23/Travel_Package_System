@@ -143,7 +143,6 @@ C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_Sys
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\qr.png
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\redHouse.jpg
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Single bed.png
-<<<<<<< HEAD
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\AFamosa.jpeg
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture.jpg
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture2.jpg
@@ -201,68 +200,3 @@ D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Pack
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\mayangLogo.png
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\melorLogo.png
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\noImageUploaded.png
-=======
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\AFamosa.jpeg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture2.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\TransnationalLogo.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\TransnationalSeats.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\eagleLangkawi.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Family room.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\ferryMelaka.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\fishboneSabah.jpeg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\jonker.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\King bed.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\logoProject.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\logoProject.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\masjidMelaka.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\MAS_plane.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\Card.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\FPX.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\PaymentMethod.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\tng.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\penangBridge.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\qr.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\redHouse.jpg
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Single bed.png
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase.mdf
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase_log.ldf
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpressDBMS.mdf
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpressDBMS_log.ldf
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.exe.config
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.exe
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.pdb
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.AssemblyReference.cache
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminAccomodationPage.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminMainPage.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminPackagePage.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminTicketPage.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CheckoutForm.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.ChekourPaymentForm.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CustomerMainPage.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.Form1.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.Properties.Resources.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketBookingForm.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketCheckout.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketForm.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketPayment.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketReceipt.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketSeat.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TourPackageDetailsForm.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TourPackageForm.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.GenerateResource.cache
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.CoreCompileInputs.cache
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.exe
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.pdb
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AccommodationAvailabilityPage.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AccommodationBookingPage.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.HotelOutput.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.RoomControl.resources
-C:\Users\A'isyah Insyirah\Desktop\UTEM\YEAR 2 SEM 2\EVENT-BASED\PROJECT\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AccommodationDetailsPage.resources
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AccommodationAvailabilityPage.resources
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AccommodationBookingPage.resources
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AccommodationDetailsPage.resources
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AccommodationReceiptPage.resources
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.HotelOutput.resources
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.RoomControl.resources
->>>>>>> 9246f5f5f32d17195ed71e08b5a1b456b79039cd

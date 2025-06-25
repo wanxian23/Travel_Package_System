@@ -66,9 +66,6 @@ namespace TravelXpress_Package_System.Properties {
         internal static System.Drawing.Bitmap DefaultBusImage_png {
             get {
                 object obj = ResourceManager.GetObject("DefaultBusImage.png", resourceCulture);
-        internal static System.Drawing.Bitmap GentingHighland {
-            get {
-                object obj = ResourceManager.GetObject("GentingHighland", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

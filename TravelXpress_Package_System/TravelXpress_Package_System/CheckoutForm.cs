@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using TravelXpress_Package_System.Module;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace TravelXpress_Package_System
 {
@@ -12,7 +17,6 @@ namespace TravelXpress_Package_System
     {
         public int packagetype;
         public int durationDays = 0;
-        public double roomExtraSlotPrice = 25;
         public CustomerMemberDetails customerMemberDetails;
         public CustomerDetails customerDetails;
         public PackageCheckout PackageCheckout;
@@ -21,9 +25,6 @@ namespace TravelXpress_Package_System
         {
             InitializeComponent();
             this.packagetype = packagetype;
-            this.customerMemberDetails = new CustomerMemberDetails();
-            this.customerDetails = new CustomerDetails();
-            this.PackageCheckout = new PackageCheckout();
 
             groupBoxCustomerFamilyDetails.Hide();
 
@@ -41,12 +42,10 @@ namespace TravelXpress_Package_System
             }
         }
 
-        public double price = 0;
-
         void getDataFromDB()
         {
             string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\chiew\\Desktop\\C# project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
-            string query = "SELECT * FROM Package WHERE PackageID = @PackageID";
+            string query = "SELECT DurationDays FROM Package WHERE PackageID = @PackageID";
             
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -57,23 +56,16 @@ namespace TravelXpress_Package_System
                 DataSet dataSet = new DataSet();
                 dataAdapter.Fill(dataSet, "Package");
 
-                var data = dataSet.Tables["Package"];
-
-                if (data.Rows.Count > 0)
+                if (dataSet.Tables["Package"].Rows.Count > 0)
                 {
-                    durationDays = int.Parse(data.Rows[0]["DurationDays"].ToString());
-                    price = double.Parse(data.Rows[0]["Price"].ToString());
-                    textBoxPackageFromLocation.Text = data.Rows[0]["FromLocation"].ToString();
-                    textBoxPackageToLocation.Text = data.Rows[0]["ToLocation"].ToString();
-                    textBoxPackageDuration.Text = data.Rows[0]["DurationDays"].ToString() + " days";
-                    textBoxPackagePrice.Text = data.Rows[0]["Price"].ToString();
+                    durationDays = int.Parse(dataSet.Tables["Package"].Rows[0]["DurationDays"].ToString());
                 }
             }
         }
 
         public List<CustomerMemberDetails> memberDetails = new List<CustomerMemberDetails>();
 
-        public int customerMemberPax = 0;
+        public decimal customerMemberPax = 0;
         public int currentCustomerMemberNo = 0;
 
         private void radioButtonTrue_CheckedChanged(object sender, EventArgs e)
@@ -105,25 +97,15 @@ namespace TravelXpress_Package_System
             panel1.AutoScroll = true;
         }
 
-        void checkNumericUpDownNull(string name)
-        {
-            MessageBox.Show($"{name} cannot be null");
-        }
-
         private void buttonMemberPaxConfirm_Click(object sender, EventArgs e)
         {
-            if (numericUpDownNumPax.Value == null)
-            {
-                checkNumericUpDownNull("Number of member");
-                return;
-            }
             panel1.AutoScroll = false;
             groupBoxCustomerFamilyDetails.Show();
             groupBoxCustomerFamilyDetails.Enabled = true;
             buttonConfirmCustomerMemberDetails.Visible = true;
             buttonEditCustomerMemberDetails.Visible = true;
             panel1.AutoScroll = true;
-            customerMemberPax = (int)numericUpDownNumPax.Value;
+            customerMemberPax = numericUpDownNumPax.Value;
             currentCustomerMemberNo = 1;
             numericUpDownNumPax.Enabled = false;
 
@@ -194,7 +176,7 @@ namespace TravelXpress_Package_System
                 ID = validNextID,
                 Name = textBoxCustomerMemberName.Text,
                 IC = textBoxCustomerMemberIC.Text,
-                Contact = textBoxCustomerMemberPhone.Text,
+                PhoneNO = textBoxCustomerMemberPhone.Text,
                 Gender = radioButtonMale.Checked ? "Male" : "Female"
             });
             
@@ -213,7 +195,7 @@ namespace TravelXpress_Package_System
         {
             textBoxCustomerMemberName.Text = memberDetails[currentCustomerMemberNo - 1].Name;
             textBoxCustomerMemberIC.Text = memberDetails[currentCustomerMemberNo - 1].IC;
-            textBoxCustomerMemberPhone.Text = memberDetails[currentCustomerMemberNo - 1].Contact;
+            textBoxCustomerMemberPhone.Text = memberDetails[currentCustomerMemberNo - 1].PhoneNO;
             if (memberDetails[currentCustomerMemberNo - 1].Gender == "Male")
             {
                 radioButtonMale.Checked = true;
@@ -228,7 +210,7 @@ namespace TravelXpress_Package_System
         {
             memberDetails[currentCustomerMemberNo - 1].Name = textBoxCustomerMemberName.Text;
             memberDetails[currentCustomerMemberNo - 1].IC = textBoxCustomerMemberIC.Text;
-            memberDetails[currentCustomerMemberNo - 1].Contact = textBoxCustomerMemberPhone.Text;
+            memberDetails[currentCustomerMemberNo - 1].PhoneNO = textBoxCustomerMemberPhone.Text;
             memberDetails[currentCustomerMemberNo - 1].Gender = radioButtonMale.Checked ? "Male" : "Female";
         }
 
@@ -310,15 +292,15 @@ namespace TravelXpress_Package_System
             {
                 return false;
             }
-            else if (string.IsNullOrEmpty(textBoxCustomerEmail.Text))
-            {
-                return false;
-            }
             else if (string.IsNullOrEmpty(textBoxCustomerIC.Text))
             {
                 return false;
             }
             else if (string.IsNullOrEmpty(textBoxCustomerContact.Text))
+            {
+                return false;
+            }
+            else if (string.IsNullOrEmpty(textBoxCustomerEmail.Text))
             {
                 return false;
             }
@@ -349,10 +331,6 @@ namespace TravelXpress_Package_System
             {
                 numericUpDownSingleBed.Visible = true;
             }
-            else
-            {
-                numericUpDownSingleBed.Visible = false;
-            }
         }
 
         private void checkBoxSingleRKingBed_CheckedChanged(object sender, EventArgs e)
@@ -360,10 +338,6 @@ namespace TravelXpress_Package_System
             if (checkBoxSingleRKingBed.Checked)
             {
                 numericUpDownSingleRKingBed.Visible = true;
-            }
-            else
-            {
-                numericUpDownSingleRKingBed.Visible = false;
             }
         }
 
@@ -373,70 +347,24 @@ namespace TravelXpress_Package_System
             {
                 numericUpDownFamilyRoom.Visible = true;
             }
-            else
-            {
-                numericUpDownFamilyRoom.Visible = false;
-            }
         }
         private void buttonCheckOut_Click(object sender, EventArgs e)
         {
             //Console.WriteLine(memberDetails.Count);
-            int roomPax = checkRoomPax();
+            int numPeople = checkRoomPax();
             if (!checkCustomerDetail())
             {
                 MessageBox.Show($"Your details is not yet complete");
                 return;
             }
-            else if (roomPax - (customerMemberPax + 1) < 0)
+            else if (numPeople != 0)
             {
-                MessageBox.Show($"Not enough room booked! You are short by {roomPax}. \nPlease add more room to accomodate all {customerMemberPax + 1} people");
+                MessageBox.Show($"Not enough room booked! You are short by {numPeople}. \nPlease add more room to accomodate all {customerMemberPax + 1} people");
                 return;
             }
             else
             {
-                if (roomPax - (customerMemberPax + 1) > 0)
-                {
-                    DialogResult result = MessageBox.Show($"You have {customerMemberPax + 1} guest(s), but the rooms selected can hold up to {roomPax} people. " +
-                        $"\nThis could lead to extra costs (RM {roomExtraSlotPrice:F2} per extra slot). \nDo you want to continue?", 
-                        "Room capacity warning",
-                        MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.No)
-                    {
-                        return;
-                    }
-                }
-                customerDetails.Name = textBoxCustomerName.Text;
-                customerDetails.IC = textBoxCustomerEmail.Text;
-                customerDetails.Contact = textBoxCustomerIC.Text;
-                customerDetails.Email = textBoxCustomerContact.Text;
-                customerDetails.Gender = radioButtonCusMale.Checked ? "Male" : "Female";
-                customerDetails.memberNum = radioButtonTrue.Checked ? (int)numericUpDownNumPax.Value : 0;
-
-                PackageCheckout.CustomerDetails = customerDetails;
-
-                if (customerDetails.memberNum != 0)
-                {
-                    PackageCheckout.CustomerMembersDetails = memberDetails;
-                }
-
-                PackageCheckout.PackageID = packagetype.ToString();
-                PackageCheckout.bookingDate = DateTime.Today; 
-                PackageCheckout.StartDate = dateTimePickerFromDate.Value;
-                PackageCheckout.EndDate = dateTimePickerToDate.Value;
-
-                PackageCheckout.SelectedPackageRoom.singleBed = checkBoxSingleBed.Checked ? (int)numericUpDownSingleBed.Value : 0;
-                PackageCheckout.SelectedPackageRoom.singleRKingBed = checkBoxSingleRKingBed.Checked ? (int)numericUpDownSingleRKingBed.Value : 0;
-                PackageCheckout.SelectedPackageRoom.familyRoom = checkBoxFamilyRoom.Checked ? (int)numericUpDownFamilyRoom.Value : 0;
-
-                PackageCheckout.numPax = customerDetails.memberNum + 1; // + 1 cause need to include customer itself
-                PackageCheckout.packageAmount = PackageCheckout.numPax * price;
-                if (roomPax - (customerMemberPax + 1) != 0)
-                {
-                    PackageCheckout.roomAmount = (roomPax - (customerMemberPax + 1)) * roomExtraSlotPrice;
-                }
-                PackageCheckout.totalAmount = PackageCheckout.packageAmount + PackageCheckout.roomAmount;
-
+                
                 ChekourPaymentForm form = new ChekourPaymentForm(PackageCheckout);
                 form.ShowDialog();
             }
@@ -449,7 +377,11 @@ namespace TravelXpress_Package_System
 
             int estimatedRoomPax = singleBed + singleRKingBed + familyRoom;
 
-            return estimatedRoomPax;
+            if (estimatedRoomPax < (customerMemberPax + 1))
+            {
+                return (((int)customerMemberPax + 1) - estimatedRoomPax);
+            }
+            return 0;
         }
 
         private void dateTimePickerFromDate_ValueChanged(object sender, EventArgs e)

@@ -63,30 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccommodationAvailabilityPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AccommodationAvailabilityPage.Designer.cs">
-      <DependentUpon>AccommodationAvailabilityPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AccommodationBookingPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AccommodationBookingPage.Designer.cs">
-      <DependentUpon>AccommodationBookingPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AccommodationDetailsPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AccommodationDetailsPage.Designer.cs">
-      <DependentUpon>AccommodationDetailsPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AccommodationReceiptPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AccommodationReceiptPage.Designer.cs">
-      <DependentUpon>AccommodationReceiptPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminAccomodationPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,29 +111,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HotelCard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HotelCard.Designer.cs">
-      <DependentUpon>HotelCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Module\ConnectionClass.cs" />
     <Compile Include="Module\CustomerDetails.cs" />
     <Compile Include="Module\CustomerMemberDetails.cs" />
     <Compile Include="Module\PackageCheckout.cs" />
-    <Compile Include="Module\SelectedPackageRoom.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Module\SeatDetail.cs" />
     <Compile Include="Module\TemporaryBusDetailsStore.cs" />
-    <Compile Include="RoomControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="RoomControl.Designer.cs">
-      <DependentUpon>RoomControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SeatDetail.cs" />
-    <Compile Include="TemporaryBusDetailsStore.cs" />
     <Compile Include="TicketBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,18 +171,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TravelXpressDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccommodationAvailabilityPage.resx">
-      <DependentUpon>AccommodationAvailabilityPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AccommodationBookingPage.resx">
-      <DependentUpon>AccommodationBookingPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AccommodationDetailsPage.resx">
-      <DependentUpon>AccommodationDetailsPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AccommodationReceiptPage.resx">
-      <DependentUpon>AccommodationReceiptPage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminAccomodationPage.resx">
       <DependentUpon>AdminAccomodationPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,9 +195,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HotelCard.resx">
-      <DependentUpon>HotelCard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -260,9 +205,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RoomControl.resx">
-      <DependentUpon>RoomControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TicketBooking.resx">
       <DependentUpon>TicketBooking.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,16 +256,13 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Image\AFamosa.jpeg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\BentongFarm.jpeg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\bus picture.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\bus picture2.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Bus\27Seats.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -342,112 +281,61 @@
     </Content>
     <Content Include="Image\Bus\TransnationalLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    <Content Include="Image\Bus\TransnationalLogo.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Bus\TransnationalSeats.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\ChewJetty.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\ColmarTropicale.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\CrocodileFarm.jpeg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="Image\eagleLangkawi.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Family room.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\ferryMelaka.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\GentingHighland.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\GentingSkyWorlds.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\HappyBeeFarm.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\itinerary\ItineraryGenting.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\itinerary\ItineraryJohor.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\itinerary\ItineraryMelaka.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\itinerary\ItineraryPahang.png" />
-    <Content Include="Image\itinerary\ItineraryPenang.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\JalanTanHiokNee.jpeg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="Image\fishboneSabah.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\jonker.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\KekLokSi.jpeg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\King bed.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\legoland.jpeg" />
     <Content Include="Image\logoProject.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\logoProject.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image\masjidMelaka.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Image\MAS_plane.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Payment\Card.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Payment\FPX.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Payment\PaymentMethod.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Payment\tng.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Image\Payment\tng.jpg" />
     <Content Include="Image\Payment\tng.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\penangBridge.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\PenangHill.jpeg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\qr.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\RapidRidePahang.jpeg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\redHouse.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Single bed.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\SkyAvenueMall.jpeg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\SultanAbuBakarMosque.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Image\TamanNegara.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\DefaultBusImage.png.bmp" />
     <Content Include="TravelDatabase.mdf">
@@ -458,10 +346,10 @@
       <DependentUpon>TravelDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="TravelXpressDBMS.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TravelXpressDBMS_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>TravelXpressDBMS.mdf</DependentUpon>
     </Content>
   </ItemGroup>
