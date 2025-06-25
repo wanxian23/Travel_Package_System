@@ -322,12 +322,9 @@
   <ItemGroup>
     <Content Include="Image\AFamosa.jpeg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-<<<<<<< HEAD
     </Content>
     <Content Include="Image\BentongFarm.jpeg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-=======
->>>>>>> b8112b2 (not yet complete but commit for change customer gender from int to char(6))
     </Content>
     <Content Include="Image\bus picture.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
