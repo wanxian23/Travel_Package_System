@@ -14,6 +14,11 @@ namespace TravelXpress_Package_System
     public partial class CheckoutForm : Form
     {
         public int packagetype;
+        public int durationDays = 0;
+        public CustomerMemberDetails customerMemberDetails;
+        public CustomerDetails customerDetails;
+        public PackageCheckout PackageCheckout;
+        
         public CheckoutForm(int packagetype)
         {
             InitializeComponent();
@@ -34,6 +39,23 @@ namespace TravelXpress_Package_System
             public string IC { get; set; }
             public string PhoneNO { get; set; }
             public string Gender { get; set; }
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\chiew\\Desktop\\C# project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
+            string query = "SELECT DurationDays FROM Package WHERE PackageID = @PackageID";
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PackageID", packagetype);
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet, "Package");
+
+                if (dataSet.Tables["Package"].Rows.Count > 0)
+                {
+                    durationDays = int.Parse(dataSet.Tables["Package"].Rows[0]["DurationDays"].ToString());
+                }
+            }
         }
 
         public List<CustomerMemberDetails> memberDetails = new List<CustomerMemberDetails>();

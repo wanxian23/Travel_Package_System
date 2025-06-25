@@ -18,5 +18,6 @@ namespace TravelXpress_Package_System
             InitializeComponent();
             this.packageType = packageType;
         }
+
     }
 }
