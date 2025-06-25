@@ -120,7 +120,6 @@ G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Pr
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\qr.png
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\redHouse.jpg
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Single bed.png
-<<<<<<< HEAD
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\AFamosa.jpeg
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture.jpg
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture2.jpg
@@ -144,62 +143,3 @@ C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_Sys
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\qr.png
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\redHouse.jpg
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Single bed.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\AFamosa.jpeg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture2.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\TransnationalLogo.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\eagleLangkawi.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Family room.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\ferryMelaka.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\fishboneSabah.jpeg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\jonker.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\King bed.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\logoProject.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\logoProject.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\masjidMelaka.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\MAS_plane.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\Card.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\FPX.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\PaymentMethod.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\tng.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\penangBridge.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\qr.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\redHouse.jpg
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Single bed.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase.mdf
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelDatabase_log.ldf
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpressDBMS.mdf
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpressDBMS_log.ldf
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.exe.config
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.exe
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.pdb
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.AssemblyReference.cache
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.exe.config
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminAccomodationPage.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminMainPage.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminPackagePage.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.AdminTicketPage.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CheckoutForm.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.ChekourPaymentForm.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.CustomerMainPage.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.Form1.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.Properties.Resources.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketBookingForm.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketCheckout.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketForm.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketPayment.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketReceipt.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TicketSeat.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TourPackageDetailsForm.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.TourPackageForm.resources
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.GenerateResource.cache
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.csproj.CoreCompileInputs.cache
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.exe
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\obj\Debug\TravelXpress_Package_System.pdb
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\27Seats.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\44Seats.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\mayangLogo.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\melorLogo.png
-D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\noImageUploaded.png
-=======
->>>>>>> parent of cbcdd6e (Add from and to date logic on check out package page)
