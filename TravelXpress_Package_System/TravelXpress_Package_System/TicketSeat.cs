@@ -15,7 +15,8 @@ namespace TravelXpress_Package_System
 {
     public partial class TicketSeat : Form
     {
-        private SqlConnection connection;
+        SqlConnection connection;
+        ConnectionClass connClass;
 
         TemporaryBusDetailsStore previousDateStore;
         SeatDetail seatDetail = new SeatDetail();
@@ -37,9 +38,8 @@ namespace TravelXpress_Package_System
                 nextBt.Visible = true;
             }
 
-            // Initialize the connection object
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Coding\\C#\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf;Integrated Security=True";
-            connection = new SqlConnection(connectionString);
+            connClass = new ConnectionClass();
+            connection = new SqlConnection(connClass.connectionString);
 
         }
 

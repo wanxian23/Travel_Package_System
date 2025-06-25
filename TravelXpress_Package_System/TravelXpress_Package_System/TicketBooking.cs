@@ -8,14 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using TravelXpress_Package_System.Module;
 
 namespace TravelXpress_Package_System
 {
     public partial class TicketBookingForm : Form
     {
-        private SqlConnection connection;
-        private SqlDataAdapter dataAdapter;
-        private DataSet dataSet;
 
         TemporaryBusDetailsStore dataStore = new TemporaryBusDetailsStore();
 
@@ -24,8 +22,6 @@ namespace TravelXpress_Package_System
         {
             InitializeComponent();
 
-            string DBConnection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Coding\\C#\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf;Integrated Security=True";
-            connection = new SqlConnection(DBConnection);
             this.seatDetail = seatDetail;
         }
 

@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Data.SqlClient;
+using TravelXpress_Package_System.Module;
 
 namespace TravelXpress_Package_System
 {
     public partial class TicketForm : Form
     {
-        private SqlConnection connection;
+        SqlConnection connection;
+        ConnectionClass connClass;
 
         TemporaryBusDetailsStore previousDateStore;
         SeatDetail seatDetail = new SeatDetail();
@@ -24,9 +26,8 @@ namespace TravelXpress_Package_System
 
             this.previousDateStore = previousDateStore;
 
-            // Initialize the connection object
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Coding\\C#\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf;Integrated Security=True";
-            connection = new SqlConnection(connectionString);
+            connClass = new ConnectionClass();
+            connection = new SqlConnection(connClass.connectionString);
         }
 
         private void backBt_Click(object sender, EventArgs e)
@@ -155,6 +156,7 @@ namespace TravelXpress_Package_System
                     panel.Controls["label14"].Text = dropoff;
                     panel.Controls["label16"].Text = Destination;
                     panel.Controls["label10"].Text = Convert.ToDouble(Price).ToString("N2");
+                    panel.Controls["label7"].Text = (totalSeats - bookedSeats).ToString();
 
 
                     PictureBox pic = panel.Controls["pictureBox1"] as PictureBox;
