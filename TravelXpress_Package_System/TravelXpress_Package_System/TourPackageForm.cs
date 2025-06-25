@@ -61,5 +61,33 @@ namespace TravelXpress_Package_System
             tourPackageDetailsForm.ShowDialog();
 
         }
+
+        private void linkLabelMorDetails2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            packageID = 2;
+            TourPackageDetailsForm tourPackageDetailsForm = new TourPackageDetailsForm(packageID);
+            tourPackageDetailsForm.ShowDialog();
+        }
+
+        private void linkLabelMorDetails3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            packageID = 3;
+            TourPackageDetailsForm tourPackageDetailsForm = new TourPackageDetailsForm(packageID);
+            tourPackageDetailsForm.ShowDialog();
+        }
+
+        private void linkLabelMorDetails4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            packageID = 4;
+            TourPackageDetailsForm tourPackageDetailsForm = new TourPackageDetailsForm(packageID);
+            tourPackageDetailsForm.ShowDialog();
+        }
+
+        private void linkLabelMorDetails5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            packageID = 5;
+            TourPackageDetailsForm tourPackageDetailsForm = new TourPackageDetailsForm(packageID);
+            tourPackageDetailsForm.ShowDialog();
+        }
     }
 }
