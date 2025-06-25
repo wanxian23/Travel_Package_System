@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketReceipt));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.receiptPanel = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.confirmBt = new System.Windows.Forms.Button();
+            this.downloadBt = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -102,7 +102,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.receiptPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -128,50 +130,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // receiptPanel
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(15, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1227, 596);
-            this.panel1.TabIndex = 3;
+            this.receiptPanel.AutoScroll = true;
+            this.receiptPanel.Controls.Add(this.panel8);
+            this.receiptPanel.Controls.Add(this.panel6);
+            this.receiptPanel.Controls.Add(this.panel7);
+            this.receiptPanel.Controls.Add(this.panel4);
+            this.receiptPanel.Controls.Add(this.panel5);
+            this.receiptPanel.Controls.Add(this.panel3);
+            this.receiptPanel.Controls.Add(this.groupBox3);
+            this.receiptPanel.Controls.Add(this.panel2);
+            this.receiptPanel.Controls.Add(this.groupBox1);
+            this.receiptPanel.Location = new System.Drawing.Point(15, 14);
+            this.receiptPanel.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.receiptPanel.Name = "receiptPanel";
+            this.receiptPanel.Size = new System.Drawing.Size(1227, 596);
+            this.receiptPanel.TabIndex = 6;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button2);
-            this.panel8.Controls.Add(this.button1);
+            this.panel8.Controls.Add(this.confirmBt);
+            this.panel8.Controls.Add(this.downloadBt);
             this.panel8.Location = new System.Drawing.Point(6, 1536);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1194, 103);
             this.panel8.TabIndex = 52;
             // 
-            // button2
+            // confirmBt
             // 
-            this.button2.Location = new System.Drawing.Point(666, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 54);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "Confirm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.confirmBt.Location = new System.Drawing.Point(666, 22);
+            this.confirmBt.Name = "confirmBt";
+            this.confirmBt.Size = new System.Drawing.Size(229, 54);
+            this.confirmBt.TabIndex = 51;
+            this.confirmBt.Text = "Confirm";
+            this.confirmBt.UseVisualStyleBackColor = true;
+            this.confirmBt.Click += new System.EventHandler(this.confirmBt_Click_1);
             // 
-            // button1
+            // downloadBt
             // 
-            this.button1.Location = new System.Drawing.Point(287, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 54);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "Download Receipt";
-            this.button1.UseVisualStyleBackColor = true;
+            this.downloadBt.Location = new System.Drawing.Point(287, 22);
+            this.downloadBt.Name = "downloadBt";
+            this.downloadBt.Size = new System.Drawing.Size(229, 54);
+            this.downloadBt.TabIndex = 50;
+            this.downloadBt.Text = "Download Receipt";
+            this.downloadBt.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -593,6 +596,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label26);
+            this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.label60);
             this.groupBox3.Controls.Add(this.label47);
             this.groupBox3.Controls.Add(this.label48);
@@ -695,10 +700,10 @@
             this.label52.BackColor = System.Drawing.Color.Transparent;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.Black;
-            this.label52.Location = new System.Drawing.Point(463, 197);
+            this.label52.Location = new System.Drawing.Point(23, 211);
             this.label52.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(232, 87);
+            this.label52.Size = new System.Drawing.Size(232, 57);
             this.label52.TabIndex = 37;
             this.label52.Text = "Transnational";
             // 
@@ -708,7 +713,7 @@
             this.label53.BackColor = System.Drawing.Color.Transparent;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Black;
-            this.label53.Location = new System.Drawing.Point(462, 168);
+            this.label53.Location = new System.Drawing.Point(22, 182);
             this.label53.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(57, 29);
@@ -747,7 +752,7 @@
             this.label56.BackColor = System.Drawing.Color.Transparent;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Black;
-            this.label56.Location = new System.Drawing.Point(22, 200);
+            this.label56.Location = new System.Drawing.Point(23, 141);
             this.label56.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(98, 25);
@@ -760,7 +765,7 @@
             this.label57.BackColor = System.Drawing.Color.Transparent;
             this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.Black;
-            this.label57.Location = new System.Drawing.Point(22, 168);
+            this.label57.Location = new System.Drawing.Point(23, 109);
             this.label57.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(158, 29);
@@ -1015,18 +1020,44 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "Name";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(458, 141);
+            this.label25.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(146, 29);
+            this.label25.TabIndex = 44;
+            this.label25.Text = "Seats Book";
+            // 
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(462, 182);
+            this.label26.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(241, 57);
+            this.label26.TabIndex = 45;
+            this.label26.Text = "1, 2, 3";
+            // 
             // TicketReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 624);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.receiptPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TicketReceipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicketReceipt";
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.TicketReceipt_Load);
+            this.receiptPanel.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -1062,61 +1093,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel receiptPanel;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button confirmBt;
+        private System.Windows.Forms.Button downloadBt;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox8;
@@ -1132,8 +1120,53 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
     }
 }

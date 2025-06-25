@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace TravelXpress_Package_System
 {
     public partial class TicketForm : Form
     {
+        private SqlConnection connection;
+
         TemporaryBusDetailsStore previousDateStore;
         SeatDetail seatDetail = new SeatDetail();
         public TicketForm(TemporaryBusDetailsStore previousDateStore, SeatDetail seatDetail)
@@ -19,7 +23,10 @@ namespace TravelXpress_Package_System
             InitializeComponent();
 
             this.previousDateStore = previousDateStore;
-            this.seatDetail = seatDetail;
+
+            // Initialize the connection object
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Coding\\C#\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf;Integrated Security=True";
+            connection = new SqlConnection(connectionString);
         }
 
         private void backBt_Click(object sender, EventArgs e)
@@ -27,137 +34,191 @@ namespace TravelXpress_Package_System
             TicketBookingForm ticketBookingForm = new TicketBookingForm(seatDetail);
             this.Hide();
             ticketBookingForm.busFrom = previousDateStore.busFrom;
-            ticketBookingForm.busTo = previousDateStore.busTo;  
+            ticketBookingForm.busTo = previousDateStore.busTo;
             ticketBookingForm.busDepartDate = previousDateStore.departDate;
             ticketBookingForm.busReturnDate = previousDateStore.reDate;
             ticketBookingForm.ShowDialog();
         }
         private void chooseBt1_Click(object sender, EventArgs e)
         {
-            TicketSeat ticketSeat = new TicketSeat(previousDateStore, seatDetail);
-            this.Hide();
-            ticketSeat.ShowDialog();
-        }
+            Button clickedButton = sender as Button;
+            string selectedTicketID = "";
+            if (clickedButton != null && clickedButton.Tag != null)
+            {
+                selectedTicketID = clickedButton.Tag.ToString();
+                previousDateStore.ticketID = selectedTicketID;
 
-        private void chooseBt2_Click(object sender, EventArgs e)
-        {
-            TicketSeat ticketSeat = new TicketSeat(previousDateStore, seatDetail);
-            this.Hide();
-            ticketSeat.ShowDialog();
+                TicketSeat ticketSeat = new TicketSeat(previousDateStore, seatDetail);
+                this.Hide(); // Hide current form while modal shows
+                ticketSeat.ShowDialog(); // Show TicketSeat and wait until it's closed
+            }
         }
 
         private void TicketForm_Load(object sender, EventArgs e)
         {
-
             busFromTb.Text = previousDateStore.busFrom;
             busToTb.Text = previousDateStore.busTo;
+            departDateLb.Location = new Point(391, 108);
+            departTb.Location = new Point(570, 112);
             departTb.Text = previousDateStore.departDate.ToString("dd MMMM yyyy");
+
+            if (previousDateStore.roundTrip)
+            {
+                departDateLb.Location = new Point(121, 104);
+                departTb.Location = new Point(300, 108);
+                returnDateLb.Visible = true;
+                returnTb.Visible = true;
+                returnTb.Text = previousDateStore.reDate.ToString("dd MMMM yyyy");
+            }
+            else
+            {
+                departDateLb.Location = new Point(391, 108);
+                departTb.Location = new Point(570, 112);
+                returnDateLb.Visible = false;
+                returnTb.Visible = false;
+            }
+
             returnTb.Text = previousDateStore.reDate.ToString("dd MMMM yyyy");
 
-            if (string.IsNullOrWhiteSpace(busToTb.Text))
+            string sqlPullTrip = "SELECT t.*, r.*, ticket.*, bus.* " +
+                                 "FROM Trip t " +
+                                 "INNER JOIN RoutePath r ON t.RouteID = r.RouteID " +
+                                 "INNER JOIN Ticket ticket ON t.TripID = ticket.TripID " +
+                                 "INNER JOIN BusDetails bus ON t.BusID = bus.BusID " +
+                                 "WHERE r.Origin LIKE @origin AND r.Destination LIKE @destination AND t.DepartureDate = @departDate " +
+                                 "ORDER BY t.DepartureTime";
+
+            List<Dictionary<string, object>> tickets = new List<Dictionary<string, object>>();
+
+            using (SqlCommand cmd = new SqlCommand(sqlPullTrip, connection))
             {
-                busToTb.Visible = false;
-                busToLb.Visible = false;
-                returnTb.Visible = false;
-                returnDateLb.Visible = false;
-                busFromLb.Location = new Point(350, 18);
-                busFromTb.Location = new Point(458, 22);
-                departDateLb.Location = new Point(415, 104);
-                departTb.Location = new Point(594, 108);
-            } 
+                cmd.Parameters.AddWithValue("@origin", "%" + busFromTb.Text + "%");
+                cmd.Parameters.AddWithValue("@destination", "%" + busToTb.Text + "%");
+                cmd.Parameters.AddWithValue("@departDate", previousDateStore.departDate.Date);
 
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var ticketData = new Dictionary<string, object>();
+
+                        for (int i = 0; i < reader.FieldCount; i++)
+                            ticketData[reader.GetName(i)] = reader[i];
+
+                        tickets.Add(ticketData);
+                    }
+                }
+
+                // Now loop the stored tickets
+                foreach (var row in tickets)
+                {
+                    string ticketID = row["TicketID"].ToString();
+                    int totalSeats = Convert.ToInt32(row["TotalSeats"]);
+                    int bookedSeats = 0;
+
+                    string sqlCheckSeatAvailability = "SELECT COUNT(*) FROM Seats WHERE TicketID = @ticketID";
+                    using (SqlCommand checkCmd = new SqlCommand(sqlCheckSeatAvailability, connection))
+                    {
+                        checkCmd.Parameters.AddWithValue("@ticketID", ticketID);
+                        bookedSeats = (int)checkCmd.ExecuteScalar();
+                    }
+
+                    if (bookedSeats >= totalSeats)
+                        continue;
+
+                    string BusID = row["BusID"].ToString();
+                    string Bus = row["Bus"].ToString();
+                    string Origin = row["Origin"].ToString();
+                    string Destination = row["Destination"].ToString();
+                    string Price = row["Price"].ToString();
+                    string busImagePath = row["BusUpload"].ToString();
+                    string boarding = row["BoardingPoint"].ToString();
+                    string dropoff = row["DropOffPoint"].ToString();
+
+                    DateTime DepartureDate = Convert.ToDateTime(row["DepartureDate"]);
+                    DateTime DepartureTime = Convert.ToDateTime(row["DepartureTime"]);
+                    DateTime arrivalTime = Convert.ToDateTime(row["ArrivalTime"]);
+
+                    TimeSpan duration = arrivalTime - DepartureTime;
+                    string durationFormatted = $"{(int)duration.TotalHours}h {duration.Minutes}m";
+
+                    // Build UI panel like before using `row[...]`
+                    Panel panel = CloneTicketPanel();
+
+                    panel.Controls["label5"].Text = DepartureTime.ToString("hh:mm tt");
+                    panel.Controls["label6"].Text = Bus;
+                    panel.Controls["label30"].Text = totalSeats.ToString();
+                    panel.Controls["label11"].Text = boarding;
+                    panel.Controls["label15"].Text = Origin;
+                    panel.Controls["label12"].Text = durationFormatted;
+                    panel.Controls["label14"].Text = dropoff;
+                    panel.Controls["label16"].Text = Destination;
+                    panel.Controls["label10"].Text = Convert.ToDouble(Price).ToString("N2");
+
+
+                    PictureBox pic = panel.Controls["pictureBox1"] as PictureBox;
+                    string imgPath = row["BusUpload"].ToString();
+                    if (File.Exists(imgPath))
+                        pic.Image = Image.FromFile(imgPath);
+                    else
+                        pic.Image = Image.FromFile("NoImageUploaded.png");
+
+                    Button chooseButton = panel.Controls["chooseBt1"] as Button;
+                    if (chooseButton != null)
+                    {
+                        chooseButton.Tag = ticketID;
+                        chooseButton.Click -= chooseBt1_Click; // remove if exists (safe to call)
+                        chooseButton.Click += chooseBt1_Click;
+                    }
+
+                    flowTicket1.Controls.Add(panel);
+                }
+
+                connection.Close();
+            }
         }
 
-        private Panel CreateTicketPanel(
-            string busName,
-            string departDate,
-            string returnDate,
-            string departureTime,
-            string returnTime,
-            string fromLocation,
-            string toLocation,
-            string price,
-            Image busImage,
-            EventHandler chooseButtonClickHandler
-        )
+        private Panel CloneTicketPanel()
         {
-            Panel ticketPanel = new Panel();
-            ticketPanel.BackColor = Color.FromArgb(224, 224, 224);
-            ticketPanel.Size = new Size(1138, 193);
-            ticketPanel.Font = new Font("Microsoft Sans Serif", 12F);
-            ticketPanel.Margin = new Padding(10);
+            Panel template = ticket1;
+            Panel clone = new Panel
+            {
+                Size = template.Size,
+                BackColor = template.BackColor,
+                Font = template.Font,
+                Margin = template.Margin,
+                Padding = template.Padding
+            };
 
-            // Bus Image
-            PictureBox pictureBox = new PictureBox();
-            pictureBox.Image = busImage;
-            pictureBox.Size = new Size(140, 140);
-            pictureBox.Location = new Point(20, 25);
-            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            ticketPanel.Controls.Add(pictureBox);
+            foreach (Control ctrl in template.Controls)
+            {
+                Control newCtrl = (Control)Activator.CreateInstance(ctrl.GetType());
 
-            // Labels
-            Label lblBusName = new Label();
-            lblBusName.Text = $"Bus: {busName}";
-            lblBusName.Location = new Point(180, 20);
-            lblBusName.AutoSize = true;
-            ticketPanel.Controls.Add(lblBusName);
+                newCtrl.Size = ctrl.Size;
+                newCtrl.Location = ctrl.Location;
+                newCtrl.Font = ctrl.Font;
+                newCtrl.Text = ctrl.Text;
+                newCtrl.BackColor = ctrl.BackColor;
+                newCtrl.ForeColor = ctrl.ForeColor;
+                newCtrl.Name = ctrl.Name;
 
-            Label lblFrom = new Label();
-            lblFrom.Text = $"From: {fromLocation}";
-            lblFrom.Location = new Point(180, 50);
-            lblFrom.AutoSize = true;
-            ticketPanel.Controls.Add(lblFrom);
+                if (ctrl is PictureBox pic && newCtrl is PictureBox newPic)
+                {
+                    newPic.Image = pic.Image;
+                    newPic.SizeMode = pic.SizeMode;
+                }
 
-            Label lblTo = new Label();
-            lblTo.Text = $"To: {toLocation}";
-            lblTo.Location = new Point(180, 80);
-            lblTo.AutoSize = true;
-            ticketPanel.Controls.Add(lblTo);
+                if (ctrl is Button btn && newCtrl is Button newBtn)
+                {
+                    newBtn.Click += chooseBt1_Click; // attach event
+                }
 
-            Label lblDepartDate = new Label();
-            lblDepartDate.Text = $"Depart Date: {departDate}";
-            lblDepartDate.Location = new Point(400, 20);
-            lblDepartDate.AutoSize = true;
-            ticketPanel.Controls.Add(lblDepartDate);
+                clone.Controls.Add(newCtrl);
+            }
 
-            Label lblReturnDate = new Label();
-            lblReturnDate.Text = $"Return Date: {returnDate}";
-            lblReturnDate.Location = new Point(400, 50);
-            lblReturnDate.AutoSize = true;
-            ticketPanel.Controls.Add(lblReturnDate);
-
-            Label lblDepartTime = new Label();
-            lblDepartTime.Text = $"Depart Time: {departureTime}";
-            lblDepartTime.Location = new Point(400, 80);
-            lblDepartTime.AutoSize = true;
-            ticketPanel.Controls.Add(lblDepartTime);
-
-            Label lblReturnTime = new Label();
-            lblReturnTime.Text = $"Return Time: {returnTime}";
-            lblReturnTime.Location = new Point(400, 110);
-            lblReturnTime.AutoSize = true;
-            ticketPanel.Controls.Add(lblReturnTime);
-
-            Label lblPrice = new Label();
-            lblPrice.Text = $"Price: RM {price}";
-            lblPrice.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
-            lblPrice.ForeColor = Color.DarkGreen;
-            lblPrice.Location = new Point(900, 30);
-            lblPrice.AutoSize = true;
-            ticketPanel.Controls.Add(lblPrice);
-
-            // Choose Button
-            Button chooseButton = new Button();
-            chooseButton.Text = "Choose";
-            chooseButton.Font = new Font("Microsoft Sans Serif", 12F);
-            chooseButton.Location = new Point(900, 100);
-            chooseButton.Size = new Size(150, 40);
-            chooseButton.Click += chooseButtonClickHandler;
-            ticketPanel.Controls.Add(chooseButton);
-
-            return ticketPanel;
+            return clone;
         }
-
 
     }
 }

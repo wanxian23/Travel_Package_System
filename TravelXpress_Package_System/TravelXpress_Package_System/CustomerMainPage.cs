@@ -36,5 +36,10 @@ namespace TravelXpress_Package_System
             AccommodationAvailabilityPage accommAvailabilityPage = new AccommodationAvailabilityPage();
             accommAvailabilityPage.ShowDialog();
         }
+
+        private void CustomerMainPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

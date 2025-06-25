@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketSeat));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.confirmBt = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -46,7 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.backBt = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.confirmBt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +73,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1227, 596);
             this.panel1.TabIndex = 1;
+            // 
+            // confirmBt
+            // 
+            this.confirmBt.Location = new System.Drawing.Point(528, 247);
+            this.confirmBt.Name = "confirmBt";
+            this.confirmBt.Size = new System.Drawing.Size(128, 43);
+            this.confirmBt.TabIndex = 30;
+            this.confirmBt.Text = "Confirm";
+            this.confirmBt.UseVisualStyleBackColor = true;
+            this.confirmBt.Click += new System.EventHandler(this.confirmBt_Click);
             // 
             // panel4
             // 
@@ -247,16 +257,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Num Of Seats";
             // 
-            // confirmBt
-            // 
-            this.confirmBt.Location = new System.Drawing.Point(528, 247);
-            this.confirmBt.Name = "confirmBt";
-            this.confirmBt.Size = new System.Drawing.Size(128, 43);
-            this.confirmBt.TabIndex = 30;
-            this.confirmBt.Text = "Confirm";
-            this.confirmBt.UseVisualStyleBackColor = true;
-            this.confirmBt.Click += new System.EventHandler(this.confirmBt_Click);
-            // 
             // TicketSeat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -268,6 +268,7 @@
             this.Name = "TicketSeat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicketSeat";
+            this.Load += new System.EventHandler(this.TicketSeat_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -288,7 +289,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button backBt;
         private System.Windows.Forms.Button clearBt;
-        private System.Windows.Forms.Button nextBt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox seatsTb;
@@ -301,5 +301,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label totalFeesLb;
         private System.Windows.Forms.Button confirmBt;
+        internal System.Windows.Forms.Button nextBt;
     }
 }

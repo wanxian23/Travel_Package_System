@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketPayment));
             this.panel = new System.Windows.Forms.Panel();
+            this.backBt = new System.Windows.Forms.Button();
+            this.fpxLabel = new System.Windows.Forms.Label();
             this.bookBt = new System.Windows.Forms.Button();
             this.cardPanel = new System.Windows.Forms.GroupBox();
             this.policyCb = new System.Windows.Forms.CheckBox();
@@ -68,6 +70,8 @@
             // panel
             // 
             this.panel.AutoScroll = true;
+            this.panel.Controls.Add(this.backBt);
+            this.panel.Controls.Add(this.fpxLabel);
             this.panel.Controls.Add(this.bookBt);
             this.panel.Controls.Add(this.cardPanel);
             this.panel.Controls.Add(this.paymentPic);
@@ -78,6 +82,28 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1227, 596);
             this.panel.TabIndex = 2;
+            // 
+            // backBt
+            // 
+            this.backBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBt.Location = new System.Drawing.Point(658, 504);
+            this.backBt.Name = "backBt";
+            this.backBt.Size = new System.Drawing.Size(119, 57);
+            this.backBt.TabIndex = 81;
+            this.backBt.Text = "Back";
+            this.backBt.UseVisualStyleBackColor = true;
+            this.backBt.Click += new System.EventHandler(this.backBt_Click);
+            // 
+            // fpxLabel
+            // 
+            this.fpxLabel.AutoSize = true;
+            this.fpxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpxLabel.Location = new System.Drawing.Point(708, 481);
+            this.fpxLabel.Name = "fpxLabel";
+            this.fpxLabel.Size = new System.Drawing.Size(314, 25);
+            this.fpxLabel.TabIndex = 80;
+            this.fpxLabel.Text = "Redirecting To FPX Interface....";
+            this.fpxLabel.Visible = false;
             // 
             // bookBt
             // 
@@ -352,6 +378,7 @@
             this.Text = "TicketPayment";
             this.Load += new System.EventHandler(this.TicketPayment_Load);
             this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.cardPanel.ResumeLayout(false);
             this.cardPanel.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -395,5 +422,7 @@
         private System.Windows.Forms.NumericUpDown exDateMMTb;
         private System.Windows.Forms.Button bookBt;
         private System.Windows.Forms.CheckBox policyCb;
+        private System.Windows.Forms.Label fpxLabel;
+        private System.Windows.Forms.Button backBt;
     }
 }
