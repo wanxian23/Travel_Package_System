@@ -123,6 +123,7 @@
     <Compile Include="ChekourPaymentForm.Designer.cs">
       <DependentUpon>ChekourPaymentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectionClass.cs" />
     <Compile Include="CustomerMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
