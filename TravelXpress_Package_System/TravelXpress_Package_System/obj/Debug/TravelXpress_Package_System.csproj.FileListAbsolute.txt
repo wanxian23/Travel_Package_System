@@ -120,6 +120,7 @@ G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Pr
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\qr.png
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\redHouse.jpg
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Single bed.png
+<<<<<<< HEAD
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\AFamosa.jpeg
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture.jpg
 C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture2.jpg
@@ -200,3 +201,5 @@ D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Pack
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\mayangLogo.png
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\melorLogo.png
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\noImageUploaded.png
+=======
+>>>>>>> parent of cbcdd6e (Add from and to date logic on check out package page)
