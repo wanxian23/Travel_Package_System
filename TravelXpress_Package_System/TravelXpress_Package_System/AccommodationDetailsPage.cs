@@ -24,8 +24,7 @@ namespace TravelXpress_Package_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //AccommodationPaymentPage accommPayment = new AccommodationPaymentPage();
-            //accommPayment.ShowDialog();
+            
         }
 
         private void label17_Click(object sender, EventArgs e)

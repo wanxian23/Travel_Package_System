@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccommodationDetailsPage));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.cardNumTb = new System.Windows.Forms.MaskedTextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.paymentPic = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cardRb = new System.Windows.Forms.RadioButton();
             this.ewalletRb = new System.Windows.Forms.RadioButton();
@@ -94,7 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cvvTb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exDateYYTb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exDateMMTb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentPic)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -492,16 +489,6 @@
             this.label25.TabIndex = 68;
             this.label25.Text = "Card Holder Name";
             // 
-            // paymentPic
-            // 
-            this.paymentPic.Image = ((System.Drawing.Image)(resources.GetObject("paymentPic.Image")));
-            this.paymentPic.Location = new System.Drawing.Point(21, 932);
-            this.paymentPic.Name = "paymentPic";
-            this.paymentPic.Size = new System.Drawing.Size(518, 527);
-            this.paymentPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.paymentPic.TabIndex = 84;
-            this.paymentPic.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cardRb);
@@ -723,7 +710,6 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.cardPanel);
-            this.Controls.Add(this.paymentPic);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -758,7 +744,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cvvTb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exDateYYTb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exDateMMTb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paymentPic)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -806,7 +791,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.MaskedTextBox cardNumTb;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.PictureBox paymentPic;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton cardRb;
         private System.Windows.Forms.RadioButton ewalletRb;
