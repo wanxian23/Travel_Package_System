@@ -279,3 +279,5 @@ D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Pack
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.exe.config
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.exe
 D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\TravelXpress_Package_System.pdb
+D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\itinerary\ItineraryPahang.png
+D:\Coding\C#\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\legoland.jpeg
