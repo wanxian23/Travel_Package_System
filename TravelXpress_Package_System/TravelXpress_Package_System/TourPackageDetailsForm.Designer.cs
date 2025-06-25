@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TourPackageDetailsForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxItinerary = new System.Windows.Forms.PictureBox();
+            this.labelPackageDetails = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,34 +42,35 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.buttonCheckout = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItinerary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxItinerary
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(790, 39);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(788, 650);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxItinerary.Location = new System.Drawing.Point(790, 39);
+            this.pictureBoxItinerary.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxItinerary.Name = "pictureBoxItinerary";
+            this.pictureBoxItinerary.Size = new System.Drawing.Size(788, 650);
+            this.pictureBoxItinerary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxItinerary.TabIndex = 0;
+            this.pictureBoxItinerary.TabStop = false;
             // 
-            // label1
+            // labelPackageDetails
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 212);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Package 1\r\nFrom: Selangor\r\nTo: Melaka\r\nTransport: Bus \r\nAccomodation: CATS Hotel\r" +
+            this.labelPackageDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPackageDetails.Location = new System.Drawing.Point(254, 39);
+            this.labelPackageDetails.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPackageDetails.Name = "labelPackageDetails";
+            this.labelPackageDetails.Size = new System.Drawing.Size(268, 230);
+            this.labelPackageDetails.TabIndex = 3;
+            this.labelPackageDetails.Text = "Package 1\r\nFrom: Selangor\r\nTo: Melaka\r\nTransport: Bus \r\nAccomodation: CATS Hotel\r" +
     "\nDuration: 3 Days 2 Night\r\nPrice: RM 1000.00 per pax\r\nSpecial Attraction: A\'Famo" +
     "sa, The Stadthuys, Jonker Street\r\n";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPackageDetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -176,6 +177,7 @@
             this.buttonCheckout.TabIndex = 29;
             this.buttonCheckout.Text = "Checkout";
             this.buttonCheckout.UseVisualStyleBackColor = true;
+            this.buttonCheckout.Click += new System.EventHandler(this.buttonCheckout_Click);
             // 
             // TourPackageDetailsForm
             // 
@@ -193,14 +195,14 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.labelPackageDetails);
+            this.Controls.Add(this.pictureBoxItinerary);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TourPackageDetailsForm";
             this.Text = "TourPackageDetailsForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxItinerary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -212,8 +214,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBoxItinerary;
+        private System.Windows.Forms.Label labelPackageDetails;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;

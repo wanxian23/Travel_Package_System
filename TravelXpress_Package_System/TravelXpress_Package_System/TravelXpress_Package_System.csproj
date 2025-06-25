@@ -141,6 +141,7 @@
     <Compile Include="HotelCard.Designer.cs">
       <DependentUpon>HotelCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\ConnectionClass.cs" />
     <Compile Include="Module\CustomerDetails.cs" />
     <Compile Include="Module\CustomerMemberDetails.cs" />
     <Compile Include="Module\PackageCheckout.cs" />
@@ -373,7 +374,9 @@
     <Content Include="Image\itinerary\ItineraryMelaka.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\itinerary\ItineraryPahang.png" />
+    <Content Include="Image\itinerary\ItineraryPahang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Image\itinerary\ItineraryPenang.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -389,12 +392,14 @@
     <Content Include="Image\King bed.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\legoland.jpeg" />
+    <Content Include="Image\legoland.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Image\logoProject.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\logoProject.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\MAS_plane.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

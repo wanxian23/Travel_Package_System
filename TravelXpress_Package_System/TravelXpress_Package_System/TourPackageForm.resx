@@ -11513,4 +11513,35 @@
         KWiWz7i4wRf2XMaxVlzjJGck8L//2Q==
 </value>
   </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Package 2
+From: Selangor
+To: Genting Highland
+Transport: Bus 
+Accomodation: Tropicana Hotel
+Duration: 3 Days 2 Night
+Price: RM 2000.00 per pax
+Special Attraction: SkyAvenue Mall, Genting SkyWorlds Theme Park, Happy Bee Farm and Insect World
+</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Package 3
+From: Perak
+To: Johor
+Transport: Bus 
+Accomodation: Luna Hotel
+Duration: 3 Days 2 Night
+Price: RM 1800.00 per pax
+Special Attraction: Sultan Abu Bakar State Mosque, LEGOLAND Malaysia, Crocodile Farm</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Package 5
+From: Negeri Sembilan
+To: Pahang
+Transport: Bus 
+Accomodation: Luna Hotel
+Duration: 3 Days 2 Night
+Price: RM 1100.00 per pax
+Special Attraction: Bentong Farm, Taman Negara National Park, Colmar Tropicale</value>
+  </data>
 </root>

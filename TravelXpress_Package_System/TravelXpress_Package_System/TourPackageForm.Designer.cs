@@ -31,16 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TourPackageForm));
             this.buttonCheckout1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.buttonCheckout2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.buttonCheckout3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.buttonCheckout4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.buttonCheckout5 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.linkLabelMorDetails1 = new System.Windows.Forms.LinkLabel();
@@ -49,6 +45,10 @@
             this.linkLabelMorDetails3 = new System.Windows.Forms.LinkLabel();
             this.linkLabelMorDetails4 = new System.Windows.Forms.LinkLabel();
             this.linkLabelMorDetails5 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -58,7 +58,7 @@
             // 
             // buttonCheckout1
             // 
-            this.buttonCheckout1.Location = new System.Drawing.Point(38, 459);
+            this.buttonCheckout1.Location = new System.Drawing.Point(38, 474);
             this.buttonCheckout1.Name = "buttonCheckout1";
             this.buttonCheckout1.Size = new System.Drawing.Size(156, 48);
             this.buttonCheckout1.TabIndex = 1;
@@ -76,18 +76,9 @@
     "\nDuration: 3 Days 2 Night\r\nPrice: RM 1000.00 per pax\r\nSpecial Attraction: A\'Famo" +
     "sa, The Stadthuys, Jonker Street\r\n";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(327, 223);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 50);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Package 2 \r\nFrom: ";
-            // 
             // buttonCheckout2
             // 
-            this.buttonCheckout2.Location = new System.Drawing.Point(331, 459);
+            this.buttonCheckout2.Location = new System.Drawing.Point(331, 474);
             this.buttonCheckout2.Name = "buttonCheckout2";
             this.buttonCheckout2.Size = new System.Drawing.Size(156, 48);
             this.buttonCheckout2.TabIndex = 4;
@@ -105,18 +96,9 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(614, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 50);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Package 3\r\nFrom: ";
-            // 
             // buttonCheckout3
             // 
-            this.buttonCheckout3.Location = new System.Drawing.Point(618, 459);
+            this.buttonCheckout3.Location = new System.Drawing.Point(618, 474);
             this.buttonCheckout3.Name = "buttonCheckout3";
             this.buttonCheckout3.Size = new System.Drawing.Size(156, 48);
             this.buttonCheckout3.TabIndex = 7;
@@ -134,18 +116,9 @@
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(907, 223);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 50);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Package 4\r\nFrom: ";
-            // 
             // buttonCheckout4
             // 
-            this.buttonCheckout4.Location = new System.Drawing.Point(911, 459);
+            this.buttonCheckout4.Location = new System.Drawing.Point(911, 474);
             this.buttonCheckout4.Name = "buttonCheckout4";
             this.buttonCheckout4.Size = new System.Drawing.Size(156, 48);
             this.buttonCheckout4.TabIndex = 10;
@@ -163,18 +136,9 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1198, 223);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 50);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Package 5\r\nFrom: ";
-            // 
             // buttonCheckout5
             // 
-            this.buttonCheckout5.Location = new System.Drawing.Point(1202, 459);
+            this.buttonCheckout5.Location = new System.Drawing.Point(1202, 474);
             this.buttonCheckout5.Name = "buttonCheckout5";
             this.buttonCheckout5.Size = new System.Drawing.Size(156, 48);
             this.buttonCheckout5.TabIndex = 13;
@@ -195,9 +159,9 @@
             // linkLabelMorDetails1
             // 
             this.linkLabelMorDetails1.AutoSize = true;
-            this.linkLabelMorDetails1.Location = new System.Drawing.Point(34, 429);
+            this.linkLabelMorDetails1.Location = new System.Drawing.Point(34, 444);
             this.linkLabelMorDetails1.Name = "linkLabelMorDetails1";
-            this.linkLabelMorDetails1.Size = new System.Drawing.Size(154, 25);
+            this.linkLabelMorDetails1.Size = new System.Drawing.Size(117, 20);
             this.linkLabelMorDetails1.TabIndex = 17;
             this.linkLabelMorDetails1.TabStop = true;
             this.linkLabelMorDetails1.Text = "More details....";
@@ -216,64 +180,102 @@
             // linkLabelMorDetails2
             // 
             this.linkLabelMorDetails2.AutoSize = true;
-            this.linkLabelMorDetails2.Location = new System.Drawing.Point(327, 429);
+            this.linkLabelMorDetails2.Location = new System.Drawing.Point(327, 444);
             this.linkLabelMorDetails2.Name = "linkLabelMorDetails2";
-            this.linkLabelMorDetails2.Size = new System.Drawing.Size(154, 25);
+            this.linkLabelMorDetails2.Size = new System.Drawing.Size(117, 20);
             this.linkLabelMorDetails2.TabIndex = 19;
             this.linkLabelMorDetails2.TabStop = true;
             this.linkLabelMorDetails2.Text = "More details....";
+            this.linkLabelMorDetails2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails2_LinkClicked);
             // 
             // linkLabelMorDetails3
             // 
             this.linkLabelMorDetails3.AutoSize = true;
-            this.linkLabelMorDetails3.Location = new System.Drawing.Point(614, 429);
+            this.linkLabelMorDetails3.Location = new System.Drawing.Point(614, 444);
             this.linkLabelMorDetails3.Name = "linkLabelMorDetails3";
-            this.linkLabelMorDetails3.Size = new System.Drawing.Size(154, 25);
+            this.linkLabelMorDetails3.Size = new System.Drawing.Size(117, 20);
             this.linkLabelMorDetails3.TabIndex = 20;
             this.linkLabelMorDetails3.TabStop = true;
             this.linkLabelMorDetails3.Text = "More details....";
+            this.linkLabelMorDetails3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails3_LinkClicked);
             // 
             // linkLabelMorDetails4
             // 
             this.linkLabelMorDetails4.AutoSize = true;
-            this.linkLabelMorDetails4.Location = new System.Drawing.Point(907, 429);
+            this.linkLabelMorDetails4.Location = new System.Drawing.Point(907, 444);
             this.linkLabelMorDetails4.Name = "linkLabelMorDetails4";
-            this.linkLabelMorDetails4.Size = new System.Drawing.Size(154, 25);
+            this.linkLabelMorDetails4.Size = new System.Drawing.Size(117, 20);
             this.linkLabelMorDetails4.TabIndex = 21;
             this.linkLabelMorDetails4.TabStop = true;
             this.linkLabelMorDetails4.Text = "More details....";
+            this.linkLabelMorDetails4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails4_LinkClicked);
             // 
             // linkLabelMorDetails5
             // 
             this.linkLabelMorDetails5.AutoSize = true;
-            this.linkLabelMorDetails5.Location = new System.Drawing.Point(1198, 429);
+            this.linkLabelMorDetails5.Location = new System.Drawing.Point(1198, 444);
             this.linkLabelMorDetails5.Name = "linkLabelMorDetails5";
-            this.linkLabelMorDetails5.Size = new System.Drawing.Size(154, 25);
+            this.linkLabelMorDetails5.Size = new System.Drawing.Size(117, 20);
             this.linkLabelMorDetails5.TabIndex = 22;
             this.linkLabelMorDetails5.TabStop = true;
             this.linkLabelMorDetails5.Text = "More details....";
+            this.linkLabelMorDetails5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelMorDetails5_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(319, 223);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(214, 202);
+            this.label2.TabIndex = 23;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(614, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(214, 202);
+            this.label3.TabIndex = 24;
+            this.label3.Text = resources.GetString("label3.Text");
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(907, 223);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(214, 202);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Package 4\r\nFrom: Melaka\r\nTo: Penang\r\nTransport: Bus \r\nAccomodation: Luna Hotel\r\nD" +
+    "uration: 3 Days 2 Night\r\nPrice: RM 1200.00 per pax\r\nSpecial Attraction: Chew Jet" +
+    "ty, Penang Hill, Kek Lok Si Temple\r\n";
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(1198, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(214, 202);
+            this.label5.TabIndex = 26;
+            this.label5.Text = resources.GetString("label5.Text");
             // 
             // TourPackageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1465, 562);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabelMorDetails5);
             this.Controls.Add(this.linkLabelMorDetails4);
             this.Controls.Add(this.linkLabelMorDetails3);
             this.Controls.Add(this.linkLabelMorDetails2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabelMorDetails1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonCheckout5);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonCheckout4);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonCheckout3);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonCheckout2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
@@ -296,16 +298,12 @@
         #endregion
         private System.Windows.Forms.Button buttonCheckout1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonCheckout2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCheckout3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonCheckout4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonCheckout5;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.LinkLabel linkLabelMorDetails1;
@@ -314,5 +312,9 @@
         private System.Windows.Forms.LinkLabel linkLabelMorDetails3;
         private System.Windows.Forms.LinkLabel linkLabelMorDetails4;
         private System.Windows.Forms.LinkLabel linkLabelMorDetails5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

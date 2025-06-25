@@ -20,8 +20,16 @@ namespace TravelXpress_Package_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            TourPackageForm tourPackageForm = new TourPackageForm();
-            tourPackageForm.ShowDialog();
+            //TourPackageForm tourPackageForm = new TourPackageForm();
+            //tourPackageForm.ShowDialog();
+            using (TourPackageForm tourPackageForm = new TourPackageForm())
+            {
+                if (tourPackageForm.ShowDialog() == DialogResult.OK)
+                {
+                    // You could refresh the customerMainPageForm data here if needed
+                    MessageBox.Show("Returned from successful booking.");
+                }
+            }
         }
 
         private void buttonTicket_Click(object sender, EventArgs e)

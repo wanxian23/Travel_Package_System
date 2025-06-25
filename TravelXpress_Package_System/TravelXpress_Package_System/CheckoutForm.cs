@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using TravelXpress_Package_System.Module;
@@ -16,7 +17,7 @@ namespace TravelXpress_Package_System
         public CustomerMemberDetails customerMemberDetails;
         public CustomerDetails customerDetails;
         public PackageCheckout PackageCheckout;
-        
+        public ConnectionClass connectionClass;
         public CheckoutForm(int packagetype)
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace TravelXpress_Package_System
             this.customerMemberDetails = new CustomerMemberDetails();
             this.customerDetails = new CustomerDetails();
             this.PackageCheckout = new PackageCheckout();
+            connectionClass = new ConnectionClass();
 
             groupBoxCustomerFamilyDetails.Hide();
 
@@ -45,14 +47,45 @@ namespace TravelXpress_Package_System
 
         void getDataFromDB()
         {
-
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\chiew\\Desktop\\C# project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
-            string query = "SELECT * FROM Package WHERE PackageID = @PackageID";
-
-            
+            string connectionString = connectionClass.connectionString;
+            string query = "SELECT * FROM ImagePath WHERE PackageID = @PackageID AND imagePath NOT LIKE '%itinerary%' ORDER BY ImageID ASC";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PackageID", packagetype);
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet, "ImagePath");
+
+                var data = dataSet.Tables["ImagePath"];
+                if (data.Rows.Count > 1)
+                {
+                    Console.WriteLine(data.Rows.Count);
+                    if (pictureBox1.Image != null)
+                    {
+                        pictureBox1.Image.Dispose(); // Free old image from memory
+                    }
+                    if (pictureBox2.Image != null)
+                    {
+                        pictureBox2.Image.Dispose(); // Free old image from memory
+                    }
+                    if (pictureBox3.Image != null)
+                    {
+                        pictureBox3.Image.Dispose(); // Free old image from memory
+                    }
+
+                    pictureBox1.Image = Image.FromFile(data.Rows[0]["imagePath"].ToString());
+                    pictureBox2.Image = Image.FromFile(data.Rows[1]["imagePath"].ToString());
+                    Console.WriteLine(data.Rows[1]["imagePath"].ToString());
+                    pictureBox3.Image = Image.FromFile(data.Rows[2]["imagePath"].ToString());
+                }
+            }
+
+            string query2 = "SELECT * FROM Package WHERE PackageID = @PackageID";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query2, connection);
                 command.Parameters.AddWithValue("@PackageID", packagetype);
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
@@ -151,6 +184,7 @@ namespace TravelXpress_Package_System
                 else
                 {
                     editCurrentMemberDetails();
+                    clearMemberDetails();
                 }
                 currentCustomerMemberNo++;
                 groupBoxCustomerFamilyDetails.Text = $"Details for customer member {currentCustomerMemberNo}: ";
@@ -379,6 +413,21 @@ namespace TravelXpress_Package_System
                 MessageBox.Show($"Your details is not yet complete");
                 return;
             }
+            else if (!finalCheckCusMemberDetails())
+            {
+                if (buttonConfirmCustomerMemberDetails.Visible == false)
+                {
+                    MessageBox.Show("You not yet confirm the number of member you want to book. \nPlease click button Confirm to continue");
+                    return;
+                }
+                else if (groupBoxCustomerFamilyDetails.Enabled == true)
+                {
+                    MessageBox.Show("You not yet confirm the member details. \nPlease click button Confirm to continue");
+                    return;
+                }
+                MessageBox.Show("You are here");
+                return;
+            }
             else if (roomPax - (customerMemberPax + 1) < 0)
             {
                 MessageBox.Show($"Not enough room booked! You are short by {roomPax}. \nPlease add more room to accomodate all {customerMemberPax + 1} people");
@@ -389,7 +438,7 @@ namespace TravelXpress_Package_System
                 if (roomPax - (customerMemberPax + 1) > 0)
                 {
                     DialogResult result = MessageBox.Show($"You have {customerMemberPax + 1} guest(s), but the rooms selected can hold up to {roomPax} people. " +
-                        $"\nThis could lead to extra costs (RM {roomExtraSlotPrice:F2} per extra slot). \nDo you want to continue?", 
+                        $"\nThis could lead to extra costs (RM {roomExtraSlotPrice:F2} per extra slot). \nDo you want to continue?",
                         "Room capacity warning",
                         MessageBoxButtons.YesNo);
 
@@ -429,8 +478,17 @@ namespace TravelXpress_Package_System
                 }
                 PackageCheckout.totalAmount = PackageCheckout.packageAmount + PackageCheckout.roomAmount;
 
-                ChekourPaymentForm form = new ChekourPaymentForm(PackageCheckout);
-                form.ShowDialog();
+                //ChekourPaymentForm form = new ChekourPaymentForm(PackageCheckout);
+                //form.ShowDialog();
+                using (ChekourPaymentForm form = new ChekourPaymentForm(PackageCheckout))
+                {
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        // Booking was successful, now close this form too
+                        this.DialogResult = DialogResult.OK; // Optional
+                        this.Close();
+                    }
+                }
             }
         }
         int checkRoomPax()
@@ -442,6 +500,24 @@ namespace TravelXpress_Package_System
             int estimatedRoomPax = singleBed + singleRKingBed + familyRoom;
 
             return estimatedRoomPax;
+        }
+
+        bool finalCheckCusMemberDetails()
+        {
+            if (radioButtonTrue.Checked)
+            {
+                if (buttonConfirmCustomerMemberDetails.Visible == false)
+                {
+                    MessageBox.Show("You not yet confirm the number of member you want to book. \nPlease click button Confirm to continue");
+                    return false;
+                }
+                else if (groupBoxCustomerFamilyDetails.Enabled == true)
+                {
+                    MessageBox.Show("You not yet confirm the member details. \nPlease click button Confirm to continue");
+                    return false;
+                }
+            }
+            return true;
         }
 
         private void dateTimePickerFromDate_ValueChanged(object sender, EventArgs e)

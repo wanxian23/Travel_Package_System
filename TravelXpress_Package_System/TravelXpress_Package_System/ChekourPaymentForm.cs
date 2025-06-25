@@ -16,10 +16,12 @@ namespace TravelXpress_Package_System
     public partial class ChekourPaymentForm : Form
     {
         public PackageCheckout PackageCheckout { get; set; }
+        public ConnectionClass connectionClass { get; set; }
         public ChekourPaymentForm(PackageCheckout PackageCheckout)
         {
             InitializeComponent();
             this.PackageCheckout = PackageCheckout;
+            connectionClass = new ConnectionClass();
 
             loadData();
 
@@ -129,7 +131,7 @@ namespace TravelXpress_Package_System
 
         void getDataFromDB(string packageID)
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\chiew\\Desktop\\C# project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
+            string connectionString = connectionClass.connectionString;
             string query = "SELECT * FROM Package WHERE PackageID = @PackageID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -156,7 +158,7 @@ namespace TravelXpress_Package_System
 
         void getDataFromTableAccomodation(string accomID)
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\chiew\\Desktop\\C# project\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf\";Integrated Security=True";
+            string connectionString = connectionClass.connectionString;
             string query = "SELECT * FROM Accommodation WHERE AccomID = @AccomID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -192,6 +194,224 @@ namespace TravelXpress_Package_System
 
         }
 
-        
+        private void radioButtonTng_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonTng.Checked)
+            {
+                pictureBoxPayment.Image = Image.FromFile(@"Image\Payment\tng.png");
+            }
+            else
+            {
+                cardPanel.Visible = false;
+            }
+        }
+
+        private void radioButtonFPX_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonFPX.Checked)
+            {
+                pictureBoxPayment.Image = Image.FromFile(@"Image\Payment\FPX.png");
+            }
+            else
+            {
+                cardPanel.Visible = false;
+            }
+        }
+
+        private void radioButtonCard_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonCard.Checked)
+            {
+                pictureBoxPayment.Image = Image.FromFile(@"Image\Payment\Card.png");
+                panel1.AutoScroll = false;
+                cardPanel.Visible = true;
+                panel1.AutoScroll = true;
+                //panel1.ScrollControlIntoView(cardPanel);
+            }
+        }
+
+        private void buttonBook_Click(object sender, EventArgs e)
+        {
+            string paymentMethod = "";
+            if (radioButtonCard.Checked)
+            {
+                if (string.IsNullOrWhiteSpace(cardHolderNameTb.Text))
+                {
+                    MessageBox.Show("Card Holder Name Cannot Be Null!", "NULL ERROR!");
+                    return;
+                }
+
+                string cleanedText = cardNumTb.Text.Replace("_", "").Replace("-", "").Trim();
+                if (string.IsNullOrWhiteSpace(cleanedText))
+                {
+                    MessageBox.Show("Card Number Cannot Be Null", "NULL ERROR!");
+                    return;
+                }
+
+                if (exDateMMTb.Value == 0 || exDateYYTb.Value == 0 || exDateMMTb == null || exDateYYTb == null)
+                {
+                    MessageBox.Show("Expiry Date For Both Month and Year Cannot Be Null or Zero!", "NULL/ INPUT ERROR");
+                    return;
+                }
+
+                if (cvvTb.Value == 0 || cvvTb == null)
+                {
+                    MessageBox.Show("CVV Number Cannot Be Null or Zero!", "NULL/ INPUT ERROR");
+                    return;
+                }
+
+                if (!visaRb.Checked && !masterRb.Checked)
+                {
+                    MessageBox.Show("Visa/ Master Must Be Chosen Either One!", "NULL ERROR");
+                    return;
+                }
+
+                if (!policyCb.Checked)
+                {
+                    MessageBox.Show("Term And Policy Must Be Checked Before Proceed!", "NULL ERROR");
+                    return;
+                }
+                paymentMethod = "Card";
+            }
+
+            if (radioButtonTng.Checked)
+            {
+                paymentMethod = "E-Wallet";
+            }
+
+            if (radioButtonFPX.Checked)
+            {
+                paymentMethod = "FPX";
+            }
+            
+            PackageCheckout.paymentMethod = paymentMethod;
+
+            string connectionString = connectionClass.connectionString;
+            int newCustomerID;
+            // insert into customer table 
+            string query = "SELECT TOP 1 * FROM Customer ORDER BY cusID DESC";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet, "Customer");
+
+                var data = dataSet.Tables["Customer"];
+                if (data.Rows.Count > 0)
+                {
+                    newCustomerID = int.Parse(data.Rows[0]["cusID"].ToString());
+                    newCustomerID++; 
+                }
+                else
+                {
+                    newCustomerID = 1;
+                }
+            }
+
+            string insertQuery = "INSERT INTO Customer (cusID, cusName, cusIC, cusContact, cusEmail, cusGender) VALUES (@cusID, @cusName, @cusIC, @cusContact, @cusEmail, @cusGender)";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(insertQuery, connection);
+                command.Parameters.AddWithValue("@cusID", newCustomerID);
+                command.Parameters.AddWithValue("@cusName", PackageCheckout.CustomerDetails.Name);
+                command.Parameters.AddWithValue("@cusIC", PackageCheckout.CustomerDetails.IC);
+                command.Parameters.AddWithValue("@cusContact", PackageCheckout.CustomerDetails.Contact);
+                command.Parameters.AddWithValue("@cusEmail", PackageCheckout.CustomerDetails.Email);
+                command.Parameters.AddWithValue("@cusGender", PackageCheckout.CustomerDetails.Gender);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            int cusMemberStartID;
+
+            if (PackageCheckout.numPax != 1)
+            {
+                string query2 = "SELECT TOP 1 * FROM CustomerMembers ORDER BY MemID DESC";
+                using (SqlConnection connection  = new SqlConnection(connectionString))
+                {
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query2, connection);
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet, "CustomerMembers");
+
+                    var data = dataSet.Tables["CustomerMembers"];
+                    if (data.Rows.Count > 0)
+                    {
+                        cusMemberStartID = int.Parse(data.Rows[0]["MemID"].ToString());
+                        cusMemberStartID++;
+                    }
+                    else
+                    {
+                        cusMemberStartID = 1;
+                    }
+                }
+
+                foreach (var member in PackageCheckout.CustomerMembersDetails)
+                {
+                    string insertQuery2 = "INSERT INTO CustomerMembers (MemID, MemName, MemIC, MemContact, MemGender, cusID) VALUES (@MemID, @MemName, @MemIC, @MemContact, @MemGender, @cusID)";
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        SqlCommand command = new SqlCommand(insertQuery2, connection);
+                        command.Parameters.AddWithValue("@MemID", cusMemberStartID);
+                        command.Parameters.AddWithValue("@MemName", member.Name);
+                        command.Parameters.AddWithValue("@MemIC", member.IC);
+                        command.Parameters.AddWithValue("@MemContact", member.Contact);
+                        command.Parameters.AddWithValue("@MemGender", member.Gender);
+                        command.Parameters.AddWithValue("@cusID", newCustomerID);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    cusMemberStartID++;
+                }
+            }
+
+            int newBookingID;
+            // insert into customer table 
+            string query3 = "SELECT TOP 1 * FROM Booking ORDER BY BookingID DESC";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query3, connection);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet, "Booking");
+
+                var data = dataSet.Tables["Booking"];
+                if (data.Rows.Count > 0)
+                {
+                    newBookingID = int.Parse(data.Rows[0]["BookingID"].ToString());
+                    newBookingID++;
+                }
+                else
+                {
+                    newBookingID = 1;
+                }
+            }
+
+            string insertQuery3 = "INSERT INTO Booking (BookingID, BookingType, BookingDate, StartDate, EndDate, NumPax, TotalAmount, PaymentMethod, CusID, PackageID) VALUES (@BookingID, @BookingType, @BookingDate, @StartDate, @EndDate, @NumPax, @TotalAmount, @PaymentMethod, @CusID, @PackageID)";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(insertQuery3, connection);
+                command.Parameters.AddWithValue("@BookingID", newBookingID);
+                command.Parameters.AddWithValue("@BookingType", PackageCheckout.BookingType);
+                command.Parameters.AddWithValue("@BookingDate", PackageCheckout.bookingDate);
+                command.Parameters.AddWithValue("@StartDate", PackageCheckout.StartDate);
+                command.Parameters.AddWithValue("@EndDate", PackageCheckout.EndDate);
+                command.Parameters.AddWithValue("@NumPax", PackageCheckout.numPax);
+                command.Parameters.AddWithValue("@TotalAmount", PackageCheckout.totalAmount);
+                command.Parameters.AddWithValue("@PaymentMethod", PackageCheckout.paymentMethod);
+                command.Parameters.AddWithValue("@CusID", newCustomerID);
+                command.Parameters.AddWithValue("@PackageID", PackageCheckout.PackageID);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            MessageBox.Show($"Successfully book Package {PackageCheckout.PackageID} for {PackageCheckout.numPax}! \nThe booking details already email to {PackageCheckout.CustomerDetails.Email}");
+            this.DialogResult = DialogResult.OK;  // Optional: communicate success
+            this.Close();
+        }
     }
 }
