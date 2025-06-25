@@ -116,8 +116,8 @@
     <Compile Include="Module\PackageCheckout.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeatDetail.cs" />
-    <Compile Include="TemporaryBusDetailsStore.cs" />
+    <Compile Include="Module\SeatDetail.cs" />
+    <Compile Include="Module\TemporaryBusDetailsStore.cs" />
     <Compile Include="TicketBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +203,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TicketBooking.resx">
       <DependentUpon>TicketBooking.cs</DependentUpon>
@@ -263,10 +264,22 @@
     <Content Include="Image\bus picture2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Bus\TransnationalLogo.png">
+    <Content Include="Image\Bus\27Seats.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Bus\TransnationalSeats.png">
+    <Content Include="Image\Bus\44Seats.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Bus\mayangLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Bus\melorLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Bus\noImageUploaded.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Bus\TransnationalLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\eagleLangkawi.jpg">
@@ -324,6 +337,7 @@
     <Content Include="Image\Single bed.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\DefaultBusImage.png.bmp" />
     <Content Include="TravelDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,8 @@ namespace TravelXpress_Package_System
 {
     public partial class TicketSeat : Form
     {
+        private SqlConnection connection;
+
         TemporaryBusDetailsStore previousDateStore;
         SeatDetail seatDetail = new SeatDetail();
         public TicketSeat(TemporaryBusDetailsStore previousDateStore, SeatDetail seatDetails)
@@ -29,7 +33,22 @@ namespace TravelXpress_Package_System
             {
                 nextBt.Visible = true;
             }
+
+            // Initialize the connection object
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Coding\\C#\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf;Integrated Security=True";
+            connection = new SqlConnection(connectionString);
+
         }
+
+        public int numSeats { get { return (int)numSeatTb.Value; } set { 
+                seatDetail.NumberOfSeats = value;
+                numSeatTb.Value = value; 
+            } }
+
+        public string seatNumber { get { return seatsTb.Text; } set { 
+                seatDetail.SeatNumber = value;
+                seatsTb.Text = value; 
+            } }
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -74,9 +93,31 @@ namespace TravelXpress_Package_System
 
             seatDetail.SeatNumber = seatsTb.Text;
 
-            double totalFees = ((int) numSeatTb.Value) * 1;
-            totalFeesLb.Text = totalFees.ToString("N2");
-            nextBt.Visible = true;
+            double totalFees = 0;
+            double price = 0;
+            string sqlPullTrip = "SELECT * " +
+                                 "FROM Ticket " +
+                                 "WHERE TicketID = @ticketID";
+            using (SqlCommand cmd = new SqlCommand(sqlPullTrip, connection))
+            {
+                cmd.Parameters.AddWithValue("@ticketID", previousDateStore.ticketID);
+
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        price = Convert.ToDouble(reader["Price"]);
+
+                        totalFees = (int)numSeatTb.Value * price;
+                        seatDetail.TotalFees = (decimal)totalFees;
+                        totalFeesLb.Text = totalFees.ToString("N2");
+                        nextBt.Visible = true;
+                    }
+                }
+                connection.Close();
+            }
+
         }
 
         private void clearBt_Click(object sender, EventArgs e)
@@ -84,7 +125,6 @@ namespace TravelXpress_Package_System
             numSeatTb.Value = 0;
             seatsTb.Text = string.Empty;
         }
-
     }
 
 }

@@ -17,6 +17,8 @@ namespace TravelXpress_Package_System
         private SqlDataAdapter dataAdapter;
         private DataSet dataSet;
 
+        TemporaryBusDetailsStore dataStore = new TemporaryBusDetailsStore();
+
         SeatDetail seatDetail = new SeatDetail();
         public TicketBookingForm(SeatDetail seatDetail)
         {
@@ -41,7 +43,6 @@ namespace TravelXpress_Package_System
 
         private void searchBt_Click(object sender, EventArgs e)
         {
-            TemporaryBusDetailsStore dataStore = new TemporaryBusDetailsStore();
 
             dataStore.departDate = departureDate.Value.Date;
             dataStore.reDate = returnDate.Value.Date;
@@ -59,6 +60,12 @@ namespace TravelXpress_Package_System
             if (string.IsNullOrWhiteSpace(busFromTb.Text))
             {
                 MessageBox.Show("'Bus From' Textbox Cannot be Null!", "NULL WARNING");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(busToTb.Text))
+            {
+                MessageBox.Show("'Bus To' Textbox Cannot be Null!", "NULL WARNING");
                 return;
             }
 
@@ -107,19 +114,27 @@ namespace TravelXpress_Package_System
 
         private void busToTb_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(busToTb.Text))
-            {
-                returnDate.Enabled = false;
-            } 
-            else
-            {
-                returnDate.Enabled = true;
-            }
+
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void roundTripCb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (roundTripCb.Checked)
+            {
+                dataStore.roundTrip = true;
+                returnDate.Enabled = true;
+
+            }
+            else
+            {
+                dataStore.roundTrip = false;
+                returnDate.Enabled = false;
+            }
         }
     }
 

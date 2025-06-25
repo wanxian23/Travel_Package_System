@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketReceipt));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.receiptPanel = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.confirmBt = new System.Windows.Forms.Button();
+            this.downloadBt = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -102,7 +102,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.receiptFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.receiptPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -126,52 +128,54 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.receiptFlowPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // receiptPanel
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(15, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1227, 596);
-            this.panel1.TabIndex = 3;
+            this.receiptPanel.AutoScroll = true;
+            this.receiptPanel.Controls.Add(this.panel8);
+            this.receiptPanel.Controls.Add(this.panel6);
+            this.receiptPanel.Controls.Add(this.panel7);
+            this.receiptPanel.Controls.Add(this.panel4);
+            this.receiptPanel.Controls.Add(this.panel5);
+            this.receiptPanel.Controls.Add(this.panel3);
+            this.receiptPanel.Controls.Add(this.groupBox3);
+            this.receiptPanel.Controls.Add(this.panel2);
+            this.receiptPanel.Controls.Add(this.groupBox1);
+            this.receiptPanel.Location = new System.Drawing.Point(20, 5);
+            this.receiptPanel.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.receiptPanel.Name = "receiptPanel";
+            this.receiptPanel.Size = new System.Drawing.Size(1227, 596);
+            this.receiptPanel.TabIndex = 3;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button2);
-            this.panel8.Controls.Add(this.button1);
+            this.panel8.Controls.Add(this.confirmBt);
+            this.panel8.Controls.Add(this.downloadBt);
             this.panel8.Location = new System.Drawing.Point(6, 1536);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1194, 103);
             this.panel8.TabIndex = 52;
             // 
-            // button2
+            // confirmBt
             // 
-            this.button2.Location = new System.Drawing.Point(666, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 54);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "Confirm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.confirmBt.Location = new System.Drawing.Point(666, 22);
+            this.confirmBt.Name = "confirmBt";
+            this.confirmBt.Size = new System.Drawing.Size(229, 54);
+            this.confirmBt.TabIndex = 51;
+            this.confirmBt.Text = "Confirm";
+            this.confirmBt.UseVisualStyleBackColor = true;
+            this.confirmBt.Click += new System.EventHandler(this.confirmBt_Click);
             // 
-            // button1
+            // downloadBt
             // 
-            this.button1.Location = new System.Drawing.Point(287, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 54);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "Download Receipt";
-            this.button1.UseVisualStyleBackColor = true;
+            this.downloadBt.Location = new System.Drawing.Point(287, 22);
+            this.downloadBt.Name = "downloadBt";
+            this.downloadBt.Size = new System.Drawing.Size(229, 54);
+            this.downloadBt.TabIndex = 50;
+            this.downloadBt.Text = "Download Receipt";
+            this.downloadBt.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -1015,18 +1019,35 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "Name";
             // 
+            // receiptFlowPanel
+            // 
+            this.receiptFlowPanel.Controls.Add(this.flowLayoutPanel2);
+            this.receiptFlowPanel.Controls.Add(this.receiptPanel);
+            this.receiptFlowPanel.Location = new System.Drawing.Point(-2, 3);
+            this.receiptFlowPanel.Name = "receiptFlowPanel";
+            this.receiptFlowPanel.Size = new System.Drawing.Size(1257, 636);
+            this.receiptFlowPanel.TabIndex = 4;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel2.TabIndex = 0;
+            // 
             // TicketReceipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 624);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.receiptFlowPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "TicketReceipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicketReceipt";
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.TicketReceipt_Load);
+            this.receiptPanel.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -1056,13 +1077,14 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.receiptFlowPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel receiptPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1108,7 +1130,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button downloadBt;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel7;
@@ -1133,7 +1155,9 @@
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button confirmBt;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.FlowLayoutPanel receiptFlowPanel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

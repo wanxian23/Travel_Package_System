@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicketPayment));
             this.panel = new System.Windows.Forms.Panel();
-            this.cardPanel = new System.Windows.Forms.GroupBox();
             this.bookBt = new System.Windows.Forms.Button();
+            this.cardPanel = new System.Windows.Forms.GroupBox();
             this.policyCb = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -54,6 +54,7 @@
             this.ewalletRb = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.fpxLabel = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.cardPanel.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -68,6 +69,7 @@
             // panel
             // 
             this.panel.AutoScroll = true;
+            this.panel.Controls.Add(this.fpxLabel);
             this.panel.Controls.Add(this.bookBt);
             this.panel.Controls.Add(this.cardPanel);
             this.panel.Controls.Add(this.paymentPic);
@@ -78,6 +80,17 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1227, 596);
             this.panel.TabIndex = 2;
+            // 
+            // bookBt
+            // 
+            this.bookBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookBt.Location = new System.Drawing.Point(1050, 504);
+            this.bookBt.Name = "bookBt";
+            this.bookBt.Size = new System.Drawing.Size(119, 57);
+            this.bookBt.TabIndex = 80;
+            this.bookBt.Text = "Book";
+            this.bookBt.UseVisualStyleBackColor = true;
+            this.bookBt.Click += new System.EventHandler(this.bookBt_Click);
             // 
             // cardPanel
             // 
@@ -102,17 +115,6 @@
             this.cardPanel.TabStop = false;
             this.cardPanel.Text = "Card Details";
             this.cardPanel.Visible = false;
-            // 
-            // bookBt
-            // 
-            this.bookBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookBt.Location = new System.Drawing.Point(1050, 504);
-            this.bookBt.Name = "bookBt";
-            this.bookBt.Size = new System.Drawing.Size(119, 57);
-            this.bookBt.TabIndex = 80;
-            this.bookBt.Text = "Book";
-            this.bookBt.UseVisualStyleBackColor = true;
-            this.bookBt.Click += new System.EventHandler(this.bookBt_Click);
             // 
             // policyCb
             // 
@@ -340,6 +342,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Payment Method";
             // 
+            // fpxLabel
+            // 
+            this.fpxLabel.AutoSize = true;
+            this.fpxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fpxLabel.Location = new System.Drawing.Point(687, 521);
+            this.fpxLabel.Name = "fpxLabel";
+            this.fpxLabel.Size = new System.Drawing.Size(314, 25);
+            this.fpxLabel.TabIndex = 80;
+            this.fpxLabel.Text = "Redirecting To FPX Interface....";
+            this.fpxLabel.Visible = false;
+            // 
             // TicketPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -352,6 +365,7 @@
             this.Text = "TicketPayment";
             this.Load += new System.EventHandler(this.TicketPayment_Load);
             this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.cardPanel.ResumeLayout(false);
             this.cardPanel.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -395,5 +409,6 @@
         private System.Windows.Forms.NumericUpDown exDateMMTb;
         private System.Windows.Forms.Button bookBt;
         private System.Windows.Forms.CheckBox policyCb;
+        private System.Windows.Forms.Label fpxLabel;
     }
 }
