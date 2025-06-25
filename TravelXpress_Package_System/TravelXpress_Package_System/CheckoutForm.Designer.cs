@@ -63,7 +63,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePickerToDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePickerFromDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -135,12 +135,12 @@
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.dateTimePickerToDate);
+            this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.dateTimePickerFromDate);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.textBox2);
@@ -492,13 +492,12 @@
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
             // 
-            // dateTimePickerToDate
+            // dateTimePicker2
             // 
-            this.dateTimePickerToDate.Location = new System.Drawing.Point(170, 1295);
-            this.dateTimePickerToDate.Name = "dateTimePickerToDate";
-            this.dateTimePickerToDate.Size = new System.Drawing.Size(311, 27);
-            this.dateTimePickerToDate.TabIndex = 60;
-            this.dateTimePickerToDate.ValueChanged += new System.EventHandler(this.dateTimePickerToDate_ValueChanged);
+            this.dateTimePicker2.Location = new System.Drawing.Point(170, 1295);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(311, 27);
+            this.dateTimePicker2.TabIndex = 60;
             // 
             // label6
             // 
@@ -515,7 +514,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.72727F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.27273F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxSingleBed, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxFamilyRoom, 0, 3);
@@ -583,7 +582,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(490, 1);
+            this.label15.Location = new System.Drawing.Point(494, 1);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 20);
             this.label15.TabIndex = 1;
@@ -591,7 +590,7 @@
             // 
             // numericUpDownSingleBed
             // 
-            this.numericUpDownSingleBed.Location = new System.Drawing.Point(490, 41);
+            this.numericUpDownSingleBed.Location = new System.Drawing.Point(494, 41);
             this.numericUpDownSingleBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -614,7 +613,7 @@
             // 
             // numericUpDownSingleRKingBed
             // 
-            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(490, 79);
+            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(494, 79);
             this.numericUpDownSingleRKingBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -637,7 +636,7 @@
             // 
             // numericUpDownFamilyRoom
             // 
-            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(490, 125);
+            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(494, 125);
             this.numericUpDownFamilyRoom.Maximum = new decimal(new int[] {
             10,
             0,
@@ -661,7 +660,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(236, 1);
+            this.label16.Location = new System.Drawing.Point(238, 1);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(99, 20);
             this.label16.TabIndex = 31;
@@ -670,7 +669,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(236, 38);
+            this.label17.Location = new System.Drawing.Point(238, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(117, 20);
             this.label17.TabIndex = 32;
@@ -679,7 +678,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(236, 76);
+            this.label18.Location = new System.Drawing.Point(238, 76);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(104, 20);
             this.label18.TabIndex = 33;
@@ -688,7 +687,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(236, 122);
+            this.label19.Location = new System.Drawing.Point(238, 122);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(104, 20);
             this.label19.TabIndex = 34;
@@ -712,13 +711,12 @@
             this.label13.TabIndex = 53;
             this.label13.Text = "Acccomodation";
             // 
-            // dateTimePickerFromDate
+            // dateTimePicker1
             // 
-            this.dateTimePickerFromDate.Location = new System.Drawing.Point(170, 1242);
-            this.dateTimePickerFromDate.Name = "dateTimePickerFromDate";
-            this.dateTimePickerFromDate.Size = new System.Drawing.Size(311, 27);
-            this.dateTimePickerFromDate.TabIndex = 58;
-            this.dateTimePickerFromDate.ValueChanged += new System.EventHandler(this.dateTimePickerFromDate_ValueChanged);
+            this.dateTimePicker1.Location = new System.Drawing.Point(170, 1242);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(311, 27);
+            this.dateTimePicker1.TabIndex = 58;
             // 
             // label2
             // 
@@ -784,8 +782,6 @@
             // comboBoxTransport
             // 
             this.comboBoxTransport.FormattingEnabled = true;
-            this.comboBoxTransport.Items.AddRange(new object[] {
-            "Bus"});
             this.comboBoxTransport.Location = new System.Drawing.Point(172, 1183);
             this.comboBoxTransport.Name = "comboBoxTransport";
             this.comboBoxTransport.Size = new System.Drawing.Size(121, 28);
@@ -938,7 +934,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerToDate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label14;
@@ -955,7 +951,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFromDate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox2;

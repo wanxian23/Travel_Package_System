@@ -120,26 +120,3 @@ G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Pr
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\qr.png
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\redHouse.jpg
 G:\My Drive\School_Stuff\UTeM_Doc\Sem\Year2\Sem2\Event-Driven Programming\Lab\Project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Single bed.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\AFamosa.jpeg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\bus picture2.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\TransnationalLogo.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Bus\TransnationalSeats.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\eagleLangkawi.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Family room.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\ferryMelaka.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\fishboneSabah.jpeg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\jonker.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\King bed.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\logoProject.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\logoProject.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\masjidMelaka.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\MAS_plane.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\Card.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\FPX.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\PaymentMethod.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Payment\tng.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\penangBridge.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\qr.png
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\redHouse.jpg
-C:\Users\chiew\Desktop\C# project\Travel_Package_System\TravelXpress_Package_System\TravelXpress_Package_System\bin\Debug\Image\Single bed.png
