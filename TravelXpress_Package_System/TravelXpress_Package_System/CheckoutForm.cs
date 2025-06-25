@@ -140,8 +140,18 @@ namespace TravelXpress_Package_System
             panel1.AutoScroll = true;
         }
 
+        void checkNumericUpDownNull(string name)
+        {
+            MessageBox.Show($"{name} cannot be null");
+        }
+
         private void buttonMemberPaxConfirm_Click(object sender, EventArgs e)
         {
+            if (numericUpDownNumPax.Value == null)
+            {
+                checkNumericUpDownNull("Number of member");
+                return;
+            }
             panel1.AutoScroll = false;
             groupBoxCustomerFamilyDetails.Show();
             groupBoxCustomerFamilyDetails.Enabled = true;
@@ -462,7 +472,7 @@ namespace TravelXpress_Package_System
                 }
 
                 PackageCheckout.PackageID = packagetype.ToString();
-                PackageCheckout.bookingDate = DateTime.Today;
+                PackageCheckout.bookingDate = DateTime.Today; 
                 PackageCheckout.StartDate = dateTimePickerFromDate.Value;
                 PackageCheckout.EndDate = dateTimePickerToDate.Value;
 

@@ -157,5 +157,10 @@ namespace TravelXpress_Package_System
                 }
             }
         }
+
+        private void linkLabelMorDetails2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -31,6 +31,8 @@ namespace TravelXpress_Package_System
                 labelAmountDetails.Text += $"Room extra cost: RM {PackageCheckout.roomAmount:F2}";
             }
             labelTotalAmount.Text = $"Total Amount: RM {PackageCheckout.totalAmount:F2}";
+
+
         }
 
         private void ChekourPaymentForm_Shown(object sender, EventArgs e)
@@ -192,6 +194,15 @@ namespace TravelXpress_Package_System
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }        
+
+        private void radioButtonTng_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonTng.Checked)
+            {
+                pictureBoxPayment.Image = Image.FromFile(@"Image\Payment\tng.png");
+                cardPanel.Visible = false;
+            }
         }
 
         private void radioButtonTng_CheckedChanged(object sender, EventArgs e)
@@ -412,6 +423,8 @@ namespace TravelXpress_Package_System
             MessageBox.Show($"Successfully book Package {PackageCheckout.PackageID} for {PackageCheckout.numPax} people! \nThe booking details already email to {PackageCheckout.CustomerDetails.Email}");
             this.DialogResult = DialogResult.OK;  // Optional: communicate success
             this.Close();
+            }
+
         }
     }
 }
