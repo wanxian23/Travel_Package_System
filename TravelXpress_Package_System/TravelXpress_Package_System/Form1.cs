@@ -25,8 +25,8 @@ namespace TravelXpress_Package_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdminMainPage adminMainPage = new AdminMainPage();
-            adminMainPage.ShowDialog();
+            AdminLoginPage adminLoginPage = new AdminLoginPage();
+            adminLoginPage.ShowDialog();
         }
     }
 }

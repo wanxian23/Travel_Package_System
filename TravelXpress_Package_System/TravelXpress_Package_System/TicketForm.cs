@@ -25,7 +25,7 @@ namespace TravelXpress_Package_System
             this.previousDateStore = previousDateStore;
 
             // Initialize the connection object
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Coding\\C#\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf;Integrated Security=True";
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=E:\\DCS\\DCS Year 2 Sem 2\\Event-Driven Programming\\EDP\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf;Integrated Security=True";
             connection = new SqlConnection(connectionString);
         }
 

@@ -93,23 +93,29 @@
     <Compile Include="AdminAccomodationPage.Designer.cs">
       <DependentUpon>AdminAccomodationPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminLoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLoginPage.Designer.cs">
+      <DependentUpon>AdminLoginPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMainPage.Designer.cs">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminTicketPage.cs">
+    <Compile Include="AdminManagementPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminTicketPage.Designer.cs">
-      <DependentUpon>AdminTicketPage.cs</DependentUpon>
+    <Compile Include="AdminManagementPage.Designer.cs">
+      <DependentUpon>AdminManagementPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPackagePage.cs">
+    <Compile Include="AdminBookingStatus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPackagePage.Designer.cs">
-      <DependentUpon>AdminPackagePage.cs</DependentUpon>
+    <Compile Include="AdminBookingStatus.Designer.cs">
+      <DependentUpon>AdminBookingStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="CheckoutForm.cs">
       <SubType>Form</SubType>
@@ -224,14 +230,17 @@
     <EmbeddedResource Include="AdminAccomodationPage.resx">
       <DependentUpon>AdminAccomodationPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminLoginPage.resx">
+      <DependentUpon>AdminLoginPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainPage.resx">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPackagePage.resx">
-      <DependentUpon>AdminPackagePage.cs</DependentUpon>
+    <EmbeddedResource Include="AdminBookingStatus.resx">
+      <DependentUpon>AdminBookingStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminTicketPage.resx">
-      <DependentUpon>AdminTicketPage.cs</DependentUpon>
+    <EmbeddedResource Include="AdminManagementPage.resx">
+      <DependentUpon>AdminManagementPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckoutForm.resx">
       <DependentUpon>CheckoutForm.cs</DependentUpon>

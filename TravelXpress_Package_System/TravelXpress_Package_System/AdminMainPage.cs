@@ -19,14 +19,14 @@ namespace TravelXpress_Package_System
 
         private void btnTicket_Click(object sender, EventArgs e)
         {
-            AdminTicketPage adminTicketPage = new AdminTicketPage();
-            adminTicketPage.Show();
+            AdminManagementPage adminManagementPage = new AdminManagementPage();
+            adminManagementPage.Show();
         }
 
         private void buttonPackage_Click(object sender, EventArgs e)
         {
-            AdminPackagePage adminPackagePage = new AdminPackagePage();
-            adminPackagePage.Show();
+            AdminBookingStatus adminBookingStatus = new AdminBookingStatus();
+            adminBookingStatus.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
