@@ -409,7 +409,7 @@ namespace TravelXpress_Package_System
                 connection.Close();
             }
 
-            MessageBox.Show($"Successfully book Package {PackageCheckout.PackageID} for {PackageCheckout.numPax}! \nThe booking details already email to {PackageCheckout.CustomerDetails.Email}");
+            MessageBox.Show($"Successfully book Package {PackageCheckout.PackageID} for {PackageCheckout.numPax} people! \nThe booking details already email to {PackageCheckout.CustomerDetails.Email}");
             this.DialogResult = DialogResult.OK;  // Optional: communicate success
             this.Close();
         }

@@ -181,7 +181,7 @@
             this.buttonConfirmCustomerMemberDetails.Location = new System.Drawing.Point(581, 1112);
             this.buttonConfirmCustomerMemberDetails.Name = "buttonConfirmCustomerMemberDetails";
             this.buttonConfirmCustomerMemberDetails.Size = new System.Drawing.Size(116, 36);
-            this.buttonConfirmCustomerMemberDetails.TabIndex = 82;
+            this.buttonConfirmCustomerMemberDetails.TabIndex = 9;
             this.buttonConfirmCustomerMemberDetails.Text = "Confirm";
             this.buttonConfirmCustomerMemberDetails.UseVisualStyleBackColor = true;
             this.buttonConfirmCustomerMemberDetails.Visible = false;
@@ -201,7 +201,7 @@
             this.textBoxCustomerEmail.Location = new System.Drawing.Point(162, 583);
             this.textBoxCustomerEmail.Name = "textBoxCustomerEmail";
             this.textBoxCustomerEmail.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerEmail.TabIndex = 7;
+            this.textBoxCustomerEmail.TabIndex = 3;
             // 
             // groupBoxCustomerGender
             // 
@@ -210,7 +210,7 @@
             this.groupBoxCustomerGender.Location = new System.Drawing.Point(162, 620);
             this.groupBoxCustomerGender.Name = "groupBoxCustomerGender";
             this.groupBoxCustomerGender.Size = new System.Drawing.Size(200, 64);
-            this.groupBoxCustomerGender.TabIndex = 80;
+            this.groupBoxCustomerGender.TabIndex = 4;
             this.groupBoxCustomerGender.TabStop = false;
             // 
             // radioButtonCusFemale
@@ -260,7 +260,7 @@
             this.buttonMemberPaxConfirm.Location = new System.Drawing.Point(581, 792);
             this.buttonMemberPaxConfirm.Name = "buttonMemberPaxConfirm";
             this.buttonMemberPaxConfirm.Size = new System.Drawing.Size(116, 36);
-            this.buttonMemberPaxConfirm.TabIndex = 80;
+            this.buttonMemberPaxConfirm.TabIndex = 7;
             this.buttonMemberPaxConfirm.Text = "Confirm";
             this.buttonMemberPaxConfirm.UseVisualStyleBackColor = true;
             this.buttonMemberPaxConfirm.Visible = false;
@@ -273,7 +273,7 @@
             this.groupBoxOtherMember.Location = new System.Drawing.Point(142, 727);
             this.groupBoxOtherMember.Name = "groupBoxOtherMember";
             this.groupBoxOtherMember.Size = new System.Drawing.Size(159, 51);
-            this.groupBoxOtherMember.TabIndex = 80;
+            this.groupBoxOtherMember.TabIndex = 5;
             this.groupBoxOtherMember.TabStop = false;
             // 
             // radioButtonFalse
@@ -324,7 +324,7 @@
             this.groupBoxCustomerFamilyDetails.Location = new System.Drawing.Point(48, 843);
             this.groupBoxCustomerFamilyDetails.Name = "groupBoxCustomerFamilyDetails";
             this.groupBoxCustomerFamilyDetails.Size = new System.Drawing.Size(446, 305);
-            this.groupBoxCustomerFamilyDetails.TabIndex = 78;
+            this.groupBoxCustomerFamilyDetails.TabIndex = 8;
             this.groupBoxCustomerFamilyDetails.TabStop = false;
             this.groupBoxCustomerFamilyDetails.Text = "groupBox1";
             // 
@@ -333,7 +333,7 @@
             this.textBoxCustomerMemberPhone.Location = new System.Drawing.Point(126, 124);
             this.textBoxCustomerMemberPhone.Name = "textBoxCustomerMemberPhone";
             this.textBoxCustomerMemberPhone.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerMemberPhone.TabIndex = 79;
+            this.textBoxCustomerMemberPhone.TabIndex = 2;
             // 
             // label23
             // 
@@ -349,7 +349,7 @@
             this.textBoxCustomerMemberName.Location = new System.Drawing.Point(126, 26);
             this.textBoxCustomerMemberName.Name = "textBoxCustomerMemberName";
             this.textBoxCustomerMemberName.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerMemberName.TabIndex = 68;
+            this.textBoxCustomerMemberName.TabIndex = 0;
             // 
             // label20
             // 
@@ -365,7 +365,7 @@
             this.textBoxCustomerMemberIC.Location = new System.Drawing.Point(126, 75);
             this.textBoxCustomerMemberIC.Name = "textBoxCustomerMemberIC";
             this.textBoxCustomerMemberIC.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerMemberIC.TabIndex = 70;
+            this.textBoxCustomerMemberIC.TabIndex = 1;
             // 
             // groupBoxCustomerMemberGender
             // 
@@ -374,7 +374,7 @@
             this.groupBoxCustomerMemberGender.Location = new System.Drawing.Point(126, 159);
             this.groupBoxCustomerMemberGender.Name = "groupBoxCustomerMemberGender";
             this.groupBoxCustomerMemberGender.Size = new System.Drawing.Size(200, 64);
-            this.groupBoxCustomerMemberGender.TabIndex = 76;
+            this.groupBoxCustomerMemberGender.TabIndex = 3;
             this.groupBoxCustomerMemberGender.TabStop = false;
             // 
             // radioButtonFemale
@@ -430,7 +430,7 @@
             this.buttonNextPerson.Location = new System.Drawing.Point(279, 251);
             this.buttonNextPerson.Name = "buttonNextPerson";
             this.buttonNextPerson.Size = new System.Drawing.Size(116, 36);
-            this.buttonNextPerson.TabIndex = 74;
+            this.buttonNextPerson.TabIndex = 4;
             this.buttonNextPerson.Text = "Next Person";
             this.buttonNextPerson.UseVisualStyleBackColor = true;
             this.buttonNextPerson.Click += new System.EventHandler(this.buttonNextPerson_Click);
@@ -511,7 +511,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.72727F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.27273F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxSingleBed, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBoxFamilyRoom, 0, 3);
@@ -579,7 +579,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(482, 1);
+            this.label15.Location = new System.Drawing.Point(480, 1);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 20);
             this.label15.TabIndex = 1;
@@ -587,7 +587,7 @@
             // 
             // numericUpDownSingleBed
             // 
-            this.numericUpDownSingleBed.Location = new System.Drawing.Point(482, 41);
+            this.numericUpDownSingleBed.Location = new System.Drawing.Point(480, 41);
             this.numericUpDownSingleBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -610,7 +610,7 @@
             // 
             // numericUpDownSingleRKingBed
             // 
-            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(482, 79);
+            this.numericUpDownSingleRKingBed.Location = new System.Drawing.Point(480, 79);
             this.numericUpDownSingleRKingBed.Maximum = new decimal(new int[] {
             10,
             0,
@@ -633,7 +633,7 @@
             // 
             // numericUpDownFamilyRoom
             // 
-            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(482, 125);
+            this.numericUpDownFamilyRoom.Location = new System.Drawing.Point(480, 125);
             this.numericUpDownFamilyRoom.Maximum = new decimal(new int[] {
             10,
             0,
@@ -657,7 +657,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(232, 1);
+            this.label16.Location = new System.Drawing.Point(231, 1);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(99, 20);
             this.label16.TabIndex = 31;
@@ -666,7 +666,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(232, 38);
+            this.label17.Location = new System.Drawing.Point(231, 38);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(117, 20);
             this.label17.TabIndex = 32;
@@ -675,7 +675,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(232, 76);
+            this.label18.Location = new System.Drawing.Point(231, 76);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(104, 20);
             this.label18.TabIndex = 33;
@@ -684,7 +684,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(232, 122);
+            this.label19.Location = new System.Drawing.Point(231, 122);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(104, 20);
             this.label19.TabIndex = 34;
@@ -785,7 +785,7 @@
             this.comboBoxTransport.Location = new System.Drawing.Point(172, 1183);
             this.comboBoxTransport.Name = "comboBoxTransport";
             this.comboBoxTransport.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxTransport.TabIndex = 52;
+            this.comboBoxTransport.TabIndex = 10;
             // 
             // textBoxPackagePrice
             // 
@@ -828,7 +828,7 @@
             0});
             this.numericUpDownNumPax.Name = "numericUpDownNumPax";
             this.numericUpDownNumPax.Size = new System.Drawing.Size(120, 27);
-            this.numericUpDownNumPax.TabIndex = 50;
+            this.numericUpDownNumPax.TabIndex = 6;
             this.numericUpDownNumPax.Value = new decimal(new int[] {
             1,
             0,
@@ -860,7 +860,7 @@
             this.textBoxCustomerName.Location = new System.Drawing.Point(162, 460);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerName.TabIndex = 4;
+            this.textBoxCustomerName.TabIndex = 0;
             // 
             // label10
             // 
@@ -876,14 +876,14 @@
             this.textBoxCustomerContact.Location = new System.Drawing.Point(162, 542);
             this.textBoxCustomerContact.Name = "textBoxCustomerContact";
             this.textBoxCustomerContact.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerContact.TabIndex = 6;
+            this.textBoxCustomerContact.TabIndex = 2;
             // 
             // textBoxCustomerIC
             // 
             this.textBoxCustomerIC.Location = new System.Drawing.Point(162, 501);
             this.textBoxCustomerIC.Name = "textBoxCustomerIC";
             this.textBoxCustomerIC.Size = new System.Drawing.Size(234, 27);
-            this.textBoxCustomerIC.TabIndex = 5;
+            this.textBoxCustomerIC.TabIndex = 1;
             // 
             // label9
             // 
