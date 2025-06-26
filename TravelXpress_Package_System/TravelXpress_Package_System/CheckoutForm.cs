@@ -448,9 +448,9 @@ namespace TravelXpress_Package_System
                     }
                 }
                 customerDetails.Name = textBoxCustomerName.Text;
-                customerDetails.IC = textBoxCustomerEmail.Text;
-                customerDetails.Contact = textBoxCustomerIC.Text;
-                customerDetails.Email = textBoxCustomerContact.Text;
+                customerDetails.IC = textBoxCustomerIC.Text;
+                customerDetails.Contact = textBoxCustomerContact.Text;
+                customerDetails.Email = textBoxCustomerEmail.Text;
                 customerDetails.Gender = radioButtonCusMale.Checked ? "Male" : "Female";
                 customerDetails.memberNum = radioButtonTrue.Checked ? (int)numericUpDownNumPax.Value : 0;
 

@@ -15,7 +15,9 @@ namespace TravelXpress_Package_System
 {
     public partial class TicketReceipt : Form
     {
-        private SqlConnection connection;
+        SqlConnection connection;
+        ConnectionClass connClass;
+
         private TemporaryBusDetailsStore previousDateStore;
         private SeatDetail previousSeatDetails;
         private CustomerDetails userDetails;
@@ -27,9 +29,9 @@ namespace TravelXpress_Package_System
             this.previousSeatDetails = previousSeatDetails;
             this.userDetails = userDetails;
 
-            // Initialize the connection object
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Coding\\C#\\Travel_Package_System\\TravelXpress_Package_System\\TravelXpress_Package_System\\TravelXpressDBMS.mdf;Integrated Security=True";
-            connection = new SqlConnection(connectionString);
+            connClass = new ConnectionClass();
+            connection = new SqlConnection(connClass.connectionString);
+
         }
 
         private void TicketReceipt_Load(object sender, EventArgs e)
